@@ -7,6 +7,7 @@
 //
 
 #import "CoreDataManager.h"
+#import "Contact.h"
 
 @implementation CoreDataManager
 
@@ -15,16 +16,16 @@
  *
  * @param entityName. The Core Data entity name
  */
-- (NSArray *)getEntitiesInCoreDataWithName:(NSString *)entityName {
+- (NSArray *)getEntitiesFromCoreDataWithName:(NSString *)entityName {
     
     NSError *error;
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSManagedObjectContext *managedObjContext = [self managedObjectContext];
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:managedObjContext];
     [fetchRequest setEntity:entity]; //SELECT * FROM entityName
     
-    NSArray *result = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    NSArray *result = [managedObjContext executeFetchRequest:fetchRequest error:&error];
     
     return result;
 }
@@ -34,28 +35,10 @@
  *
  * @param attributes. The entity attributes
  */
-- (void)writeTwitterUserWithAttributes:(NSDictionary *)attributes {
+- (void)addContactIntoCoreDataWithAttributes:(NSDictionary *)attributes {
     
-    TwitterUser *managedObject = [NSEntityDescription insertNewObjectForEntityForName:@"TwitterUser"
+    Contact *managedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Contact"
                                                                inManagedObjectContext:[self managedObjectContext]];
-    
-    for (NSString *key in [attributes allKeys]) {
-        
-        [managedObject setValue:[attributes valueForKey:key] forKey:key];
-    }
-    
-    [self saveContext];
-}
-
-/**
- * Write a InstagramUser into Core Data storage
- *
- * @param attributes. The entity attributes
- */
-- (void)writeInstagramUserWithAttributes:(NSDictionary *)attributes {
-    
-    InstagramUser *managedObject = [NSEntityDescription insertNewObjectForEntityForName:@"InstagramUser"
-                                                                 inManagedObjectContext:[self managedObjectContext]];
     
     for (NSString *key in [attributes allKeys]) {
         
@@ -73,7 +56,7 @@
  * @param identifier. The identifier
  * @param attributes. The attributes for update.
  */
-- (void)updataEntity:(NSString *)entityName
+- (void)editAndUpdateEntity:(NSString *)entityName
       identifierName:(NSString *)identifierName
           identifier:(NSString *)identifier
           attributes:(NSDictionary *)attributes {
@@ -81,16 +64,16 @@
     if ([entityName length] > 0) {
         
         NSError *error;
-        NSManagedObjectContext *moc = [self managedObjectContext];
+        NSManagedObjectContext *managedObjContext = [self managedObjectContext];
         
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-        NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:moc];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:managedObjContext];
         [fetchRequest setEntity:entity];
         
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self.%@ == %@", identifierName, identifier];
         [fetchRequest setPredicate:predicate];
         
-        NSArray *result = [moc executeFetchRequest:fetchRequest error:&error];
+        NSArray *result = [managedObjContext executeFetchRequest:fetchRequest error:&error];
         
         if ([result count] == 1) {
             

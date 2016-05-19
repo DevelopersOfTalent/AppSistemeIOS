@@ -11,26 +11,9 @@
 
 @interface CoreDataManager : CoreDataStack
 
-/**
- * Return the entities stored into Code Data
- *
- * @param entityName. The Core Data entity name
- */
-- (NSArray *)getEntitiesInCoreDataWithName:(NSString *)entityName;
+- (NSArray *)getEntitiesFromCoreDataWithName:(NSString *)entityName;
 
-/**
- * Write a TwitterUser into Core Data storage
- *
- * @param attributes. The entity attributes
- */
-- (void)writeTwitterUserWithAttributes:(NSDictionary *)attributes;
-
-/**
- * Write a InstagramUser into Core Data storage
- *
- * @param attributes. The entity attributes
- */
-- (void)writeInstagramUserWithAttributes:(NSDictionary *)attributes;
+- (void)addContactIntoCoreDataWithAttributes:(NSDictionary *)attributes;
 
 /**
  * Update a Stored entity
@@ -40,7 +23,7 @@
  * @param identifier. The identifier
  * @param attributes. The attributes for update.
  */
-- (void)updataEntity:(NSString *)entityName
+- (void)editAndUpdateEntity:(NSString *)entityName
       identifierName:(NSString *)identifierName
           identifier:(NSString *)identifier
           attributes:(NSDictionary *)attributes;
