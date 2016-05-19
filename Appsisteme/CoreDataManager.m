@@ -56,7 +56,7 @@
  * @param identifier. The identifier
  * @param attributes. The attributes for update.
  */
-- (void)editAndUpdateEntity:(NSString *)entityName
+- (void)editEntity:(NSString *)entityName
       identifierName:(NSString *)identifierName
           identifier:(NSString *)identifier
           attributes:(NSDictionary *)attributes {

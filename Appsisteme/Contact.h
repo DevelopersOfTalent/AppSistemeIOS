@@ -12,6 +12,11 @@
 
 @interface Contact : NSManagedObject
 
+
+@property (nullable, nonatomic, retain) NSString *name;
+@property (nullable, nonatomic, retain) NSNumber *phoneNumber;
+
+
 // Insert code here to declare functionality of your managed object subclass
 
 @end
