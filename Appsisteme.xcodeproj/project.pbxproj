@@ -20,6 +20,7 @@
 		FB02856F1CEC8664005B6B67 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = FB02856D1CEC8664005B6B67 /* Contact.m */; };
 		FB0285731CEC8E67005B6B67 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0285721CEC8E67005B6B67 /* CoreDataStack.m */; };
 		FB0285761CEC8FA5005B6B67 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0285751CEC8FA5005B6B67 /* CoreDataManager.m */; };
+		FB3F4C681CEEFCD100C04940 /* NotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3F4C671CEEFCD100C04940 /* NotificationManager.m */; };
 		FBD1EFAE1CEDB5F30056AB89 /* SecViewcontrollerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD1EFAD1CEDB5F30056AB89 /* SecViewcontrollerViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,8 @@
 		FB0285721CEC8E67005B6B67 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
 		FB0285741CEC8FA5005B6B67 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		FB0285751CEC8FA5005B6B67 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		FB3F4C661CEEFCD100C04940 /* NotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationManager.h; sourceTree = "<group>"; };
+		FB3F4C671CEEFCD100C04940 /* NotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationManager.m; sourceTree = "<group>"; };
 		FBD1EFAC1CEDB5F30056AB89 /* SecViewcontrollerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecViewcontrollerViewController.h; sourceTree = "<group>"; };
 		FBD1EFAD1CEDB5F30056AB89 /* SecViewcontrollerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecViewcontrollerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +114,8 @@
 				FB0285461CEC5EBF005B6B67 /* Info.plist */,
 				FB02853E1CEC5EBF005B6B67 /* Appsisteme.xcdatamodeld */,
 				FB0285321CEC5EBF005B6B67 /* Supporting Files */,
+				FB3F4C661CEEFCD100C04940 /* NotificationManager.h */,
+				FB3F4C671CEEFCD100C04940 /* NotificationManager.m */,
 			);
 			path = Appsisteme;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB02856F1CEC8664005B6B67 /* Contact.m in Sources */,
+				FB3F4C681CEEFCD100C04940 /* NotificationManager.m in Sources */,
 				FB02853A1CEC5EBF005B6B67 /* ViewController.m in Sources */,
 				FB02856E1CEC8664005B6B67 /* Contact+CoreDataProperties.m in Sources */,
 				FB0285761CEC8FA5005B6B67 /* CoreDataManager.m in Sources */,
