@@ -11,7 +11,6 @@
 
 #import "Contact.h"
 
-NS_ASSUME_NONNULL_BEGIN
 
 @interface Contact (CoreDataProperties)
 
@@ -20,4 +19,3 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-NS_ASSUME_NONNULL_END
