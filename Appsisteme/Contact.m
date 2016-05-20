@@ -10,6 +10,8 @@
 
 @implementation Contact
 
+@dynamic name, phoneNumber;
+
 // Insert code here to add functionality to your managed object subclass
 
 @end

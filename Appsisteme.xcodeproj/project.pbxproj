@@ -15,10 +15,12 @@
 		FB0285421CEC5EBF005B6B67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB0285411CEC5EBF005B6B67 /* Assets.xcassets */; };
 		FB0285451CEC5EBF005B6B67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB0285431CEC5EBF005B6B67 /* LaunchScreen.storyboard */; };
 		FB0285501CEC5EBF005B6B67 /* AppsistemeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB02854F1CEC5EBF005B6B67 /* AppsistemeTests.m */; };
-		FB0285601CEC72D5005B6B67 /* ContactsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB02855F1CEC72D5005B6B67 /* ContactsManager.m */; };
 		FB0285661CEC7A41005B6B67 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB0285641CEC7A41005B6B67 /* Model.xcdatamodeld */; };
 		FB02856E1CEC8664005B6B67 /* Contact+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FB02856B1CEC8664005B6B67 /* Contact+CoreDataProperties.m */; };
 		FB02856F1CEC8664005B6B67 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = FB02856D1CEC8664005B6B67 /* Contact.m */; };
+		FB0285731CEC8E67005B6B67 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0285721CEC8E67005B6B67 /* CoreDataStack.m */; };
+		FB0285761CEC8FA5005B6B67 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0285751CEC8FA5005B6B67 /* CoreDataManager.m */; };
+		FBD1EFAE1CEDB5F30056AB89 /* SecViewcontrollerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD1EFAD1CEDB5F30056AB89 /* SecViewcontrollerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,13 +48,17 @@
 		FB02854B1CEC5EBF005B6B67 /* AppsistemeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppsistemeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB02854F1CEC5EBF005B6B67 /* AppsistemeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppsistemeTests.m; sourceTree = "<group>"; };
 		FB0285511CEC5EBF005B6B67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB02855E1CEC72D5005B6B67 /* ContactsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsManager.h; sourceTree = "<group>"; };
-		FB02855F1CEC72D5005B6B67 /* ContactsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsManager.m; sourceTree = "<group>"; };
 		FB0285651CEC7A41005B6B67 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		FB02856A1CEC8664005B6B67 /* Contact+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Contact+CoreDataProperties.h"; sourceTree = "<group>"; };
 		FB02856B1CEC8664005B6B67 /* Contact+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Contact+CoreDataProperties.m"; sourceTree = "<group>"; };
 		FB02856C1CEC8664005B6B67 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
 		FB02856D1CEC8664005B6B67 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		FB0285711CEC8E67005B6B67 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		FB0285721CEC8E67005B6B67 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		FB0285741CEC8FA5005B6B67 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		FB0285751CEC8FA5005B6B67 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		FBD1EFAC1CEDB5F30056AB89 /* SecViewcontrollerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecViewcontrollerViewController.h; sourceTree = "<group>"; };
+		FBD1EFAD1CEDB5F30056AB89 /* SecViewcontrollerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecViewcontrollerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,12 +100,11 @@
 		FB0285311CEC5EBF005B6B67 /* Appsisteme */ = {
 			isa = PBXGroup;
 			children = (
+				FBD1EFAB1CEDB5980056AB89 /* View Controllers */,
 				FB0285701CEC86AA005B6B67 /* Core Data */,
 				FB02855D1CEC71A7005B6B67 /* Model */,
 				FB0285351CEC5EBF005B6B67 /* AppDelegate.h */,
 				FB0285361CEC5EBF005B6B67 /* AppDelegate.m */,
-				FB0285381CEC5EBF005B6B67 /* ViewController.h */,
-				FB0285391CEC5EBF005B6B67 /* ViewController.m */,
 				FB02853B1CEC5EBF005B6B67 /* Main.storyboard */,
 				FB0285411CEC5EBF005B6B67 /* Assets.xcassets */,
 				FB0285431CEC5EBF005B6B67 /* LaunchScreen.storyboard */,
@@ -130,8 +135,6 @@
 		FB02855D1CEC71A7005B6B67 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FB02855E1CEC72D5005B6B67 /* ContactsManager.h */,
-				FB02855F1CEC72D5005B6B67 /* ContactsManager.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -144,8 +147,23 @@
 				FB02856B1CEC8664005B6B67 /* Contact+CoreDataProperties.m */,
 				FB02856C1CEC8664005B6B67 /* Contact.h */,
 				FB02856D1CEC8664005B6B67 /* Contact.m */,
+				FB0285711CEC8E67005B6B67 /* CoreDataStack.h */,
+				FB0285721CEC8E67005B6B67 /* CoreDataStack.m */,
+				FB0285741CEC8FA5005B6B67 /* CoreDataManager.h */,
+				FB0285751CEC8FA5005B6B67 /* CoreDataManager.m */,
 			);
 			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		FBD1EFAB1CEDB5980056AB89 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB0285381CEC5EBF005B6B67 /* ViewController.h */,
+				FB0285391CEC5EBF005B6B67 /* ViewController.m */,
+				FBD1EFAC1CEDB5F30056AB89 /* SecViewcontrollerViewController.h */,
+				FBD1EFAD1CEDB5F30056AB89 /* SecViewcontrollerViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,11 +269,13 @@
 				FB02856F1CEC8664005B6B67 /* Contact.m in Sources */,
 				FB02853A1CEC5EBF005B6B67 /* ViewController.m in Sources */,
 				FB02856E1CEC8664005B6B67 /* Contact+CoreDataProperties.m in Sources */,
+				FB0285761CEC8FA5005B6B67 /* CoreDataManager.m in Sources */,
 				FB0285371CEC5EBF005B6B67 /* AppDelegate.m in Sources */,
-				FB0285601CEC72D5005B6B67 /* ContactsManager.m in Sources */,
+				FBD1EFAE1CEDB5F30056AB89 /* SecViewcontrollerViewController.m in Sources */,
 				FB0285661CEC7A41005B6B67 /* Model.xcdatamodeld in Sources */,
 				FB0285401CEC5EBF005B6B67 /* Appsisteme.xcdatamodeld in Sources */,
 				FB0285341CEC5EBF005B6B67 /* main.m in Sources */,
+				FB0285731CEC8E67005B6B67 /* CoreDataStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +468,7 @@
 				FB0285561CEC5EBF005B6B67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB0285571CEC5EBF005B6B67 /* Build configuration list for PBXNativeTarget "AppsistemeTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +477,7 @@
 				FB0285591CEC5EBF005B6B67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

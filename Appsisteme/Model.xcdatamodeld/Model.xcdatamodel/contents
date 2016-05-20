@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Xcode 7.0">
+<model userDefinedModelVersionIdentifier="contact" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Xcode 7.0">
     <entity name="Contact" representedClassName="Contact" syncable="YES">
         <attribute name="name" attributeType="String" syncable="YES"/>
-        <attribute name="phoneNumber" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="phoneNumber" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="Contact" positionX="-63" positionY="-18" width="128" height="75"/>
