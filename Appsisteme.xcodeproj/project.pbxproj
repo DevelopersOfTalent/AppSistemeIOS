@@ -45,6 +45,7 @@
 		6554DB1C1CF1B701002684D5 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
 		6554DB1D1CF1B701002684D5 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
 		6554DB201CF1CADE002684D5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		65D0E24F1CF21C6F00374315 /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
 		FB02852F1CEC5EBF005B6B67 /* Appsisteme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appsisteme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB0285331CEC5EBF005B6B67 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FB0285351CEC5EBF005B6B67 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -495,9 +496,10 @@
 		6554DB1F1CF1CADE002684D5 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				65D0E24F1CF21C6F00374315 /* Model 2.xcdatamodel */,
 				6554DB201CF1CADE002684D5 /* Model.xcdatamodel */,
 			);
-			currentVersion = 6554DB201CF1CADE002684D5 /* Model.xcdatamodel */;
+			currentVersion = 65D0E24F1CF21C6F00374315 /* Model 2.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

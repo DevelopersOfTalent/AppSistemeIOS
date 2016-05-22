@@ -27,11 +27,13 @@
     
     ContactsViewController *contactsVC = [[ContactsViewController alloc] initWithContext: context];
     UINavigationController *navContacts = [[UINavigationController alloc] initWithRootViewController:contactsVC];
+    navContacts = (UINavigationController *) self.window.rootViewController; //added
     self.window.rootViewController = navContacts;
     
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+
     
     return YES;
 }

@@ -15,8 +15,8 @@
 
 - (void) loadContacts;
 
--(void) addInsertButton;
--(void) addButtonWasTapped:(id)sender;
+//-(void) addInsertButton;
+//-(void) addButtonWasTapped:(id)sender;
 
 @end
 

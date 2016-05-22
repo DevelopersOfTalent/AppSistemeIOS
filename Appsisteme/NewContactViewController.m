@@ -36,6 +36,7 @@
 -(void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
     [self.contactName becomeFirstResponder];
 }
 
@@ -51,7 +52,11 @@
     
     // Asignamos las propiedades
     [contact setName:self.contactName.text];
-    [contact setPhoneNumber:self.contactPhoneNumber.text];
+    
+    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+    //phoneFormatter.numberStyle = NSNumberFormatter;
+    NSNumber *phone = [f numberFromString:self.contactPhoneNumber.text];
+    [contact setPhoneNumber:phone];
     
     // Lo metemos en nuestro ManagedObjectContext
     [self.context insertObject:contact];

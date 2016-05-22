@@ -61,21 +61,31 @@
 }
 
 
-#pragma mark - Interface
+//#pragma mark - Interface
+//
+//-(void) addInsertButton
+//{
+//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonWasTapped:)];
+//    self.navigationItem.rightBarButtonItem = addButton;
+//}
+//
+//
+//#pragma mark - Events
+//
+//-(void) addButtonWasTapped:(id)sender
+//{
+//    NewContactViewController *newContactVC = [[NewContactViewController alloc] initWithContext:self.context];
+//    [self presentViewController:newContactVC animated:YES completion:nil];
+//}
 
--(void) addInsertButton
-{
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonWasTapped:)];
-    self.navigationItem.rightBarButtonItem = addButton;
-}
-
-
-#pragma mark - Events
-
--(void) addButtonWasTapped:(id)sender
-{
-    NewContactViewController *newContactVC = [[NewContactViewController alloc] initWithContext:self.context];
-    [self presentViewController:newContactVC animated:YES completion:nil];
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([[segue identifier] isEqualToString:@"add"]) {
+        
+        
+//        NewContactViewController *newContactVC = [[NewContactViewController alloc]initWithContext:self.context];
+//        [segue destinationViewController]
+    }
 }
 
 @end
