@@ -2,7 +2,7 @@
 //  Contact+CoreDataProperties.h
 //  Appsisteme
 //
-//  Created by Alumno on 18/05/16.
+//  Created by Andrea Cerrato on 22/5/16.
 //  Copyright © 2016 Alumno. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Contact (CoreDataProperties)
 
 @property (nullable, nonatomic, retain) NSString *name;
-@property (nullable, nonatomic, retain) NSNumber *phoneNumber;
+@property (nullable, nonatomic, retain) NSString *phoneNumber;
 
 @end
 

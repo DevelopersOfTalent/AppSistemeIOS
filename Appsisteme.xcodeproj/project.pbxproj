@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6554DB111CF1A33C002684D5 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB101CF1A33C002684D5 /* CoreDataStack.m */; };
+		6554DB161CF1AB8B002684D5 /* Contact+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB131CF1AB8B002684D5 /* Contact+CoreDataProperties.m */; };
+		6554DB171CF1AB8B002684D5 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB151CF1AB8B002684D5 /* Contact.m */; };
+		6554DB1A1CF1AE07002684D5 /* Contact+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB191CF1AE07002684D5 /* Contact+Methods.m */; };
+		6554DB1E1CF1B701002684D5 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB1D1CF1B701002684D5 /* CoreDataTableViewController.m */; };
+		6554DB211CF1CADE002684D5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB1F1CF1CADE002684D5 /* Model.xcdatamodeld */; };
 		FB0285341CEC5EBF005B6B67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0285331CEC5EBF005B6B67 /* main.m */; };
 		FB0285371CEC5EBF005B6B67 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0285361CEC5EBF005B6B67 /* AppDelegate.m */; };
-		FB02853A1CEC5EBF005B6B67 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0285391CEC5EBF005B6B67 /* ViewController.m */; };
+		FB02853A1CEC5EBF005B6B67 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0285391CEC5EBF005B6B67 /* ContactsViewController.m */; };
 		FB02853D1CEC5EBF005B6B67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB02853B1CEC5EBF005B6B67 /* Main.storyboard */; };
-		FB0285401CEC5EBF005B6B67 /* Appsisteme.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB02853E1CEC5EBF005B6B67 /* Appsisteme.xcdatamodeld */; };
 		FB0285421CEC5EBF005B6B67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB0285411CEC5EBF005B6B67 /* Assets.xcassets */; };
 		FB0285451CEC5EBF005B6B67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB0285431CEC5EBF005B6B67 /* LaunchScreen.storyboard */; };
 		FB0285501CEC5EBF005B6B67 /* AppsistemeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB02854F1CEC5EBF005B6B67 /* AppsistemeTests.m */; };
-		FB0285661CEC7A41005B6B67 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB0285641CEC7A41005B6B67 /* Model.xcdatamodeld */; };
-		FB02856E1CEC8664005B6B67 /* Contact+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FB02856B1CEC8664005B6B67 /* Contact+CoreDataProperties.m */; };
-		FB02856F1CEC8664005B6B67 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = FB02856D1CEC8664005B6B67 /* Contact.m */; };
-		FB0285731CEC8E67005B6B67 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0285721CEC8E67005B6B67 /* CoreDataStack.m */; };
-		FB0285761CEC8FA5005B6B67 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0285751CEC8FA5005B6B67 /* CoreDataManager.m */; };
-		FBD1EFAE1CEDB5F30056AB89 /* SecViewcontrollerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD1EFAD1CEDB5F30056AB89 /* SecViewcontrollerViewController.m */; };
+		FBD1EFAE1CEDB5F30056AB89 /* NewContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD1EFAD1CEDB5F30056AB89 /* NewContactViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,31 +34,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6554DB0F1CF1A33C002684D5 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		6554DB101CF1A33C002684D5 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		6554DB121CF1AB8B002684D5 /* Contact+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Contact+CoreDataProperties.h"; path = "../Contact+CoreDataProperties.h"; sourceTree = "<group>"; };
+		6554DB131CF1AB8B002684D5 /* Contact+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Contact+CoreDataProperties.m"; path = "../Contact+CoreDataProperties.m"; sourceTree = "<group>"; };
+		6554DB141CF1AB8B002684D5 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Contact.h; path = ../Contact.h; sourceTree = "<group>"; };
+		6554DB151CF1AB8B002684D5 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contact.m; path = ../Contact.m; sourceTree = "<group>"; };
+		6554DB181CF1AE07002684D5 /* Contact+Methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Contact+Methods.h"; sourceTree = "<group>"; };
+		6554DB191CF1AE07002684D5 /* Contact+Methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Contact+Methods.m"; sourceTree = "<group>"; };
+		6554DB1C1CF1B701002684D5 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
+		6554DB1D1CF1B701002684D5 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
+		6554DB201CF1CADE002684D5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		FB02852F1CEC5EBF005B6B67 /* Appsisteme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appsisteme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB0285331CEC5EBF005B6B67 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FB0285351CEC5EBF005B6B67 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB0285361CEC5EBF005B6B67 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FB0285381CEC5EBF005B6B67 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FB0285391CEC5EBF005B6B67 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FB0285381CEC5EBF005B6B67 /* ContactsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
+		FB0285391CEC5EBF005B6B67 /* ContactsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
 		FB02853C1CEC5EBF005B6B67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FB02853F1CEC5EBF005B6B67 /* Appsisteme.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Appsisteme.xcdatamodel; sourceTree = "<group>"; };
 		FB0285411CEC5EBF005B6B67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB0285441CEC5EBF005B6B67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB0285461CEC5EBF005B6B67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB02854B1CEC5EBF005B6B67 /* AppsistemeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppsistemeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB02854F1CEC5EBF005B6B67 /* AppsistemeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppsistemeTests.m; sourceTree = "<group>"; };
 		FB0285511CEC5EBF005B6B67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB0285651CEC7A41005B6B67 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		FB02856A1CEC8664005B6B67 /* Contact+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Contact+CoreDataProperties.h"; sourceTree = "<group>"; };
-		FB02856B1CEC8664005B6B67 /* Contact+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Contact+CoreDataProperties.m"; sourceTree = "<group>"; };
-		FB02856C1CEC8664005B6B67 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
-		FB02856D1CEC8664005B6B67 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
-		FB0285711CEC8E67005B6B67 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
-		FB0285721CEC8E67005B6B67 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
-		FB0285741CEC8FA5005B6B67 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
-		FB0285751CEC8FA5005B6B67 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
-		FBD1EFAC1CEDB5F30056AB89 /* SecViewcontrollerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecViewcontrollerViewController.h; sourceTree = "<group>"; };
-		FBD1EFAD1CEDB5F30056AB89 /* SecViewcontrollerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecViewcontrollerViewController.m; sourceTree = "<group>"; };
+		FBD1EFAC1CEDB5F30056AB89 /* NewContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewContactViewController.h; sourceTree = "<group>"; };
+		FBD1EFAD1CEDB5F30056AB89 /* NewContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewContactViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6554DB1B1CF1AE38002684D5 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6554DB181CF1AE07002684D5 /* Contact+Methods.h */,
+				6554DB191CF1AE07002684D5 /* Contact+Methods.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		FB0285261CEC5EBF005B6B67 = {
 			isa = PBXGroup;
 			children = (
@@ -100,16 +110,16 @@
 		FB0285311CEC5EBF005B6B67 /* Appsisteme */ = {
 			isa = PBXGroup;
 			children = (
+				FB0285351CEC5EBF005B6B67 /* AppDelegate.h */,
+				FB0285361CEC5EBF005B6B67 /* AppDelegate.m */,
 				FBD1EFAB1CEDB5980056AB89 /* View Controllers */,
 				FB0285701CEC86AA005B6B67 /* Core Data */,
 				FB02855D1CEC71A7005B6B67 /* Model */,
-				FB0285351CEC5EBF005B6B67 /* AppDelegate.h */,
-				FB0285361CEC5EBF005B6B67 /* AppDelegate.m */,
+				6554DB1B1CF1AE38002684D5 /* Categories */,
 				FB02853B1CEC5EBF005B6B67 /* Main.storyboard */,
 				FB0285411CEC5EBF005B6B67 /* Assets.xcassets */,
 				FB0285431CEC5EBF005B6B67 /* LaunchScreen.storyboard */,
 				FB0285461CEC5EBF005B6B67 /* Info.plist */,
-				FB02853E1CEC5EBF005B6B67 /* Appsisteme.xcdatamodeld */,
 				FB0285321CEC5EBF005B6B67 /* Supporting Files */,
 			);
 			path = Appsisteme;
@@ -135,6 +145,11 @@
 		FB02855D1CEC71A7005B6B67 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6554DB1F1CF1CADE002684D5 /* Model.xcdatamodeld */,
+				6554DB121CF1AB8B002684D5 /* Contact+CoreDataProperties.h */,
+				6554DB131CF1AB8B002684D5 /* Contact+CoreDataProperties.m */,
+				6554DB141CF1AB8B002684D5 /* Contact.h */,
+				6554DB151CF1AB8B002684D5 /* Contact.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -142,15 +157,8 @@
 		FB0285701CEC86AA005B6B67 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				FB0285641CEC7A41005B6B67 /* Model.xcdatamodeld */,
-				FB02856A1CEC8664005B6B67 /* Contact+CoreDataProperties.h */,
-				FB02856B1CEC8664005B6B67 /* Contact+CoreDataProperties.m */,
-				FB02856C1CEC8664005B6B67 /* Contact.h */,
-				FB02856D1CEC8664005B6B67 /* Contact.m */,
-				FB0285711CEC8E67005B6B67 /* CoreDataStack.h */,
-				FB0285721CEC8E67005B6B67 /* CoreDataStack.m */,
-				FB0285741CEC8FA5005B6B67 /* CoreDataManager.h */,
-				FB0285751CEC8FA5005B6B67 /* CoreDataManager.m */,
+				6554DB0F1CF1A33C002684D5 /* CoreDataStack.h */,
+				6554DB101CF1A33C002684D5 /* CoreDataStack.m */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -158,10 +166,12 @@
 		FBD1EFAB1CEDB5980056AB89 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FB0285381CEC5EBF005B6B67 /* ViewController.h */,
-				FB0285391CEC5EBF005B6B67 /* ViewController.m */,
-				FBD1EFAC1CEDB5F30056AB89 /* SecViewcontrollerViewController.h */,
-				FBD1EFAD1CEDB5F30056AB89 /* SecViewcontrollerViewController.m */,
+				FB0285381CEC5EBF005B6B67 /* ContactsViewController.h */,
+				FB0285391CEC5EBF005B6B67 /* ContactsViewController.m */,
+				FBD1EFAC1CEDB5F30056AB89 /* NewContactViewController.h */,
+				FBD1EFAD1CEDB5F30056AB89 /* NewContactViewController.m */,
+				6554DB1C1CF1B701002684D5 /* CoreDataTableViewController.h */,
+				6554DB1D1CF1B701002684D5 /* CoreDataTableViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -266,16 +276,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB02856F1CEC8664005B6B67 /* Contact.m in Sources */,
-				FB02853A1CEC5EBF005B6B67 /* ViewController.m in Sources */,
-				FB02856E1CEC8664005B6B67 /* Contact+CoreDataProperties.m in Sources */,
-				FB0285761CEC8FA5005B6B67 /* CoreDataManager.m in Sources */,
+				6554DB171CF1AB8B002684D5 /* Contact.m in Sources */,
+				FB02853A1CEC5EBF005B6B67 /* ContactsViewController.m in Sources */,
+				6554DB161CF1AB8B002684D5 /* Contact+CoreDataProperties.m in Sources */,
 				FB0285371CEC5EBF005B6B67 /* AppDelegate.m in Sources */,
-				FBD1EFAE1CEDB5F30056AB89 /* SecViewcontrollerViewController.m in Sources */,
-				FB0285661CEC7A41005B6B67 /* Model.xcdatamodeld in Sources */,
-				FB0285401CEC5EBF005B6B67 /* Appsisteme.xcdatamodeld in Sources */,
+				6554DB1E1CF1B701002684D5 /* CoreDataTableViewController.m in Sources */,
+				FBD1EFAE1CEDB5F30056AB89 /* NewContactViewController.m in Sources */,
+				6554DB1A1CF1AE07002684D5 /* Contact+Methods.m in Sources */,
 				FB0285341CEC5EBF005B6B67 /* main.m in Sources */,
-				FB0285731CEC8E67005B6B67 /* CoreDataStack.m in Sources */,
+				6554DB211CF1CADE002684D5 /* Model.xcdatamodeld in Sources */,
+				6554DB111CF1A33C002684D5 /* CoreDataStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,22 +492,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		FB02853E1CEC5EBF005B6B67 /* Appsisteme.xcdatamodeld */ = {
+		6554DB1F1CF1CADE002684D5 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				FB02853F1CEC5EBF005B6B67 /* Appsisteme.xcdatamodel */,
+				6554DB201CF1CADE002684D5 /* Model.xcdatamodel */,
 			);
-			currentVersion = FB02853F1CEC5EBF005B6B67 /* Appsisteme.xcdatamodel */;
-			path = Appsisteme.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		FB0285641CEC7A41005B6B67 /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				FB0285651CEC7A41005B6B67 /* Model.xcdatamodel */,
-			);
-			currentVersion = FB0285651CEC7A41005B6B67 /* Model.xcdatamodel */;
+			currentVersion = 6554DB201CF1CADE002684D5 /* Model.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

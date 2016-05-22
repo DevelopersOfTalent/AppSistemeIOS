@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Contacts View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ContactsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -48,15 +49,14 @@
                         <outlet property="myContacts" destination="rHS-0k-Cgh" id="Jy5-0S-yRT"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="nZv-CD-xvB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="288" y="289"/>
         </scene>
-        <!--Sec Viewcontroller View Controller-->
+        <!--New Contact View Controller-->
         <scene sceneID="mRh-lg-0fy">
             <objects>
-                <viewController id="85C-7s-5E4" customClass="SecViewcontrollerViewController" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4fS-ed-Qgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="85C-7s-5E4" customClass="NewContactViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vk4-fA-QXn"/>
                         <viewControllerLayoutGuide type="bottom" id="D4r-eS-TXz"/>
@@ -75,14 +75,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSz-fE-LAL">
-                                <rect key="frame" x="137" y="218" width="62" height="30"/>
-                                <state key="normal" title="Aceptar"/>
-                                <connections>
-                                    <action selector="saveContact:" destination="85C-7s-5E4" eventType="touchUpInside" id="E8R-Ai-WCE"/>
-                                    <segue destination="nZv-CD-xvB" kind="unwind" unwindAction="unwindToViewController:" id="nXp-jF-oOd"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -92,7 +84,6 @@
                         <outlet property="contactPhoneNumber" destination="N3D-xR-4fF" id="PnY-iI-Ts1"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4fS-ed-Qgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="714" y="289"/>
         </scene>

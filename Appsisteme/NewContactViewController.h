@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecViewcontrollerViewController : UIViewController
+@interface NewContactViewController : UIViewController
+
+-(instancetype) initWithContext: (NSManagedObjectContext *) context;
+-(void) saveContact;
 
 @end
