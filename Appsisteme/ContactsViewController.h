@@ -11,8 +11,6 @@
 
 @interface ContactsViewController : CoreDataTableViewController
 
-- (id) initWithContext: (NSManagedObjectContext *) context;
-
 - (void) loadContacts;
 
 //-(void) addInsertButton;

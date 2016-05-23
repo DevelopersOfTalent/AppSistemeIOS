@@ -7,13 +7,13 @@
 //
 
 #import "AppDelegate.h"
-#import "CoreDataStack.h"
+
 
 #import "ContactsViewController.h"
 
 @interface AppDelegate ()
 
-@property (strong, nonatomic) CoreDataStack *coreDataStack;
+
 
 @end
 
@@ -23,16 +23,17 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.coreDataStack = [[CoreDataStack alloc] init];
-    NSManagedObjectContext *context = [self.coreDataStack managedObjectContext];
+//    NSManagedObjectContext *context = [self.coreDataStack managedObjectContext];
     
-    ContactsViewController *contactsVC = [[ContactsViewController alloc] initWithContext: context];
-    UINavigationController *navContacts = [[UINavigationController alloc] initWithRootViewController:contactsVC];
-    navContacts = (UINavigationController *) self.window.rootViewController; //added
-    self.window.rootViewController = navContacts;
     
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+//    ContactsViewController *contactsVC = [[ContactsViewController alloc] initWithContext:context];
+//    UINavigationController *navContacts = [[UINavigationController alloc] initWithRootViewController:contactsVC];
+//    
+//    self.window.rootViewController = navContacts;
+//    
+//    // Override point for customization after application launch.
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    [self.window makeKeyAndVisible];
 
     
     return YES;
@@ -69,5 +70,23 @@
     [self.coreDataStack saveContext];
 }
 
+#pragma mark - Utils
+
+/**
+ * Returns the application delegate
+ *
+ * @return The app delegate.
+ */
++ (AppDelegate *)appDelegate {
+    
+    static AppDelegate *appDelegate;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        
+        appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    });
+    
+    return appDelegate;
+}
 
 @end

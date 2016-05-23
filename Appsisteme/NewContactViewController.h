@@ -11,6 +11,9 @@
 @interface NewContactViewController : UIViewController
 
 -(instancetype) initWithContext: (NSManagedObjectContext *) context;
+
 -(void) saveContact;
+
+-(void) receiveContext:(NSManagedObjectContext *) context;
 
 @end
