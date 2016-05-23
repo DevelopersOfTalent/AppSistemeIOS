@@ -8,6 +8,7 @@
 
 #import "NewContactViewController.h"
 #import "Contact.h"
+#import "CoreDataStack.h"
 
 @interface NewContactViewController ()
 
@@ -15,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *contactPhoneNumber;
 
 @property (strong, nonatomic) NSManagedObjectContext *context;
+@property (strong, nonatomic) NSManagedObjectContext *contextAux;
 
 @end
 
@@ -37,6 +39,8 @@
 {
     [super viewWillAppear:animated];
     
+    self.context = self.contextAux;
+    
     [self.contactName becomeFirstResponder];
 }
 
@@ -52,28 +56,32 @@
     
     // Asignamos las propiedades
     [contact setName:self.contactName.text];
-    
-    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
-    //phoneFormatter.numberStyle = NSNumberFormatter;
-    NSNumber *phone = [f numberFromString:self.contactPhoneNumber.text];
-    [contact setPhoneNumber:phone];
+    [contact setPhoneNumber:self.contactPhoneNumber.text];
     
     // Lo metemos en nuestro ManagedObjectContext
     [self.context insertObject:contact];
+    
 }
 
 
 #pragma mark - Events
-
--(IBAction) cancelButtonWasTapped
-{
+- (IBAction)cancelContact:(UIButton *)sender {
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
--(IBAction) doneButtonWasTapped
-{
+- (IBAction)aceptContact:(UIButton *)sender {
+    
     [self saveContact];
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+#pragma mark - segue function
+
+-(void) receiveContext:(NSManagedObjectContext *) context {
+    
+    self.contextAux = context;
 }
 
 

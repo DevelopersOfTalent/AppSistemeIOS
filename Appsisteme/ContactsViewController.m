@@ -9,6 +9,7 @@
 #import "ContactsViewController.h"
 #import "Contact.h"
 #import "NewContactViewController.h"
+#import "AppDelegate.h"
 
 
 @interface ContactsViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -20,15 +21,18 @@
 
 @implementation ContactsViewController
 
-- (id) initWithContext: (NSManagedObjectContext *) context {
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
-    //Creo que esto voy a tener que modificarlo
-    if (self = [super initWithStyle:UITableViewStylePlain]) {
-        _context = context;
-    }
-    return self;
+    _context = [[[AppDelegate appDelegate] coreDataStack] managedObjectContext];
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self loadContacts];
+}
 
 #pragma mark - Core Data
 
@@ -36,7 +40,7 @@
     
     //Fetch
     NSFetchRequest *fetch = [[NSFetchRequest alloc] init];
-    [fetch setEntity:[NSEntityDescription entityForName:@"contacts" inManagedObjectContext:self.context]];
+    [fetch setEntity:[NSEntityDescription entityForName:@"Contact" inManagedObjectContext:self.context]];
     fetch.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
     NSFetchedResultsController *results = [[NSFetchedResultsController alloc] initWithFetchRequest:fetch managedObjectContext:self.context sectionNameKeyPath:nil cacheName:nil];
     self.fetchedResultsController = results;
@@ -78,14 +82,20 @@
 //    [self presentViewController:newContactVC animated:YES completion:nil];
 //}
 
+#pragma mark - Segues
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([[segue identifier] isEqualToString:@"add"]) {
+
+        NewContactViewController *newContactVC = (NewContactViewController *)[segue destinationViewController];
         
-        
-//        NewContactViewController *newContactVC = [[NewContactViewController alloc]initWithContext:self.context];
-//        [segue destinationViewController]
+        [newContactVC receiveContext:_context];
     }
+}
+
+-(IBAction)unwindToContactsView:(UIStoryboardSegue *)sender {
+    
 }
 
 @end

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="YLY-fz-LkO">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Mis Contactos-->
+        <scene sceneID="Wwm-eL-iyi">
+            <objects>
+                <tableViewController storyboardIdentifier="contactsVCidentifier" id="ejX-wX-S9E" customClass="ContactsViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" sectionHeaderHeight="28" sectionFooterHeight="28" id="alR-6d-lKT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cells" rowHeight="57" id="OWk-1h-qmM">
+                                <rect key="frame" x="0.0" y="92" width="320" height="57"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OWk-1h-qmM" id="agT-xP-AeQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ejX-wX-S9E" id="qlQ-lD-cNC"/>
+                            <outlet property="delegate" destination="ejX-wX-S9E" id="0Ho-vV-I9p"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Mis Contactos" id="Dn3-ki-U8H">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="cQ2-g0-0Db">
+                            <connections>
+                                <segue destination="85C-7s-5E4" kind="push" identifier="add" id="Pzb-SX-gxu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gAC-BC-k9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="2rj-3u-fxg" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="270" y="184"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rbC-OK-dJg">
+            <objects>
+                <navigationController toolbarHidden="NO" id="YLY-fz-LkO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IN0-MQ-8bN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="XVf-fs-Xzw">
+                        <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <outlet property="delegate" destination="YLY-fz-LkO" id="bux-v6-7xE"/>
+                        </connections>
+                    </toolbar>
+                    <connections>
+                        <segue destination="ejX-wX-S9E" kind="relationship" relationship="rootViewController" id="24P-Lr-0Nj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cmY-tP-4zc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-138.66666666666666" y="184.59999999999999"/>
+        </scene>
+        <!--Nuevo Contacto-->
+        <scene sceneID="mRh-lg-0fy">
+            <objects>
+                <viewController id="85C-7s-5E4" customClass="NewContactViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vk4-fA-QXn"/>
+                        <viewControllerLayoutGuide type="bottom" id="D4r-eS-TXz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t5A-6a-oUC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefono" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N3D-xR-4fF">
+                                <rect key="frame" x="112" y="184" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cp-kG-qkO">
+                                <rect key="frame" x="64" y="280" width="86" height="30"/>
+                                <state key="normal" title="Aceptar"/>
+                                <connections>
+                                    <action selector="aceptContact:" destination="85C-7s-5E4" eventType="touchUpInside" id="Zbp-zf-SAj"/>
+                                    <segue destination="2rj-3u-fxg" kind="unwind" unwindAction="unwindToContactsView:" id="KuE-hJ-qPg"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="usp-MX-81y">
+                                <rect key="frame" x="112" y="125" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZP-yy-yDw">
+                                <rect key="frame" x="187" y="280" width="67" height="30"/>
+                                <state key="normal" title="Cancelar"/>
+                                <connections>
+                                    <action selector="cancelContact:" destination="85C-7s-5E4" eventType="touchUpInside" id="TtU-o9-0zT"/>
+                                    <segue destination="2rj-3u-fxg" kind="unwind" unwindAction="unwindToContactsView:" id="eHC-XL-nie"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nuevo Contacto" id="405-aW-hr3"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="contactName" destination="usp-MX-81y" id="LVt-bH-eAy"/>
+                        <outlet property="contactPhoneNumber" destination="N3D-xR-4fF" id="PnY-iI-Ts1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4fS-ed-Qgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="671" y="184"/>
+        </scene>
+    </scenes>
+</document>

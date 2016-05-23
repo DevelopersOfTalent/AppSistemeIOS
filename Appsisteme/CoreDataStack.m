@@ -73,7 +73,7 @@
 
 
 - (void)saveContext
-{
+{ NSLog(@"Entra en saveContext");
     NSError *error = nil;
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
     if (managedObjectContext != nil) {
