@@ -117,7 +117,7 @@
         <!--0A guardianRegisterParent-->
         <scene sceneID="7FB-21-TWZ">
             <objects>
-                <viewController title="0A guardianRegisterParent" id="UF2-Bb-Iin" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="0A guardianRegisterParent" id="UF2-Bb-Iin" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ivv-yu-pCe"/>
                         <viewControllerLayoutGuide type="bottom" id="LuP-CA-QYj"/>
@@ -262,33 +262,116 @@ wqFPcyBlc3RhbW9zIGNvbmVjdGFuZG8QISBFbnNlZ3VpZGEgZXN0YW1vcyBsaXN0b3MuLi4
             </objects>
             <point key="canvasLocation" x="1587" y="289"/>
         </scene>
-        <!--2.2_contacts-->
-        <scene sceneID="5qh-23-BW8">
+        <!--2.2.1_my_contacts-->
+        <scene sceneID="SHE-X3-qT6">
             <objects>
-                <viewController title="2.2_contacts" id="vh5-Yh-pXq" sceneMemberID="viewController">
+                <tableViewController title="2.2.1_my_contacts" id="yOq-nZ-Kw1" customClass="ContactsViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4GL-y9-pj7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wDv-U7-FMl">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wDv-U7-FMl" id="paf-A7-ElC">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yOq-nZ-Kw1" id="PAv-UD-sqJ"/>
+                            <outlet property="delegate" destination="yOq-nZ-Kw1" id="BpZ-fr-fD7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Mis Contactos" id="vh4-lS-Fhl">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="bF7-Xp-Xms">
+                            <connections>
+                                <segue destination="rDr-VR-8yb" kind="show" identifier="add" id="tIB-Sl-JoU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dmt-cz-zyN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bip-VO-bNj" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3589" y="-472"/>
+        </scene>
+        <!--2.2.2_new_contact-->
+        <scene sceneID="pWg-GC-WhM">
+            <objects>
+                <viewController title="2.2.2_new_contact" id="rDr-VR-8yb" customClass="NewContactViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ZeK-Z0-dSL"/>
-                        <viewControllerLayoutGuide type="bottom" id="LNM-KH-guL"/>
+                        <viewControllerLayoutGuide type="top" id="ZWx-Vb-ZZm"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Ft-cr-83W"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9Wx-Ax-3d6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <view key="view" contentMode="scaleToFill" id="oZg-1t-cUv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c95-Rw-MN0">
-                                <rect key="frame" x="20" y="20" width="280" height="491"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" red="0.59937667939999995" green="0.29577203800000001" blue="0.26210814560000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="separatorColor" red="0.59937667939999995" green="0.29577203800000001" blue="0.26210814560000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre del contacto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2oV-fS-vkb">
+                                <rect key="frame" x="79" y="91" width="162" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Teléfono del contacto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KRl-5t-fcG">
+                                <rect key="frame" x="79" y="163" width="162" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qzr-Wf-RoP">
+                                <rect key="frame" x="64" y="263" width="67" height="30"/>
+                                <state key="normal" title="Aceptar"/>
+                                <connections>
+                                    <action selector="aceptContact:" destination="rDr-VR-8yb" eventType="touchUpInside" id="GY4-4p-Khm"/>
+                                    <segue destination="bip-VO-bNj" kind="unwind" unwindAction="unwindToContactsView:" id="Gnh-5p-Prn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97J-jl-muR">
+                                <rect key="frame" x="186" y="263" width="71" height="30"/>
+                                <state key="normal" title="Cancelar"/>
+                                <connections>
+                                    <action selector="cancelContact:" destination="rDr-VR-8yb" eventType="touchUpInside" id="dJX-xJ-o2D"/>
+                                    <segue destination="bip-VO-bNj" kind="unwind" unwindAction="unwindToContactsView:" id="W3K-gV-FdY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Teléfonos" id="aYP-c3-fic"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="contactName" destination="2oV-fS-vkb" id="eaw-xY-NxA"/>
+                        <outlet property="contactPhoneNumber" destination="KRl-5t-fcG" id="BGc-X4-y42"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KsK-I2-fcA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YRC-S4-D4h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2730" y="-480"/>
+            <point key="canvasLocation" x="4049" y="-472"/>
+        </scene>
+        <!--2.2_contacts-->
+        <scene sceneID="pBb-wj-i1w">
+            <objects>
+                <navigationController title="2.2_contacts" toolbarHidden="NO" id="Q15-MO-l7F" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Teléfonos" id="kE9-oV-WbT"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8n3-Ek-H0j">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="0aI-dg-1VJ">
+                        <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="yOq-nZ-Kw1" kind="relationship" relationship="rootViewController" id="9gV-yv-ZqI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fn0-hI-Hp6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2656" y="-397"/>
         </scene>
         <!--3.1_parentStates-->
         <scene sceneID="k9x-Rg-aSG">
@@ -366,19 +449,18 @@ wqFPcyBlc3RhbW9zIGNvbmVjdGFuZG8QISBFbnNlZ3VpZGEgZXN0YW1vcyBsaXN0b3MuLi4
                     </tabBar>
                     <connections>
                         <segue destination="CBL-cw-O3l" kind="relationship" relationship="viewControllers" id="NxS-Fq-BvN"/>
-                        <segue destination="vh5-Yh-pXq" kind="relationship" relationship="viewControllers" id="1QT-Je-vd6"/>
+                        <segue destination="Q15-MO-l7F" kind="relationship" relationship="viewControllers" id="bct-Lf-RJF"/>
                         <segue destination="3oK-1B-S2P" kind="relationship" relationship="viewControllers" id="2ze-cB-3Ai"/>
                         <segue destination="nZ6-pK-SG8" kind="relationship" relationship="viewControllers" id="hvr-Ei-DZ0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NVF-wS-S1x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2087" y="-319"/>
+            <point key="canvasLocation" x="2037" y="-345"/>
         </scene>
         <!--2.3_log-->
         <scene sceneID="iZn-k6-FAs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MyN-cX-oHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="2.3_log" id="3oK-1B-S2P" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X0O-Hq-3KP"/>
@@ -400,8 +482,9 @@ wqFPcyBlc3RhbW9zIGNvbmVjdGFuZG8QISBFbnNlZ3VpZGEgZXN0YW1vcyBsaXN0b3MuLi4
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MyN-cX-oHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2818" y="184"/>
+            <point key="canvasLocation" x="2946" y="184"/>
         </scene>
         <!--4 Out Scene-->
         <scene sceneID="kg0-wV-KvV">
@@ -599,6 +682,6 @@ wqFPcyBlc3RhbW9zIGNvbmVjdGFuZG8QISBFbnNlZ3VpZGEgZXN0YW1vcyBsaXN0b3MuLi4
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jTF-Ea-Ccq"/>
+        <segue reference="hvr-Ei-DZ0"/>
     </inferredMetricsTieBreakers>
 </document>
