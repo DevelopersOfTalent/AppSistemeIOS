@@ -41,14 +41,14 @@
     
     [self.coreDataManager addContactIntoCoreDataWithAttributes:self.contactDic];
     
-//    NSUndoManager *undoManager = [[self.contact managedObjectContext] undoManager];
-//    [undoManager setActionName:[NSString stringWithFormat:@"%@", self.editedContactName]];
-//    
-//    [self.editedContactName setValue:self.contactName forKey:self.editedContactName];
-//    
-//    [undoManager setActionName:[NSString stringWithFormat:@"%@", self.editedContactPhoneNumber]];
-//    
-//    [self.editedContactPhoneNumber setValue:self.contactPhoneNumber forKey:self.editedContactPhoneNumber];
+    NSUndoManager *undoManager = [[self.contact managedObjectContext] undoManager];
+    [undoManager setActionName:[NSString stringWithFormat:@"%@", self.editedContactName]];
+    
+    [self.editedContactName setValue:self.contactName forKey:self.editedContactName];
+    
+    [undoManager setActionName:[NSString stringWithFormat:@"%@", self.editedContactPhoneNumber]];
+    
+    [self.editedContactPhoneNumber setValue:self.contactPhoneNumber forKey:self.editedContactPhoneNumber];
     
     
 }
