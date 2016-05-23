@@ -8,6 +8,7 @@
 
 #import "NewContactViewController.h"
 #import "Contact.h"
+#import "CoreDataStack.h"
 
 @interface NewContactViewController ()
 
@@ -59,6 +60,7 @@
     
     // Lo metemos en nuestro ManagedObjectContext
     [self.context insertObject:contact];
+    
 }
 
 
