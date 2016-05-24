@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UserTypeViewController.h
 //  Appsisteme
 //
 //  Created by Alumno on 24/05/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface UserTypeViewController : UIViewController
 
 @end

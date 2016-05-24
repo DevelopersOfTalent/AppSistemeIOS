@@ -2,7 +2,7 @@
 //  CoreDataStack.m
 //  Appsisteme
 //
-//  Created by Paloma Manzano on 22/5/16.
+//  Created by  on 22/5/16.
 //  Copyright © 2016 Alumno. All rights reserved.
 //
 
