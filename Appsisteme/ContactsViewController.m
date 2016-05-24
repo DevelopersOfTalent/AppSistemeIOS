@@ -64,6 +64,46 @@
     return cell;
 }
 
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    
+    Contact *contact =[self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle: contact.name
+                                                                   message:@"¿Que desea hacer?"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Llamar"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {
+                                                              
+                                                              NSString *phNo = contact.phoneNumber;
+                                                              NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",phNo]];
+                                                              
+                                                              if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
+                                                                  [[UIApplication sharedApplication] openURL:phoneUrl];
+                                                              } else
+                                                              {
+                                                                  UIAlertController* alert2 = [UIAlertController alertControllerWithTitle: @"Alert"                                                                                                                                 message:@"Call facility is not available!!!"
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+                                                                  UIAlertAction* alertIn = [UIAlertAction actionWithTitle:@"OK"
+                                                                                                                           style:UIAlertActionStyleDefault
+                                                                                                                         handler:^(UIAlertAction * action) {
+                                                                                                                             
+                                                                                                                             
+                                                                                                                         }];
+                                                                  [alert2 addAction:alertIn];
+                                                              }
+                                                          }];
+    UIAlertAction* defaultAction2 = [UIAlertAction actionWithTitle:@"Atras"
+                                                             style:UIAlertActionStyleDefault
+                                                           handler:^(UIAlertAction * action) {
+                                                               
+                                                               
+                                                           }];
+    [alert addAction:defaultAction];
+    [alert addAction:defaultAction2];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 
 //#pragma mark - Interface
 //
@@ -97,6 +137,8 @@
 -(IBAction)unwindToContactsView:(UIStoryboardSegue *)sender {
     
 }
+
+
 
 @end
 
