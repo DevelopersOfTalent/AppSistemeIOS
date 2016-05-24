@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "CoreDataStack.h"
+#import <OneSignal/OneSignal.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) CoreDataStack *coreDataStack;
+
+@property (strong, nonatomic) OneSignal *oneSignal;
 
 /**
  * Returns the application delegate

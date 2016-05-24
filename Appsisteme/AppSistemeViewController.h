@@ -10,4 +10,6 @@
 
 @interface AppSistemeViewController : UIViewController
 
+-(void) segueToNextViewController;
+
 @end

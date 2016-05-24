@@ -20,7 +20,11 @@
 		FB0285421CEC5EBF005B6B67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB0285411CEC5EBF005B6B67 /* Assets.xcassets */; };
 		FB0285451CEC5EBF005B6B67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB0285431CEC5EBF005B6B67 /* LaunchScreen.storyboard */; };
 		FB0285501CEC5EBF005B6B67 /* AppsistemeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB02854F1CEC5EBF005B6B67 /* AppsistemeTests.m */; };
+		FBA12EC01CF45B70003A0649 /* OneSignal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA12EBF1CF45B70003A0649 /* OneSignal.framework */; };
+		FBA12EC21CF45C37003A0649 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA12EC11CF45C37003A0649 /* SystemConfiguration.framework */; };
+		FBA12EC51CF46399003A0649 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA12EC41CF46399003A0649 /* ViewController.m */; };
 		FBD1EFAE1CEDB5F30056AB89 /* NewContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD1EFAD1CEDB5F30056AB89 /* NewContactViewController.m */; };
+		FBEE177F1CF43CB7001D05CF /* AppSistemeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEE177E1CF43CB7001D05CF /* AppSistemeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +63,14 @@
 		FB02854B1CEC5EBF005B6B67 /* AppsistemeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppsistemeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB02854F1CEC5EBF005B6B67 /* AppsistemeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppsistemeTests.m; sourceTree = "<group>"; };
 		FB0285511CEC5EBF005B6B67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBA12EBF1CF45B70003A0649 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OneSignal.framework; sourceTree = "<group>"; };
+		FBA12EC11CF45C37003A0649 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FBA12EC31CF46399003A0649 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FBA12EC41CF46399003A0649 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FBD1EFAC1CEDB5F30056AB89 /* NewContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewContactViewController.h; sourceTree = "<group>"; };
 		FBD1EFAD1CEDB5F30056AB89 /* NewContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewContactViewController.m; sourceTree = "<group>"; };
+		FBEE177D1CF43CB7001D05CF /* AppSistemeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSistemeViewController.h; sourceTree = "<group>"; };
+		FBEE177E1CF43CB7001D05CF /* AppSistemeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSistemeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA12EC21CF45C37003A0649 /* SystemConfiguration.framework in Frameworks */,
+				FBA12EC01CF45B70003A0649 /* OneSignal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +105,7 @@
 		FB0285261CEC5EBF005B6B67 = {
 			isa = PBXGroup;
 			children = (
+				FBA12EC11CF45C37003A0649 /* SystemConfiguration.framework */,
 				FB0285311CEC5EBF005B6B67 /* Appsisteme */,
 				FB02854E1CEC5EBF005B6B67 /* AppsistemeTests */,
 				FB0285301CEC5EBF005B6B67 /* Products */,
@@ -111,8 +124,10 @@
 		FB0285311CEC5EBF005B6B67 /* Appsisteme */ = {
 			isa = PBXGroup;
 			children = (
+				FBA12EBF1CF45B70003A0649 /* OneSignal.framework */,
 				FB0285351CEC5EBF005B6B67 /* AppDelegate.h */,
 				FB0285361CEC5EBF005B6B67 /* AppDelegate.m */,
+				FBEE17831CF43F93001D05CF /* Class */,
 				FBD1EFAB1CEDB5980056AB89 /* View Controllers */,
 				FB0285701CEC86AA005B6B67 /* Core Data */,
 				FB02855D1CEC71A7005B6B67 /* Model */,
@@ -167,6 +182,10 @@
 		FBD1EFAB1CEDB5980056AB89 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FBA12EC31CF46399003A0649 /* ViewController.h */,
+				FBA12EC41CF46399003A0649 /* ViewController.m */,
+				FBEE177D1CF43CB7001D05CF /* AppSistemeViewController.h */,
+				FBEE177E1CF43CB7001D05CF /* AppSistemeViewController.m */,
 				FB0285381CEC5EBF005B6B67 /* ContactsViewController.h */,
 				FB0285391CEC5EBF005B6B67 /* ContactsViewController.m */,
 				FBD1EFAC1CEDB5F30056AB89 /* NewContactViewController.h */,
@@ -175,6 +194,13 @@
 				6554DB1D1CF1B701002684D5 /* CoreDataTableViewController.m */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FBEE17831CF43F93001D05CF /* Class */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +252,12 @@
 				TargetAttributes = {
 					FB02852E1CEC5EBF005B6B67 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = JUUC95RWCX;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					FB02854A1CEC5EBF005B6B67 = {
 						CreatedOnToolsVersion = 7.3;
@@ -282,6 +314,8 @@
 				6554DB161CF1AB8B002684D5 /* Contact+CoreDataProperties.m in Sources */,
 				FB0285371CEC5EBF005B6B67 /* AppDelegate.m in Sources */,
 				6554DB1E1CF1B701002684D5 /* CoreDataTableViewController.m in Sources */,
+				FBEE177F1CF43CB7001D05CF /* AppSistemeViewController.m in Sources */,
+				FBA12EC51CF46399003A0649 /* ViewController.m in Sources */,
 				FBD1EFAE1CEDB5F30056AB89 /* NewContactViewController.m in Sources */,
 				6554DB1A1CF1AE07002684D5 /* Contact+Methods.m in Sources */,
 				FB0285341CEC5EBF005B6B67 /* main.m in Sources */,
@@ -365,7 +399,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -404,7 +438,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -416,9 +450,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Appsisteme",
+				);
 				INFOPLIST_FILE = Appsisteme/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = test.Appsisteme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -428,9 +468,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Appsisteme",
+				);
 				INFOPLIST_FILE = Appsisteme/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = test.Appsisteme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
