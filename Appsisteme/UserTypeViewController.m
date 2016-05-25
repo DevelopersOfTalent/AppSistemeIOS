@@ -7,10 +7,13 @@
 //
 
 #import "UserTypeViewController.h"
+#import "RegisterViewController.h"
 
 @interface UserTypeViewController ()
 
-#define VIGILANTE @"Soy padre";
+@property (weak, nonatomic) IBOutlet UIButton *guardian;
+
+@property (weak, nonatomic) IBOutlet UIButton *guarded;
 
 @property (nonatomic, copy) NSString *userType;
 
@@ -18,16 +21,36 @@
 
 @implementation UserTypeViewController
 
+#pragma mark - LifeCycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
+
+#pragma mark - segues
+
 - (IBAction) setUser:(UIButton *) sender {
-//    
-//    if ([sender.titleLabel.text isEqualToString:VIGILANTE]) {
-//        
-//    }
+    
+    if ([sender.titleLabel.text isEqualToString:self.guardian.titleLabel.text]) {
+        self.userType = @"guardian";
+    }
+    if ([sender.titleLabel.text isEqualToString:self.guarded.titleLabel.text]) {
+        self.userType = @"guarded";
+    }
+    
+    [self performSegueWithIdentifier:@"segueToRegister" sender:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([[segue identifier] isEqualToString:@"segueToRegister"]) {
+        
+        RegisterViewController *registerVC = (RegisterViewController *)[segue destinationViewController];
+        
+        [registerVC receiveUserType:self.userType];
+    }
 }
 
 @end

@@ -77,7 +77,7 @@
 }
 
 
-#pragma mark - segue function
+#pragma mark - Before segue function
 
 -(void) receiveContext:(NSManagedObjectContext *) context {
     

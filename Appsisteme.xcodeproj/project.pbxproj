@@ -24,6 +24,7 @@
 		FBA12EC21CF45C37003A0649 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA12EC11CF45C37003A0649 /* SystemConfiguration.framework */; };
 		FBA12EC81CF46C5C003A0649 /* UserTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA12EC71CF46C5C003A0649 /* UserTypeViewController.m */; };
 		FBD1EFAE1CEDB5F30056AB89 /* NewContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD1EFAD1CEDB5F30056AB89 /* NewContactViewController.m */; };
+		FBD8A3EC1CF58EC60076F920 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD8A3EB1CF58EC60076F920 /* RegisterViewController.m */; };
 		FBEE177F1CF43CB7001D05CF /* AppSistemeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEE177E1CF43CB7001D05CF /* AppSistemeViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,8 @@
 		FBA12EC71CF46C5C003A0649 /* UserTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTypeViewController.m; sourceTree = "<group>"; };
 		FBD1EFAC1CEDB5F30056AB89 /* NewContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewContactViewController.h; sourceTree = "<group>"; };
 		FBD1EFAD1CEDB5F30056AB89 /* NewContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewContactViewController.m; sourceTree = "<group>"; };
+		FBD8A3EA1CF58EC60076F920 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		FBD8A3EB1CF58EC60076F920 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		FBEE177D1CF43CB7001D05CF /* AppSistemeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSistemeViewController.h; sourceTree = "<group>"; };
 		FBEE177E1CF43CB7001D05CF /* AppSistemeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSistemeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,6 +187,8 @@
 			children = (
 				FBA12EC61CF46C5C003A0649 /* UserTypeViewController.h */,
 				FBA12EC71CF46C5C003A0649 /* UserTypeViewController.m */,
+				FBD8A3EA1CF58EC60076F920 /* RegisterViewController.h */,
+				FBD8A3EB1CF58EC60076F920 /* RegisterViewController.m */,
 				FBEE177D1CF43CB7001D05CF /* AppSistemeViewController.h */,
 				FBEE177E1CF43CB7001D05CF /* AppSistemeViewController.m */,
 				FB0285381CEC5EBF005B6B67 /* ContactsViewController.h */,
@@ -318,6 +323,7 @@
 				FBD1EFAE1CEDB5F30056AB89 /* NewContactViewController.m in Sources */,
 				6554DB1A1CF1AE07002684D5 /* Contact+Methods.m in Sources */,
 				FB0285341CEC5EBF005B6B67 /* main.m in Sources */,
+				FBD8A3EC1CF58EC60076F920 /* RegisterViewController.m in Sources */,
 				6554DB211CF1CADE002684D5 /* Model.xcdatamodeld in Sources */,
 				6554DB111CF1A33C002684D5 /* CoreDataStack.m in Sources */,
 				FBA12EC81CF46C5C003A0649 /* UserTypeViewController.m in Sources */,
