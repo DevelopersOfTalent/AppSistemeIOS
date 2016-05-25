@@ -10,6 +10,8 @@
 #import "Contact.h"
 #import "NewContactViewController.h"
 #import "AppDelegate.h"
+#import "ContactsTableViewCell.h"
+#import "EditContactViewController.h"
 
 
 @interface ContactsViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -52,16 +54,28 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView
         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"cell";
+    ContactsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[ContactsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    cell.preferencesButton.tag = indexPath.row;
+    [cell.preferencesButton addTarget:self action:@selector(editContact:) forControlEvents:(UIControlEventTouchUpInside)];
+    
+    
+    
+    
     Contact *contact = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = contact.name;
+    cell.labelContactsName.text = contact.name;
     
     return cell;
+}
+
+- (void)editContact:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"edit" sender:sender];
+    
+    
 }
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -76,23 +90,10 @@
                                                           handler:^(UIAlertAction * action) {
                                                               
                                                               NSString *phNo = contact.phoneNumber;
-                                                              NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",phNo]];
                                                               
-                                                              if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
-                                                                  [[UIApplication sharedApplication] openURL:phoneUrl];
-                                                              } else
-                                                              {
-                                                                  UIAlertController* alert2 = [UIAlertController alertControllerWithTitle: @"Alert"                                                                                                                                 message:@"Call facility is not available!!!"
-                                                                preferredStyle:UIAlertControllerStyleAlert];
-                                                                  UIAlertAction* alertIn = [UIAlertAction actionWithTitle:@"OK"
-                                                                                                                           style:UIAlertActionStyleDefault
-                                                                                                                         handler:^(UIAlertAction * action) {
-                                                                                                                             
-                                                                                                                             
-                                                                                                                         }];
-                                                                  [alert2 addAction:alertIn];
-                                                              }
-                                                          }];
+                                                              [self makeCall:phNo];
+                                                              
+                                                              }];
     UIAlertAction* defaultAction2 = [UIAlertAction actionWithTitle:@"Atras"
                                                              style:UIAlertActionStyleDefault
                                                            handler:^(UIAlertAction * action) {
@@ -132,9 +133,50 @@
         
         [newContactVC receiveContext:_context];
     }
+    
+    if ([[segue identifier] isEqualToString:@"edit"]) {
+        
+        //butoon
+        
+        [NSIndexPath indexPathForRow:sender.tag inSection:0];
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Contact *selectedContact = (Contact *)[[self fetchedResultsController] objectAtIndexPath:indexPath];
+        
+        
+        
+        EditContactViewController *editContactViewController = (EditContactViewController *)[segue destinationViewController];
+        
+        [editContactViewController receiveContext:self.context andContact:selectedContact];
+    }
 }
 
 -(IBAction)unwindToContactsView:(UIStoryboardSegue *)sender {
+    
+}
+
+-(void) makeCall: (NSString *)phNo {
+    
+    
+    NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",phNo]];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
+        
+        [[UIApplication sharedApplication] openURL:phoneUrl];
+        
+    } else
+    {
+        UIAlertController* alert2 = [UIAlertController alertControllerWithTitle: @"Alert"                                                                                                                                 message:@"Call facility is not available!!!"
+            preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* alertIn = [UIAlertAction actionWithTitle:@"OK"
+                                                          style:UIAlertActionStyleDefault
+                                                        handler:^(UIAlertAction * action) {
+                                                            
+                                                            
+                                                        }];
+        [alert2 addAction:alertIn];
+    }
     
 }
 

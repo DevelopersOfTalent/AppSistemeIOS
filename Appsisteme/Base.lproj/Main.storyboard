@@ -271,13 +271,41 @@ wqFPcyBlc3RhbW9zIGNvbmVjdGFuZG8QISBFbnNlZ3VpZGEgZXN0YW1vcyBsaXN0b3MuLi4
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wDv-U7-FMl">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="wDv-U7-FMl" customClass="ContactsTableViewCell">
                                 <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wDv-U7-FMl" id="paf-A7-ElC">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUe-aD-2Q4">
+                                            <rect key="frame" x="248" y="5" width="46" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="46" id="bwk-Cs-JQe"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9g-dO-mRp">
+                                            <rect key="frame" x="20" y="9" width="138" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="tUe-aD-2Q4" firstAttribute="leading" secondItem="j9g-dO-mRp" secondAttribute="trailing" constant="90" id="6wL-8U-4PK"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="j9g-dO-mRp" secondAttribute="bottom" constant="5" id="IFB-Sl-AfP"/>
+                                        <constraint firstItem="tUe-aD-2Q4" firstAttribute="baseline" secondItem="j9g-dO-mRp" secondAttribute="baseline" id="bzR-pP-jBY"/>
+                                        <constraint firstItem="j9g-dO-mRp" firstAttribute="top" secondItem="paf-A7-ElC" secondAttribute="topMargin" constant="1" id="cqL-Tt-JXO"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="tUe-aD-2Q4" secondAttribute="trailing" constant="18" id="gcg-B8-xed"/>
+                                        <constraint firstItem="j9g-dO-mRp" firstAttribute="leading" secondItem="paf-A7-ElC" secondAttribute="leadingMargin" constant="12" id="v5i-ck-h9y"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contactsCell" destination="paf-A7-ElC" id="Gzf-RA-XGs"/>
+                                    <outlet property="labelContactsName" destination="j9g-dO-mRp" id="EcL-gc-qAE"/>
+                                    <outlet property="preferencesButton" destination="tUe-aD-2Q4" id="RP2-mx-xnZ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -293,11 +321,59 @@ wqFPcyBlc3RhbW9zIGNvbmVjdGFuZG8QISBFbnNlZ3VpZGEgZXN0YW1vcyBsaXN0b3MuLi4
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <segue destination="Q8z-Fr-e8S" kind="show" identifier="edit" id="ksT-3Z-qI8"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmt-cz-zyN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="bip-VO-bNj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3589" y="-472"/>
+        </scene>
+        <!--Edit Contact View Controller-->
+        <scene sceneID="8ZQ-nO-Kdi">
+            <objects>
+                <viewController id="Q8z-Fr-e8S" customClass="EditContactViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z9y-Wq-cB4"/>
+                        <viewControllerLayoutGuide type="bottom" id="JRe-WZ-OCd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yfG-ug-0hU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre del contacto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N1D-L0-1u2">
+                                <rect key="frame" x="79" y="132" width="162" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Teléfono del contacto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o5q-Ux-5cj">
+                                <rect key="frame" x="79" y="203" width="162" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRM-s3-2Rj">
+                                <rect key="frame" x="61" y="285" width="92" height="30"/>
+                                <state key="normal" title="Editar"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7b-l7-lsh">
+                                <rect key="frame" x="175" y="285" width="86" height="30"/>
+                                <state key="normal" title="Eliminar"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="contactName" destination="N1D-L0-1u2" id="L1Q-54-cUO"/>
+                        <outlet property="contactPhoneNumber" destination="o5q-Ux-5cj" id="qGy-1e-cA0"/>
+                        <outlet property="deleteButton" destination="V7b-l7-lsh" id="wcR-WL-8PJ"/>
+                        <outlet property="editButton" destination="vRM-s3-2Rj" id="wRZ-dR-sHi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tNw-0a-lgB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3773" y="-1040"/>
         </scene>
         <!--2.2.2_new_contact-->
         <scene sceneID="pWg-GC-WhM">
@@ -311,11 +387,6 @@ wqFPcyBlc3RhbW9zIGNvbmVjdGFuZG8QISBFbnNlZ3VpZGEgZXN0YW1vcyBsaXN0b3MuLi4
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre del contacto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2oV-fS-vkb">
-                                <rect key="frame" x="79" y="91" width="162" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Teléfono del contacto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KRl-5t-fcG">
                                 <rect key="frame" x="79" y="163" width="162" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -337,6 +408,11 @@ wqFPcyBlc3RhbW9zIGNvbmVjdGFuZG8QISBFbnNlZ3VpZGEgZXN0YW1vcyBsaXN0b3MuLi4
                                     <segue destination="bip-VO-bNj" kind="unwind" unwindAction="unwindToContactsView:" id="W3K-gV-FdY"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre del contacto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2oV-fS-vkb">
+                                <rect key="frame" x="79" y="91" width="162" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -348,7 +424,7 @@ wqFPcyBlc3RhbW9zIGNvbmVjdGFuZG8QISBFbnNlZ3VpZGEgZXN0YW1vcyBsaXN0b3MuLi4
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YRC-S4-D4h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4049" y="-472"/>
+            <point key="canvasLocation" x="4054" y="-448"/>
         </scene>
         <!--2.2_contacts-->
         <scene sceneID="pBb-wj-i1w">

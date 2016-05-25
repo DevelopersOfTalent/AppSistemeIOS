@@ -42,6 +42,7 @@
     self.context = self.contextAux;
     
     [self.contactName becomeFirstResponder];
+    
 }
 
 
