@@ -37,10 +37,10 @@
 -(IBAction) segueWithUserType:(UIButton *) sender {
     
     if ([self.userType isEqualToString:@"guardian"]) {
-        [self performSegueWithIdentifier:@"segueToGuardian" sender:nil];
+        [self performSegueWithIdentifier:@"segueToGuardianPath" sender:nil];
     }
     if ([self.userType isEqualToString:@"guarded"]) {
-        [self performSegueWithIdentifier:@"segueToGuarded" sender:nil];
+        [self performSegueWithIdentifier:@"segueToGuardedPath" sender:nil];
     }
 }
 

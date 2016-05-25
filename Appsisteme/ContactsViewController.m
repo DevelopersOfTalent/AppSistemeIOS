@@ -22,6 +22,8 @@
 @implementation ContactsViewController
 
 
+#pragma mark - LifeCycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -33,6 +35,7 @@
     
     [self loadContacts];
 }
+
 
 #pragma mark - Core Data
 
@@ -64,23 +67,6 @@
     return cell;
 }
 
-
-//#pragma mark - Interface
-//
-//-(void) addInsertButton
-//{
-//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonWasTapped:)];
-//    self.navigationItem.rightBarButtonItem = addButton;
-//}
-//
-//
-//#pragma mark - Events
-//
-//-(void) addButtonWasTapped:(id)sender
-//{
-//    NewContactViewController *newContactVC = [[NewContactViewController alloc] initWithContext:self.context];
-//    [self presentViewController:newContactVC animated:YES completion:nil];
-//}
 
 #pragma mark - Segues
 
