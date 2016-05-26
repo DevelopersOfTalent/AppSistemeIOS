@@ -42,6 +42,7 @@
     self.context = self.contextAux;
     
     [self.contactName becomeFirstResponder];
+    
 }
 
 
@@ -60,7 +61,7 @@
     
     // Lo metemos en nuestro ManagedObjectContext
     [self.context insertObject:contact];
-    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
@@ -68,6 +69,7 @@
 - (IBAction)cancelContact:(UIButton *)sender {
     
     [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)aceptContact:(UIButton *)sender {

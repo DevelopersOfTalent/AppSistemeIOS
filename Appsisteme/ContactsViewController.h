@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CoreDataTableViewController.h"
 
+
 @interface ContactsViewController : CoreDataTableViewController
 
 - (void) loadContacts;
