@@ -20,6 +20,9 @@
 		FB0285421CEC5EBF005B6B67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB0285411CEC5EBF005B6B67 /* Assets.xcassets */; };
 		FB0285451CEC5EBF005B6B67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB0285431CEC5EBF005B6B67 /* LaunchScreen.storyboard */; };
 		FB0285501CEC5EBF005B6B67 /* AppsistemeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB02854F1CEC5EBF005B6B67 /* AppsistemeTests.m */; };
+		FB509CD41CF58626006D8922 /* ContactsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB509CD31CF58626006D8922 /* ContactsTableViewCell.m */; };
+		FB509CDD1CF59EB2006D8922 /* EditContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB509CDC1CF59EB2006D8922 /* EditContactViewController.m */; };
+		FB509CDF1CF5AFD8006D8922 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB509CDE1CF5AFD8006D8922 /* Foundation.framework */; };
 		FBA12EC01CF45B70003A0649 /* OneSignal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA12EBF1CF45B70003A0649 /* OneSignal.framework */; };
 		FBA12EC21CF45C37003A0649 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA12EC11CF45C37003A0649 /* SystemConfiguration.framework */; };
 		FBA12EC81CF46C5C003A0649 /* UserTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA12EC71CF46C5C003A0649 /* UserTypeViewController.m */; };
@@ -65,6 +68,11 @@
 		FB02854B1CEC5EBF005B6B67 /* AppsistemeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppsistemeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB02854F1CEC5EBF005B6B67 /* AppsistemeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppsistemeTests.m; sourceTree = "<group>"; };
 		FB0285511CEC5EBF005B6B67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB509CD21CF58626006D8922 /* ContactsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewCell.h; sourceTree = "<group>"; };
+		FB509CD31CF58626006D8922 /* ContactsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewCell.m; sourceTree = "<group>"; };
+		FB509CDB1CF59EB2006D8922 /* EditContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditContactViewController.h; sourceTree = "<group>"; };
+		FB509CDC1CF59EB2006D8922 /* EditContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditContactViewController.m; sourceTree = "<group>"; };
+		FB509CDE1CF5AFD8006D8922 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FBA12EBF1CF45B70003A0649 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OneSignal.framework; sourceTree = "<group>"; };
 		FBA12EC11CF45C37003A0649 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FBA12EC61CF46C5C003A0649 /* UserTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTypeViewController.h; sourceTree = "<group>"; };
@@ -84,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB509CDF1CF5AFD8006D8922 /* Foundation.framework in Frameworks */,
 				FBA12EC21CF45C37003A0649 /* SystemConfiguration.framework in Frameworks */,
 				FBA12EC01CF45B70003A0649 /* OneSignal.framework in Frameworks */,
 			);
@@ -111,7 +120,6 @@
 		FB0285261CEC5EBF005B6B67 = {
 			isa = PBXGroup;
 			children = (
-				FBA12EC11CF45C37003A0649 /* SystemConfiguration.framework */,
 				FB0285311CEC5EBF005B6B67 /* Appsisteme */,
 				FB02854E1CEC5EBF005B6B67 /* AppsistemeTests */,
 				FB0285301CEC5EBF005B6B67 /* Products */,
@@ -130,6 +138,8 @@
 		FB0285311CEC5EBF005B6B67 /* Appsisteme */ = {
 			isa = PBXGroup;
 			children = (
+				FB509CDE1CF5AFD8006D8922 /* Foundation.framework */,
+				FBA12EC11CF45C37003A0649 /* SystemConfiguration.framework */,
 				FBA12EBF1CF45B70003A0649 /* OneSignal.framework */,
 				FB0285351CEC5EBF005B6B67 /* AppDelegate.h */,
 				FB0285361CEC5EBF005B6B67 /* AppDelegate.m */,
@@ -200,6 +210,12 @@
 				FB0285391CEC5EBF005B6B67 /* ContactsViewController.m */,
 				FBD1EFAC1CEDB5F30056AB89 /* NewContactViewController.h */,
 				FBD1EFAD1CEDB5F30056AB89 /* NewContactViewController.m */,
+				6554DB1C1CF1B701002684D5 /* CoreDataTableViewController.h */,
+				6554DB1D1CF1B701002684D5 /* CoreDataTableViewController.m */,
+				FB509CD21CF58626006D8922 /* ContactsTableViewCell.h */,
+				FB509CD31CF58626006D8922 /* ContactsTableViewCell.m */,
+				FB509CDB1CF59EB2006D8922 /* EditContactViewController.h */,
+				FB509CDC1CF59EB2006D8922 /* EditContactViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -326,9 +342,11 @@
 				6554DB171CF1AB8B002684D5 /* Contact.m in Sources */,
 				FB02853A1CEC5EBF005B6B67 /* ContactsViewController.m in Sources */,
 				6554DB161CF1AB8B002684D5 /* Contact+CoreDataProperties.m in Sources */,
+				FB509CDD1CF59EB2006D8922 /* EditContactViewController.m in Sources */,
 				FB0285371CEC5EBF005B6B67 /* AppDelegate.m in Sources */,
 				6554DB1E1CF1B701002684D5 /* CoreDataTableViewController.m in Sources */,
 				FBD1EFAE1CEDB5F30056AB89 /* NewContactViewController.m in Sources */,
+				FB509CD41CF58626006D8922 /* ContactsTableViewCell.m in Sources */,
 				6554DB1A1CF1AE07002684D5 /* Contact+Methods.m in Sources */,
 				FBD8A3EF1CF5DD4F0076F920 /* NavigationViewController.m in Sources */,
 				FB0285341CEC5EBF005B6B67 /* main.m in Sources */,
@@ -467,6 +485,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Appsisteme",
@@ -477,6 +496,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.talentum.appsisteme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -486,6 +506,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Appsisteme",
@@ -496,6 +517,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.talentum.appsisteme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
