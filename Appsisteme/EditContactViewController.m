@@ -8,7 +8,9 @@
 
 #import "EditContactViewController.h"
 #import "Contact.h"
-#import "CoreDataStack.h"
+
+
+
 
 @interface EditContactViewController ()
 
@@ -26,6 +28,8 @@
 @property (nonatomic, strong) Contact *editedContact;
 @property (nonatomic, strong) Contact *editedContactAux;
 
+
+
 @end
 
 @implementation EditContactViewController
@@ -42,6 +46,10 @@
     
     self.textFieldName.text = self.editedContact.name;
     self.textFieldPhoneNumber.text = self.editedContact.phoneNumber;
+    
+
+    
+    
 }
 
 
@@ -60,13 +68,25 @@
     return self;
 }
 
--(void) editContact
-{
+- (IBAction)editContact:(id)sender {
     
     
-    
-    
-    
+    [self.editedContact setName:self.textFieldName.text];
+    [self.editedContact setPhoneNumber:self.textFieldPhoneNumber.text];
+    [self.navigationController popViewControllerAnimated:YES];
+
 }
+
+    
+
+- (IBAction)deleteContact:(id)sender {
+    
+    
+    [_context deleteObject:_editedContact];
+    [self.navigationController popViewControllerAnimated:YES];
+
+}
+    
+
 
 @end

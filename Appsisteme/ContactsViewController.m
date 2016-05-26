@@ -27,12 +27,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _context = [[[AppDelegate appDelegate] coreDataStack] managedObjectContext];
+  _context = [[[AppDelegate appDelegate] coreDataStack] managedObjectContext];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+    _context = [[[AppDelegate appDelegate] coreDataStack] managedObjectContext];
     [self loadContacts];
 }
 
@@ -134,9 +134,7 @@
     }
 }
 
--(IBAction)unwindToContactsView:(UIStoryboardSegue *)sender {
-    
-}
+
 
 -(void) makeCall: (NSString *)phNo {
     

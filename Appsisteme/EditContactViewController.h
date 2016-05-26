@@ -20,7 +20,7 @@
 
 -(instancetype) initWithContext: (NSManagedObjectContext *) context;
 
--(void) editContact;
+
 
 -(void) receiveContext:(NSManagedObjectContext *) context andContact:(Contact *) editedContact;
 
