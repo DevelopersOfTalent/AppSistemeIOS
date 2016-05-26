@@ -347,11 +347,6 @@ wqFPcyBlc3RhbW9zIGNvbmVjdGFuZG8QISBFbnNlZ3VpZGEgZXN0YW1vcyBsaXN0b3MuLi4
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Teléfono del contacto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o5q-Ux-5cj">
-                                <rect key="frame" x="79" y="203" width="162" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRM-s3-2Rj">
                                 <rect key="frame" x="61" y="285" width="92" height="30"/>
                                 <state key="normal" title="Editar"/>
@@ -360,15 +355,20 @@ wqFPcyBlc3RhbW9zIGNvbmVjdGFuZG8QISBFbnNlZ3VpZGEgZXN0YW1vcyBsaXN0b3MuLi4
                                 <rect key="frame" x="175" y="285" width="86" height="30"/>
                                 <state key="normal" title="Eliminar"/>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Teléfono del contacto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o5q-Ux-5cj">
+                                <rect key="frame" x="79" y="203" width="162" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="contactName" destination="N1D-L0-1u2" id="L1Q-54-cUO"/>
-                        <outlet property="contactPhoneNumber" destination="o5q-Ux-5cj" id="qGy-1e-cA0"/>
                         <outlet property="deleteButton" destination="V7b-l7-lsh" id="wcR-WL-8PJ"/>
                         <outlet property="editButton" destination="vRM-s3-2Rj" id="wRZ-dR-sHi"/>
+                        <outlet property="textFieldName" destination="N1D-L0-1u2" id="3Zm-kI-f2u"/>
+                        <outlet property="textFieldPhoneNumber" destination="o5q-Ux-5cj" id="p3w-Xw-zar"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNw-0a-lgB" userLabel="First Responder" sceneMemberID="firstResponder"/>

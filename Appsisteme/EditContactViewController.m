@@ -14,8 +14,8 @@
 
 
 
-@property (weak, nonatomic) IBOutlet UITextField *contactName;
-@property (weak, nonatomic) IBOutlet UITextField *contactPhoneNumber;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldName;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldPhoneNumber;
 
 @property (weak, nonatomic) IBOutlet UIButton *editButton;
 @property (weak, nonatomic) IBOutlet UIButton *deleteButton;
@@ -40,8 +40,8 @@
     self.context = self.contextAux;
     self.editedContact = self.editedContactAux;
     
-    self.contactName.text = self.editedContact.name;
-    self.contactPhoneNumber.text = self.editedContact.phoneNumber;
+    self.textFieldName.text = self.editedContact.name;
+    self.textFieldPhoneNumber.text = self.editedContact.phoneNumber;
 }
 
 
@@ -62,6 +62,7 @@
 
 -(void) editContact
 {
+    
     
     
     

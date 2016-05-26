@@ -106,23 +106,6 @@
 }
 
 
-//#pragma mark - Interface
-//
-//-(void) addInsertButton
-//{
-//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonWasTapped:)];
-//    self.navigationItem.rightBarButtonItem = addButton;
-//}
-//
-//
-//#pragma mark - Events
-//
-//-(void) addButtonWasTapped:(id)sender
-//{
-//    NewContactViewController *newContactVC = [[NewContactViewController alloc] initWithContext:self.context];
-//    [self presentViewController:newContactVC animated:YES completion:nil];
-//}
-
 #pragma mark - Segues
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -136,11 +119,11 @@
     
     if ([[segue identifier] isEqualToString:@"edit"]) {
         
-        //butoon
+        //button
         
-        [NSIndexPath indexPathForRow:sender.tag inSection:0];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:((UIView*)sender).tag inSection:0];
         
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Contact *selectedContact = (Contact *)[[self fetchedResultsController] objectAtIndexPath:indexPath];
         
         
