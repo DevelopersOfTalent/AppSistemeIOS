@@ -47,9 +47,6 @@
     self.textFieldName.text = self.editedContact.name;
     self.textFieldPhoneNumber.text = self.editedContact.phoneNumber;
     
-
-    
-    
 }
 
 
@@ -73,8 +70,8 @@
     
     [self.editedContact setName:self.textFieldName.text];
     [self.editedContact setPhoneNumber:self.textFieldPhoneNumber.text];
+    
     [self.navigationController popViewControllerAnimated:YES];
-
 }
 
     
@@ -83,6 +80,7 @@
     
     
     [_context deleteObject:_editedContact];
+    
     [self.navigationController popViewControllerAnimated:YES];
 
 }

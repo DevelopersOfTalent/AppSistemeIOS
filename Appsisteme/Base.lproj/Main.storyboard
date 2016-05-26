@@ -236,13 +236,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="wDv-U7-FMl">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="wDv-U7-FMl" customClass="ContactsTableViewCell">
                                 <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wDv-U7-FMl" id="paf-A7-ElC">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ijk-2Y-3au">
+                                            <rect key="frame" x="33" y="11" width="169" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvb-Af-BfU">
+                                            <rect key="frame" x="250" y="7" width="46" height="30"/>
+                                            <state key="normal" title="Editar"/>
+                                        </button>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contactsCell" destination="paf-A7-ElC" id="acr-1o-cjI"/>
+                                    <outlet property="labelContactsName" destination="Ijk-2Y-3au" id="WCS-lp-OA3"/>
+                                    <outlet property="preferencesButton" destination="yvb-Af-BfU" id="vLJ-my-WyJ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -251,18 +268,73 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="vh4-lS-Fhl">
-                        <barButtonItem key="rightBarButtonItem" title="+" id="bF7-Xp-Xms">
+                        <barButtonItem key="rightBarButtonItem" title="ADD" width="25" id="bF7-Xp-Xms">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="rDr-VR-8yb" kind="show" identifier="add" id="tIB-Sl-JoU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <segue destination="jAP-xF-qSl" kind="show" identifier="edit" id="n82-n3-7mt"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmt-cz-zyN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="bip-VO-bNj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2999" y="-115"/>
+        </scene>
+        <!--Edit Contact View Controller-->
+        <scene sceneID="6yL-sF-Mg1">
+            <objects>
+                <viewController id="jAP-xF-qSl" customClass="EditContactViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LOy-sR-xib"/>
+                        <viewControllerLayoutGuide type="bottom" id="YWn-Au-Lkb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0r8-su-RnS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ym-qM-Fle">
+                                <rect key="frame" x="80" y="353" width="46" height="30"/>
+                                <state key="normal" title="Editar"/>
+                                <connections>
+                                    <action selector="editContact:" destination="jAP-xF-qSl" eventType="touchUpInside" id="qxc-uY-is2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJf-V4-owA">
+                                <rect key="frame" x="205" y="353" width="62" height="30"/>
+                                <state key="normal" title="Eliminar"/>
+                                <connections>
+                                    <action selector="deleteContact:" destination="jAP-xF-qSl" eventType="touchUpInside" id="BQu-WS-6B5"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rXK-AR-KBQ">
+                                <rect key="frame" x="112" y="195" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Teléfono" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GUU-ZF-U0y">
+                                <rect key="frame" x="112" y="245" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="deleteButton" destination="uJf-V4-owA" id="WII-wT-ARj"/>
+                        <outlet property="editButton" destination="5Ym-qM-Fle" id="cqQ-UJ-YYd"/>
+                        <outlet property="textFieldName" destination="rXK-AR-KBQ" id="yjf-l7-vMH"/>
+                        <outlet property="textFieldPhoneNumber" destination="GUU-ZF-U0y" id="0Fs-kB-024"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p7p-MM-sce" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3487" y="-715"/>
         </scene>
         <!--2.2.2_new_contact-->
         <scene sceneID="pWg-GC-WhM">
@@ -786,7 +858,7 @@
     <resources>
         <image name="buttom_bad" width="181" height="179"/>
         <image name="buttom_call" width="181" height="180"/>
-        <image name="buttom_fine" width="180" height="180"/>
+        <image name="buttom_fine" width="135" height="137"/>
         <image name="button_ask" width="316" height="314"/>
         <image name="icono_no_persona_asociada" width="204" height="204"/>
         <image name="logo" width="461" height="249"/>

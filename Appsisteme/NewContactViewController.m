@@ -8,7 +8,6 @@
 
 #import "NewContactViewController.h"
 #import "Contact.h"
-#import "CoreDataStack.h"
 
 @interface NewContactViewController ()
 
@@ -42,7 +41,6 @@
     self.context = self.contextAux;
     
     [self.contactName becomeFirstResponder];
-    
 }
 
 

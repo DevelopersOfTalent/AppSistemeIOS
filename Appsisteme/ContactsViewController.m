@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-  _context = [[[AppDelegate appDelegate] coreDataStack] managedObjectContext];
+    _context = [[[AppDelegate appDelegate] coreDataStack] managedObjectContext];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -76,10 +76,12 @@
 }
 
 - (void)editContact:(UIButton *)sender {
+    
     [self performSegueWithIdentifier:@"edit" sender:sender];
-    
-    
 }
+
+
+#pragma mark - Table View Delegate
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     

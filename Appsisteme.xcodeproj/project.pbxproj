@@ -210,10 +210,6 @@
 				FB0285391CEC5EBF005B6B67 /* ContactsViewController.m */,
 				FBD1EFAC1CEDB5F30056AB89 /* NewContactViewController.h */,
 				FBD1EFAD1CEDB5F30056AB89 /* NewContactViewController.m */,
-				6554DB1C1CF1B701002684D5 /* CoreDataTableViewController.h */,
-				6554DB1D1CF1B701002684D5 /* CoreDataTableViewController.m */,
-				FB509CD21CF58626006D8922 /* ContactsTableViewCell.h */,
-				FB509CD31CF58626006D8922 /* ContactsTableViewCell.m */,
 				FB509CDB1CF59EB2006D8922 /* EditContactViewController.h */,
 				FB509CDC1CF59EB2006D8922 /* EditContactViewController.m */,
 			);
@@ -225,6 +221,8 @@
 			children = (
 				FBD46E981CF6DA45000202F9 /* Session.h */,
 				FBD46E991CF6DA45000202F9 /* Session.m */,
+				FB509CD21CF58626006D8922 /* ContactsTableViewCell.h */,
+				FB509CD31CF58626006D8922 /* ContactsTableViewCell.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
