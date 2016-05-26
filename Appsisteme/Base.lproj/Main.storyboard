@@ -391,7 +391,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ISp-Sp-8wv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1723" y="1772"/>
+            <point key="canvasLocation" x="1717" y="1771"/>
         </scene>
         <!--2 guardianHOME_tabBar-->
         <scene sceneID="twl-MF-Gq0">
@@ -562,7 +562,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xI6-5n-d5r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1723" y="987"/>
+            <point key="canvasLocation" x="1717" y="971"/>
         </scene>
         <!--2.1_guardianAskState-->
         <scene sceneID="0ro-8b-6GJ">

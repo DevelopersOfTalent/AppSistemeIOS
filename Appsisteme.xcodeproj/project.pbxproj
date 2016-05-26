@@ -267,6 +267,9 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 						};
 					};
 					FB02854A1CEC5EBF005B6B67 = {
@@ -472,7 +475,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = test.Appsisteme;
+				PRODUCT_BUNDLE_IDENTIFIER = com.talentum.appsisteme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -491,7 +494,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = test.Appsisteme;
+				PRODUCT_BUNDLE_IDENTIFIER = com.talentum.appsisteme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
