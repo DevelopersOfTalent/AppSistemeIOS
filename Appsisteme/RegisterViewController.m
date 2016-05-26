@@ -7,6 +7,7 @@
 //
 
 #import "RegisterViewController.h"
+#import "Session.h"
 
 @interface RegisterViewController ()
 
@@ -36,10 +37,10 @@
 
 -(IBAction) segueWithUserType:(UIButton *) sender {
     
-    if ([self.userType isEqualToString:@"guardian"]) {
+    if ([[[Session sharedSession] userType] isEqualToString:@"guardian"]) {
         [self performSegueWithIdentifier:@"segueToGuardianPath" sender:nil];
     }
-    if ([self.userType isEqualToString:@"guarded"]) {
+    if ([[[Session sharedSession] userType] isEqualToString:@"guarded"]) {
         [self performSegueWithIdentifier:@"segueToGuardedPath" sender:nil];
     }
 }

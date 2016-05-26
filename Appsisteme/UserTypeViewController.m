@@ -8,6 +8,7 @@
 
 #import "UserTypeViewController.h"
 #import "RegisterViewController.h"
+#import "Session.h"
 
 @interface UserTypeViewController ()
 
@@ -34,10 +35,10 @@
 - (IBAction) setUser:(UIButton *) sender {
     
     if ([sender.titleLabel.text isEqualToString:self.guardian.titleLabel.text]) {
-        self.userType = @"guardian";
+        [[Session sharedSession] setUserType:@"guardian"];
     }
     if ([sender.titleLabel.text isEqualToString:self.guarded.titleLabel.text]) {
-        self.userType = @"guarded";
+        [[Session sharedSession] setUserType:@"guarded"];
     }
     
     [self performSegueWithIdentifier:@"segueToRegister" sender:nil];

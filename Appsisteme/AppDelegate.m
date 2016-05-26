@@ -39,7 +39,6 @@
     self.oneSignal = [[OneSignal alloc] initWithLaunchOptions:launchOptions
                                                         appId:@"5eb5a37e-b458-11e3-ac11-000c2940e62c"
                                            handleNotification:nil];
-
     
     return YES;
 }
