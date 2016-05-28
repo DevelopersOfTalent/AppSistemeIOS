@@ -14,11 +14,12 @@
 @interface AppDelegate ()
 
 
-
 @end
 
 
 @implementation AppDelegate
+@synthesize oneSignal = _oneSignal;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
@@ -37,8 +38,23 @@
     
     //One signal
     self.oneSignal = [[OneSignal alloc] initWithLaunchOptions:launchOptions
-                                                        appId:@"5eb5a37e-b458-11e3-ac11-000c2940e62c"
+                                                        appId:@"bdf1bce9-c220-4631-8784-045722fa5861"
                                            handleNotification:nil];
+    
+    [_oneSignal enableInAppAlertNotification:true];
+    
+    [_oneSignal IdsAvailable:^(NSString* userId, NSString* pushToken) {
+        NSLog(@"UserId:%@", userId);
+        _userId = userId;
+        
+        if (pushToken != nil)
+            NSLog(@"pushToken:%@", pushToken);
+    }];
+    
+    [_oneSignal postNotification:@{
+                                       @"contents" : @{@"en": _userId},
+                                       @"include_player_ids": @[@"5a8439c6-52a3-4677-98d2-744dc05d31cd"]
+                                       }];
     
     return YES;
 }

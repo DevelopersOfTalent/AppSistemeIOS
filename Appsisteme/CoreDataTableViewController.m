@@ -13,7 +13,7 @@
 #pragma mark - Fetching
 
 - (void)performFetch
-{ NSLog(@"Entra en performFetch");
+{
     if (self.fetchedResultsController) {
         if (self.fetchedResultsController.fetchRequest.predicate) {
             if (self.debug) NSLog(@"[%@ %@] fetching %@ with predicate: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), self.fetchedResultsController.fetchRequest.entityName, self.fetchedResultsController.fetchRequest.predicate);
@@ -31,7 +31,7 @@
 }
 
 - (void)setFetchedResultsController:(NSFetchedResultsController *)newfrc
-{ NSLog(@"Entra en setFetchedResultsController");
+{
     NSFetchedResultsController *oldfrc = _fetchedResultsController;
     if (newfrc != oldfrc) {
         _fetchedResultsController = newfrc;

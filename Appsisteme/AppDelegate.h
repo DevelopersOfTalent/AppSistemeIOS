@@ -18,6 +18,8 @@
 
 @property (strong, nonatomic) OneSignal *oneSignal;
 
+@property (nonatomic) NSString *userId;
+
 /**
  * Returns the application delegate
  *

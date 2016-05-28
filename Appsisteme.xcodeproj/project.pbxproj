@@ -30,6 +30,7 @@
 		FBD46E9A1CF6DA45000202F9 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD46E991CF6DA45000202F9 /* Session.m */; };
 		FBD8A3EC1CF58EC60076F920 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD8A3EB1CF58EC60076F920 /* RegisterViewController.m */; };
 		FBD8A3EF1CF5DD4F0076F920 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD8A3EE1CF5DD4F0076F920 /* NavigationViewController.m */; };
+		FBF8A3ED1CF9DD84009B000A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF8A3EC1CF9DD84009B000A /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		FBD8A3EB1CF58EC60076F920 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		FBD8A3ED1CF5DD4F0076F920 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		FBD8A3EE1CF5DD4F0076F920 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		FBF8A3EC1CF9DD84009B000A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBF8A3ED1CF9DD84009B000A /* UIKit.framework in Frameworks */,
 				FB509CDF1CF5AFD8006D8922 /* Foundation.framework in Frameworks */,
 				FBA12EC21CF45C37003A0649 /* SystemConfiguration.framework in Frameworks */,
 				FBA12EC01CF45B70003A0649 /* OneSignal.framework in Frameworks */,
@@ -138,6 +141,7 @@
 		FB0285311CEC5EBF005B6B67 /* Appsisteme */ = {
 			isa = PBXGroup;
 			children = (
+				FBF8A3EC1CF9DD84009B000A /* UIKit.framework */,
 				FB509CDE1CF5AFD8006D8922 /* Foundation.framework */,
 				FBA12EC11CF45C37003A0649 /* SystemConfiguration.framework */,
 				FBA12EBF1CF45B70003A0649 /* OneSignal.framework */,
@@ -282,7 +286,7 @@
 								enabled = 1;
 							};
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -492,7 +496,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.talentum.appsisteme;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appforbrands.appsisteme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -513,7 +517,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.talentum.appsisteme;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appforbrands.appsisteme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

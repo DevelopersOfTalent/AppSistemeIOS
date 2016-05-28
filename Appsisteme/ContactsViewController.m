@@ -14,9 +14,14 @@
 #import "EditContactViewController.h"
 
 
+
 @interface ContactsViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) NSManagedObjectContext *context;
+
+@property (strong,nonatomic) OneSignal *oneSignal;
+
+@property (strong,nonatomic) NSString *idUser;
 
 @end
 
@@ -28,14 +33,40 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[[AppDelegate appDelegate] oneSignal] sendTag:@"key" value:@"value"];
     
     _context = [[[AppDelegate appDelegate] coreDataStack] managedObjectContext];
+    
+    _idUser= @"5a8439c6-52a3-4677-98d2-744dc05d31cd";
+    [_oneSignal postNotification:@{
+                                   @"contents" : @{@"en": @"Hola"},
+                                   @"include_player_ids": @[_idUser]
+                                   }];
+    
 }
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    if ( application.applicationState == UIApplicationStateInactive || application.applicationState == UIApplicationStateBackground  )
+    {
+        //opened from a push notification when the app was on background
+        NSDictionary *notification = [userInfo objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+        NSLog(@"Notificacion: %@",notification);
+    }
+}
+
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self loadContacts];
     _context = [[[AppDelegate appDelegate] coreDataStack] managedObjectContext];
     [self loadContacts];
+    
+    [_oneSignal getTags:^(NSDictionary* tags) {
+        NSLog(@"%@", tags);
+    }];
+    
+    
 }
 
 
@@ -124,7 +155,6 @@
     
     if ([[segue identifier] isEqualToString:@"edit"]) {
         
-        //button
         
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:((UIView*)sender).tag inSection:0];
         
