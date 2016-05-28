@@ -66,8 +66,9 @@
 #pragma mark - Events
 - (IBAction)cancelContact:(UIButton *)sender {
     
-    [self dismissViewControllerAnimated:YES completion:nil];
     [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 - (IBAction)aceptContact:(UIButton *)sender {
@@ -78,6 +79,8 @@
     [_context save:&error];
     
     [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
+
 }
 
 

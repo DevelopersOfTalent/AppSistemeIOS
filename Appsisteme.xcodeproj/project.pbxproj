@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		652BCB271CFA002E00008F24 /* GuardedNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 652BCB261CFA002E00008F24 /* GuardedNavigationController.m */; };
 		6554DB111CF1A33C002684D5 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB101CF1A33C002684D5 /* CoreDataStack.m */; };
 		6554DB161CF1AB8B002684D5 /* Contact+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB131CF1AB8B002684D5 /* Contact+CoreDataProperties.m */; };
 		6554DB171CF1AB8B002684D5 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB151CF1AB8B002684D5 /* Contact.m */; };
@@ -29,7 +30,7 @@
 		FBD1EFAE1CEDB5F30056AB89 /* NewContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD1EFAD1CEDB5F30056AB89 /* NewContactViewController.m */; };
 		FBD46E9A1CF6DA45000202F9 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD46E991CF6DA45000202F9 /* Session.m */; };
 		FBD8A3EC1CF58EC60076F920 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD8A3EB1CF58EC60076F920 /* RegisterViewController.m */; };
-		FBD8A3EF1CF5DD4F0076F920 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD8A3EE1CF5DD4F0076F920 /* NavigationViewController.m */; };
+		FBD8A3EF1CF5DD4F0076F920 /* GuardianNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD8A3EE1CF5DD4F0076F920 /* GuardianNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		652BCB251CFA002E00008F24 /* GuardedNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuardedNavigationController.h; sourceTree = "<group>"; };
+		652BCB261CFA002E00008F24 /* GuardedNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuardedNavigationController.m; sourceTree = "<group>"; };
 		6554DB0F1CF1A33C002684D5 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
 		6554DB101CF1A33C002684D5 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
 		6554DB121CF1AB8B002684D5 /* Contact+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Contact+CoreDataProperties.h"; path = "../Contact+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -83,8 +86,8 @@
 		FBD46E991CF6DA45000202F9 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
 		FBD8A3EA1CF58EC60076F920 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		FBD8A3EB1CF58EC60076F920 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		FBD8A3ED1CF5DD4F0076F920 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
-		FBD8A3EE1CF5DD4F0076F920 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		FBD8A3ED1CF5DD4F0076F920 /* GuardianNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuardianNavigationController.h; sourceTree = "<group>"; };
+		FBD8A3EE1CF5DD4F0076F920 /* GuardianNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuardianNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		652BCB241CF9FFF000008F24 /* Navigation controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FBD8A3ED1CF5DD4F0076F920 /* GuardianNavigationController.h */,
+				FBD8A3EE1CF5DD4F0076F920 /* GuardianNavigationController.m */,
+				652BCB251CFA002E00008F24 /* GuardedNavigationController.h */,
+				652BCB261CFA002E00008F24 /* GuardedNavigationController.m */,
+			);
+			name = "Navigation controllers";
+			sourceTree = "<group>";
+		};
 		6554DB1B1CF1AE38002684D5 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,12 +214,11 @@
 		FBD1EFAB1CEDB5980056AB89 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				652BCB241CF9FFF000008F24 /* Navigation controllers */,
 				FBA12EC61CF46C5C003A0649 /* UserTypeViewController.h */,
 				FBA12EC71CF46C5C003A0649 /* UserTypeViewController.m */,
 				FBD8A3EA1CF58EC60076F920 /* RegisterViewController.h */,
 				FBD8A3EB1CF58EC60076F920 /* RegisterViewController.m */,
-				FBD8A3ED1CF5DD4F0076F920 /* NavigationViewController.h */,
-				FBD8A3EE1CF5DD4F0076F920 /* NavigationViewController.m */,
 				FB0285381CEC5EBF005B6B67 /* ContactsViewController.h */,
 				FB0285391CEC5EBF005B6B67 /* ContactsViewController.m */,
 				FBD1EFAC1CEDB5F30056AB89 /* NewContactViewController.h */,
@@ -341,12 +354,13 @@
 				FB02853A1CEC5EBF005B6B67 /* ContactsViewController.m in Sources */,
 				6554DB161CF1AB8B002684D5 /* Contact+CoreDataProperties.m in Sources */,
 				FB509CDD1CF59EB2006D8922 /* EditContactViewController.m in Sources */,
+				652BCB271CFA002E00008F24 /* GuardedNavigationController.m in Sources */,
 				FB0285371CEC5EBF005B6B67 /* AppDelegate.m in Sources */,
 				6554DB1E1CF1B701002684D5 /* CoreDataTableViewController.m in Sources */,
 				FBD1EFAE1CEDB5F30056AB89 /* NewContactViewController.m in Sources */,
 				FB509CD41CF58626006D8922 /* ContactsTableViewCell.m in Sources */,
 				6554DB1A1CF1AE07002684D5 /* Contact+Methods.m in Sources */,
-				FBD8A3EF1CF5DD4F0076F920 /* NavigationViewController.m in Sources */,
+				FBD8A3EF1CF5DD4F0076F920 /* GuardianNavigationController.m in Sources */,
 				FB0285341CEC5EBF005B6B67 /* main.m in Sources */,
 				FBD8A3EC1CF58EC60076F920 /* RegisterViewController.m in Sources */,
 				6554DB211CF1CADE002684D5 /* Model.xcdatamodeld in Sources */,
