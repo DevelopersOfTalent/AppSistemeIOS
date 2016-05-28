@@ -71,6 +71,9 @@
     [self.editedContact setName:self.textFieldName.text];
     [self.editedContact setPhoneNumber:self.textFieldPhoneNumber.text];
     
+    NSError *error;
+    [_context save:&error];
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -80,6 +83,17 @@
     
     
     [_context deleteObject:_editedContact];
+    
+    NSError *error;
+    [_context save:&error];
+    
+//    NSError *error = nil;
+//    if (_context != nil) {
+//        if ([_context hasChanges] && ![_context save:&error]) {
+//            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+//            abort();
+//        }
+//    }
     
     [self.navigationController popViewControllerAnimated:YES];
 

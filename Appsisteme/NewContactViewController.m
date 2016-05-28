@@ -73,6 +73,10 @@
 - (IBAction)aceptContact:(UIButton *)sender {
     
     [self saveContact];
+    
+    NSError *error;
+    [_context save:&error];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
