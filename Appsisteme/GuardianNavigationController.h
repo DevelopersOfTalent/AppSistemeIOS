@@ -10,4 +10,5 @@
 
 @interface GuardianNavigationController : UINavigationController
 
+//- (void)goToAddContact;
 @end
