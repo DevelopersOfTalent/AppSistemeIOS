@@ -39,7 +39,20 @@
     //One signal
     self.oneSignal = [[OneSignal alloc] initWithLaunchOptions:launchOptions
                                                         appId:@"bdf1bce9-c220-4631-8784-045722fa5861"
-                                           handleNotification:nil];
+                                           handleNotification:^(NSString* message, NSDictionary* additionalData, BOOL isActive) {
+                                               NSLog(@"OneSignal Notification opened:\nMessage: %@", message);
+                                               
+                                               if (additionalData) {
+                                                   NSLog(@"additionalData: %@", additionalData);
+                                                   
+                                                   // Check for and read any custom values you added to the notification
+                                                   // This done with the "Additional Data" section the dashboard.
+                                                   // OR setting the 'data' field on our REST API.
+                                                   NSString* customKey = additionalData[@"customKey"];
+                                                   if (customKey)
+                                                       NSLog(@"customKey: %@", customKey);
+                                               }
+                                           }];
     
     [_oneSignal enableInAppAlertNotification:true];
     
@@ -49,12 +62,15 @@
         
         if (pushToken != nil)
             NSLog(@"pushToken:%@", pushToken);
+        
     }];
     
-    [_oneSignal postNotification:@{
-                                       @"contents" : @{@"en": _userId},
-                                       @"include_player_ids": @[@"5a8439c6-52a3-4677-98d2-744dc05d31cd"]
-                                       }];
+
+    return YES;
+ //   [_oneSignal postNotification:@{
+  //                                 @"contents" : @{@"en": @"_userId"},
+   //                                @"include_player_ids": @[@"9584842e-0dd2-48b9-bdab-fa1f37ba1339"]
+  //                                 }];
     
     return YES;
 }
@@ -107,6 +123,19 @@
     });
     
     return appDelegate;
+}
+
+
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler
+{
+    NSLog(@"userInfo: %@",userInfo);
+    if ( application.applicationState == UIApplicationStateInactive || application.applicationState == UIApplicationStateBackground  )
+    {
+        //opened from a push notification when the app was on background
+        NSDictionary *notification = [userInfo objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+        NSLog(@"Notificacion: %@",notification);
+    }
 }
 
 @end

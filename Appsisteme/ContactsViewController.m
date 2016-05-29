@@ -21,6 +21,8 @@
 
 @property (strong,nonatomic) OneSignal *oneSignal;
 
+@property (strong,nonatomic) AppDelegate *appDelegate;
+
 @property (strong,nonatomic) NSString *idUser;
 
 @end
@@ -37,23 +39,9 @@
     
     _context = [[[AppDelegate appDelegate] coreDataStack] managedObjectContext];
     
-    _idUser= @"5a8439c6-52a3-4677-98d2-744dc05d31cd";
-    [_oneSignal postNotification:@{
-                                   @"contents" : @{@"en": @"Hola"},
-                                   @"include_player_ids": @[_idUser]
-                                   }];
     
 }
 
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
-{
-    if ( application.applicationState == UIApplicationStateInactive || application.applicationState == UIApplicationStateBackground  )
-    {
-        //opened from a push notification when the app was on background
-        NSDictionary *notification = [userInfo objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
-        NSLog(@"Notificacion: %@",notification);
-    }
-}
 
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -66,6 +54,13 @@
         NSLog(@"%@", tags);
     }];
     
+    _idUser= @"9584842e-0dd2-48b9-bdab-fa1f37ba1339";
+    
+    _oneSignal = [[AppDelegate appDelegate] oneSignal];
+    [_oneSignal postNotification:@{
+                                   @"contents" : @{@"en": @"Hola"},
+                                   @"include_player_ids": @[_idUser]
+                                   }];
     
 }
 
@@ -184,7 +179,6 @@
     {
         UIAlertController* alert2 = [UIAlertController alertControllerWithTitle: @"Alert"                                                                                                                                 message:@"Call facility is not available!!!"
             preferredStyle:UIAlertControllerStyleAlert];
-        
         UIAlertAction* alertIn = [UIAlertAction actionWithTitle:@"OK"
                                                           style:UIAlertActionStyleDefault
                                                         handler:^(UIAlertAction * action) {
