@@ -46,10 +46,10 @@
         [self doTheSegue];
     } else if (![self isValidEmail:self.email.text]) {
         
-        [self.view makeToast:@"El email introducido no es correcto"];
+        [self.view makeToast:@"El email introducido no es correcto" duration:2.0 position:CSToastPositionCenter];
     } else {
         
-        [self.view makeToast:@"La contraseña debe tener entre 6 y 10 caracteres"];
+        [self.view makeToast:@"La contraseña debe tener entre 6 y 10 caracteres" duration:2.0 position:CSToastPositionCenter];
     }
 
     

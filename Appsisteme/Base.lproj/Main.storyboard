@@ -499,7 +499,7 @@
         <!--2.2_contacts-->
         <scene sceneID="pBb-wj-i1w">
             <objects>
-                <navigationController title="2.2_contacts" toolbarHidden="NO" id="Q15-MO-l7F" customClass="GuardianNavigationController" sceneMemberID="viewController">
+                <navigationController title="2.2_contacts" id="Q15-MO-l7F" customClass="GuardianNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Teléfonos" image="icono_telefonos" selectedImage="icono_telefonos" id="kE9-oV-WbT"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

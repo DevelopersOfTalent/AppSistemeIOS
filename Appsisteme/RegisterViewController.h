@@ -10,7 +10,6 @@
 
 @interface RegisterViewController : UIViewController
 
--(BOOL) NSStringIsValidEmail:(NSString *)checkString;
 -(void)receiveUserType:(NSString *) userType;
 
 @end
