@@ -13,6 +13,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    
+    self.imageView.layer.cornerRadius = self.imageView.frame.size.width / 2;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

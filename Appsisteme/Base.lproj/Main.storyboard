@@ -738,7 +738,7 @@
         <!--4 Out Scene-->
         <scene sceneID="kg0-wV-KvV">
             <objects>
-                <viewController title="4 Out Scene" modalTransitionStyle="partialCurl" id="nZ6-pK-SG8" sceneMemberID="viewController">
+                <viewController title="4 Out Scene" modalTransitionStyle="partialCurl" id="nZ6-pK-SG8" customClass="ExitViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L37-du-436"/>
                         <viewControllerLayoutGuide type="bottom" id="VwS-1C-uIc"/>

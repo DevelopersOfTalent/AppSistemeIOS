@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		650F77711CFB6AB1006A2374 /* ExitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650F77701CFB6AB1006A2374 /* ExitViewController.m */; };
 		650FF2AE1CFB131A007EADA5 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 650FF2AD1CFB131A007EADA5 /* UIView+Toast.m */; };
 		652BCB271CFA002E00008F24 /* GuardedNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 652BCB261CFA002E00008F24 /* GuardedNavigationController.m */; };
 		6554DB111CF1A33C002684D5 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB101CF1A33C002684D5 /* CoreDataStack.m */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		650F776F1CFB6AB1006A2374 /* ExitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExitViewController.h; sourceTree = "<group>"; };
+		650F77701CFB6AB1006A2374 /* ExitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExitViewController.m; sourceTree = "<group>"; };
 		650FF2AC1CFB1313007EADA5 /* UIView+Toast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIView+Toast.h"; path = "../../Toast-master/Toast/Toast/UIView+Toast.h"; sourceTree = "<group>"; };
 		650FF2AD1CFB131A007EADA5 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Toast.m"; path = "../../Toast-master/Toast/Toast/UIView+Toast.m"; sourceTree = "<group>"; };
 		652BCB251CFA002E00008F24 /* GuardedNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuardedNavigationController.h; sourceTree = "<group>"; };
@@ -238,6 +241,8 @@
 				FBD1EFAD1CEDB5F30056AB89 /* NewContactViewController.m */,
 				FB509CDB1CF59EB2006D8922 /* EditContactViewController.h */,
 				FB509CDC1CF59EB2006D8922 /* EditContactViewController.m */,
+				650F776F1CFB6AB1006A2374 /* ExitViewController.h */,
+				650F77701CFB6AB1006A2374 /* ExitViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -366,6 +371,7 @@
 				FBD46E9A1CF6DA45000202F9 /* Session.m in Sources */,
 				6554DB171CF1AB8B002684D5 /* Contact.m in Sources */,
 				FB02853A1CEC5EBF005B6B67 /* ContactsViewController.m in Sources */,
+				650F77711CFB6AB1006A2374 /* ExitViewController.m in Sources */,
 				6554DB161CF1AB8B002684D5 /* Contact+CoreDataProperties.m in Sources */,
 				FB509CDD1CF59EB2006D8922 /* EditContactViewController.m in Sources */,
 				652BCB271CFA002E00008F24 /* GuardedNavigationController.m in Sources */,

@@ -33,6 +33,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
+    
     [super viewWillAppear:animated];
     _context = [[[AppDelegate appDelegate] coreDataStack] managedObjectContext];
     [self loadContacts];
