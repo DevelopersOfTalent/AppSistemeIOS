@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		650FF2AE1CFB131A007EADA5 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 650FF2AD1CFB131A007EADA5 /* UIView+Toast.m */; };
 		652BCB271CFA002E00008F24 /* GuardedNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 652BCB261CFA002E00008F24 /* GuardedNavigationController.m */; };
 		6554DB111CF1A33C002684D5 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB101CF1A33C002684D5 /* CoreDataStack.m */; };
 		6554DB161CF1AB8B002684D5 /* Contact+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB131CF1AB8B002684D5 /* Contact+CoreDataProperties.m */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		650FF2AC1CFB1313007EADA5 /* UIView+Toast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIView+Toast.h"; path = "../../Toast-master/Toast/Toast/UIView+Toast.h"; sourceTree = "<group>"; };
+		650FF2AD1CFB131A007EADA5 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Toast.m"; path = "../../Toast-master/Toast/Toast/UIView+Toast.m"; sourceTree = "<group>"; };
 		652BCB251CFA002E00008F24 /* GuardedNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuardedNavigationController.h; sourceTree = "<group>"; };
 		652BCB261CFA002E00008F24 /* GuardedNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuardedNavigationController.m; sourceTree = "<group>"; };
 		6554DB0F1CF1A33C002684D5 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
@@ -111,6 +114,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		650FF2AB1CFB12F9007EADA5 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				650FF2AC1CFB1313007EADA5 /* UIView+Toast.h */,
+				650FF2AD1CFB131A007EADA5 /* UIView+Toast.m */,
+			);
+			name = Toast;
+			sourceTree = "<group>";
+		};
 		652BCB241CF9FFF000008F24 /* Navigation controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +137,7 @@
 		6554DB1B1CF1AE38002684D5 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				650FF2AB1CFB12F9007EADA5 /* Toast */,
 				6554DB181CF1AE07002684D5 /* Contact+Methods.h */,
 				6554DB191CF1AE07002684D5 /* Contact+Methods.m */,
 			);
@@ -349,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				650FF2AE1CFB131A007EADA5 /* UIView+Toast.m in Sources */,
 				FBD46E9A1CF6DA45000202F9 /* Session.m in Sources */,
 				6554DB171CF1AB8B002684D5 /* Contact.m in Sources */,
 				FB02853A1CEC5EBF005B6B67 /* ContactsViewController.m in Sources */,

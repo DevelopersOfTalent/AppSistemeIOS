@@ -862,7 +862,8 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="epN-7l-vXs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.32549019610000002" green="0.69803921570000005" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="tBv-fG-qZl" kind="relationship" relationship="viewControllers" id="iVH-YC-zAJ"/>
@@ -1030,6 +1031,8 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="email" destination="CXp-PE-MhA" id="S3E-f3-sTS"/>
+                        <outlet property="password" destination="aWw-JB-V8P" id="Rsf-zU-XXs"/>
                         <segue destination="acy-b6-RNE" kind="show" identifier="segueToGuardianPath" id="G9T-vd-rcO"/>
                         <segue destination="vtW-2Y-Jd7" kind="show" identifier="segueToGuardedPath" id="38A-cP-e1w"/>
                     </connections>
