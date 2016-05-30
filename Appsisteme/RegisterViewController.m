@@ -23,6 +23,15 @@
 
 @implementation RegisterViewController
 
+
+#pragma mark - Before segue function
+
+-(void)receiveUserType:(NSString *) userType {
+    
+    self.userTypeAux = userType;
+}
+
+
 #pragma mark - LifeCycle
 
 - (void)viewDidLoad {
@@ -34,6 +43,14 @@
     [super viewWillAppear:animated];
     
     self.userType = self.userTypeAux;
+}
+
+
+#pragma mark - Hide keyboard
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+    [super touchesBegan:touches withEvent:event];
 }
 
 
@@ -82,14 +99,6 @@
     if ([[[Session sharedSession] userType] isEqualToString:@"guarded"]) {
         [self performSegueWithIdentifier:@"segueToGuardedPath" sender:nil];
     }
-}
-
-
-#pragma mark - Before segue function
-
--(void)receiveUserType:(NSString *) userType {
-    
-    self.userTypeAux = userType;
 }
 
 @end

@@ -242,6 +242,8 @@
 				FBA12EC71CF46C5C003A0649 /* UserTypeViewController.m */,
 				FBD8A3EA1CF58EC60076F920 /* RegisterViewController.h */,
 				FBD8A3EB1CF58EC60076F920 /* RegisterViewController.m */,
+				FB250B061CFC25040096B2D4 /* StateViewController.h */,
+				FB250B071CFC25040096B2D4 /* StateViewController.m */,
 				FB0285381CEC5EBF005B6B67 /* ContactsViewController.h */,
 				FB0285391CEC5EBF005B6B67 /* ContactsViewController.m */,
 				FBD1EFAC1CEDB5F30056AB89 /* NewContactViewController.h */,
@@ -250,8 +252,6 @@
 				FB509CDC1CF59EB2006D8922 /* EditContactViewController.m */,
 				650F776F1CFB6AB1006A2374 /* ExitViewController.h */,
 				650F77701CFB6AB1006A2374 /* ExitViewController.m */,
-				FB250B061CFC25040096B2D4 /* StateViewController.h */,
-				FB250B071CFC25040096B2D4 /* StateViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";

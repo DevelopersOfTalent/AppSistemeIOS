@@ -133,7 +133,13 @@
     [self.navigationController popViewControllerAnimated:YES];
 
 }
-    
 
+
+#pragma mark - Hide keyboard
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+    [super touchesBegan:touches withEvent:event];
+}
 
 @end

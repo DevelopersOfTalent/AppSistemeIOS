@@ -33,6 +33,14 @@
 }
 
 
+#pragma mark - Before segue function
+
+-(void) receiveContext:(NSManagedObjectContext *) context {
+    
+    self.contextAux = context;
+}
+
+
 #pragma mark - LifeCycle
 
 -(void) viewWillAppear:(BOOL)animated
@@ -120,11 +128,11 @@
 }
 
 
-#pragma mark - Before segue function
+#pragma mark - Hide keyboard
 
--(void) receiveContext:(NSManagedObjectContext *) context {
-    
-    self.contextAux = context;
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+    [super touchesBegan:touches withEvent:event];
 }
 
 
