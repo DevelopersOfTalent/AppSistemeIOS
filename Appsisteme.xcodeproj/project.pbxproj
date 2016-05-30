@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		650B96841CFCAA8500A89738 /* Contact+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B96811CFCAA8500A89738 /* Contact+CoreDataProperties.m */; };
+		650B96851CFCAA8500A89738 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B96831CFCAA8500A89738 /* Contact.m */; };
 		650F77711CFB6AB1006A2374 /* ExitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650F77701CFB6AB1006A2374 /* ExitViewController.m */; };
 		650FF2AE1CFB131A007EADA5 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 650FF2AD1CFB131A007EADA5 /* UIView+Toast.m */; };
 		652BCB271CFA002E00008F24 /* GuardedNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 652BCB261CFA002E00008F24 /* GuardedNavigationController.m */; };
 		6554DB111CF1A33C002684D5 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB101CF1A33C002684D5 /* CoreDataStack.m */; };
-		6554DB161CF1AB8B002684D5 /* Contact+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB131CF1AB8B002684D5 /* Contact+CoreDataProperties.m */; };
-		6554DB171CF1AB8B002684D5 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB151CF1AB8B002684D5 /* Contact.m */; };
 		6554DB1A1CF1AE07002684D5 /* Contact+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB191CF1AE07002684D5 /* Contact+Methods.m */; };
 		6554DB1E1CF1B701002684D5 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB1D1CF1B701002684D5 /* CoreDataTableViewController.m */; };
 		6554DB211CF1CADE002684D5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB1F1CF1CADE002684D5 /* Model.xcdatamodeld */; };
@@ -48,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		650B96801CFCAA8500A89738 /* Contact+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Contact+CoreDataProperties.h"; path = "../Contact+CoreDataProperties.h"; sourceTree = "<group>"; };
+		650B96811CFCAA8500A89738 /* Contact+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Contact+CoreDataProperties.m"; path = "../Contact+CoreDataProperties.m"; sourceTree = "<group>"; };
+		650B96821CFCAA8500A89738 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Contact.h; path = ../Contact.h; sourceTree = "<group>"; };
+		650B96831CFCAA8500A89738 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contact.m; path = ../Contact.m; sourceTree = "<group>"; };
 		650F776F1CFB6AB1006A2374 /* ExitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExitViewController.h; sourceTree = "<group>"; };
 		650F77701CFB6AB1006A2374 /* ExitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExitViewController.m; sourceTree = "<group>"; };
 		650FF2AC1CFB1313007EADA5 /* UIView+Toast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIView+Toast.h"; path = "../../Toast-master/Toast/Toast/UIView+Toast.h"; sourceTree = "<group>"; };
@@ -56,10 +60,6 @@
 		652BCB261CFA002E00008F24 /* GuardedNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuardedNavigationController.m; sourceTree = "<group>"; };
 		6554DB0F1CF1A33C002684D5 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
 		6554DB101CF1A33C002684D5 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
-		6554DB121CF1AB8B002684D5 /* Contact+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Contact+CoreDataProperties.h"; path = "../Contact+CoreDataProperties.h"; sourceTree = "<group>"; };
-		6554DB131CF1AB8B002684D5 /* Contact+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Contact+CoreDataProperties.m"; path = "../Contact+CoreDataProperties.m"; sourceTree = "<group>"; };
-		6554DB141CF1AB8B002684D5 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Contact.h; path = ../Contact.h; sourceTree = "<group>"; };
-		6554DB151CF1AB8B002684D5 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contact.m; path = ../Contact.m; sourceTree = "<group>"; };
 		6554DB181CF1AE07002684D5 /* Contact+Methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Contact+Methods.h"; sourceTree = "<group>"; };
 		6554DB191CF1AE07002684D5 /* Contact+Methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Contact+Methods.m"; sourceTree = "<group>"; };
 		6554DB1C1CF1B701002684D5 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
@@ -215,10 +215,10 @@
 			isa = PBXGroup;
 			children = (
 				6554DB1F1CF1CADE002684D5 /* Model.xcdatamodeld */,
-				6554DB121CF1AB8B002684D5 /* Contact+CoreDataProperties.h */,
-				6554DB131CF1AB8B002684D5 /* Contact+CoreDataProperties.m */,
-				6554DB141CF1AB8B002684D5 /* Contact.h */,
-				6554DB151CF1AB8B002684D5 /* Contact.m */,
+				650B96801CFCAA8500A89738 /* Contact+CoreDataProperties.h */,
+				650B96811CFCAA8500A89738 /* Contact+CoreDataProperties.m */,
+				650B96821CFCAA8500A89738 /* Contact.h */,
+				650B96831CFCAA8500A89738 /* Contact.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -378,17 +378,17 @@
 			files = (
 				650FF2AE1CFB131A007EADA5 /* UIView+Toast.m in Sources */,
 				FBD46E9A1CF6DA45000202F9 /* Session.m in Sources */,
-				6554DB171CF1AB8B002684D5 /* Contact.m in Sources */,
 				FB02853A1CEC5EBF005B6B67 /* ContactsViewController.m in Sources */,
 				FB250B081CFC25040096B2D4 /* StateViewController.m in Sources */,
 				650F77711CFB6AB1006A2374 /* ExitViewController.m in Sources */,
-				6554DB161CF1AB8B002684D5 /* Contact+CoreDataProperties.m in Sources */,
 				FB509CDD1CF59EB2006D8922 /* EditContactViewController.m in Sources */,
+				650B96841CFCAA8500A89738 /* Contact+CoreDataProperties.m in Sources */,
 				652BCB271CFA002E00008F24 /* GuardedNavigationController.m in Sources */,
 				FB0285371CEC5EBF005B6B67 /* AppDelegate.m in Sources */,
 				6554DB1E1CF1B701002684D5 /* CoreDataTableViewController.m in Sources */,
 				FBD1EFAE1CEDB5F30056AB89 /* NewContactViewController.m in Sources */,
 				FB509CD41CF58626006D8922 /* ContactsTableViewCell.m in Sources */,
+				650B96851CFCAA8500A89738 /* Contact.m in Sources */,
 				6554DB1A1CF1AE07002684D5 /* Contact+Methods.m in Sources */,
 				FB0285341CEC5EBF005B6B67 /* main.m in Sources */,
 				FBD8A3EC1CF58EC60076F920 /* RegisterViewController.m in Sources */,

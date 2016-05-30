@@ -19,7 +19,9 @@
 
 @property (strong, nonatomic) NSManagedObjectContext *context;
 
-@property (strong,nonatomic) AppDelegate *appDelegate;
+@property (strong, nonatomic) AppDelegate *appDelegate;
+
+@property (strong, nonatomic) ContactsTableViewCell *cell;
 
 
 @end
@@ -35,8 +37,6 @@
     [[[AppDelegate appDelegate] oneSignal] sendTag:@"key" value:@"value"];
     
     _context = [[[AppDelegate appDelegate] coreDataStack] managedObjectContext];
-    
-    
 }
 
 
@@ -44,7 +44,7 @@
 -(void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    [self loadContacts];
+
     _context = [[[AppDelegate appDelegate] coreDataStack] managedObjectContext];
     [self loadContacts];
     
@@ -76,12 +76,19 @@
         cell = [[ContactsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    cell.imageView.layer.cornerRadius = cell.imageView.frame.size.width / 2;
+    cell.imageView.clipsToBounds = YES;
+    
     cell.preferencesButton.tag = indexPath.row;
     [cell.preferencesButton addTarget:self action:@selector(editContact:) forControlEvents:(UIControlEventTouchUpInside)];
     
     Contact *contact = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.labelContactsName.text = contact.name;
-    cell.imageView.image = self.image;
+    
+    UIImage *image = [UIImage imageWithData:contact.image];
+    cell.imageView.image = image;
+    cell.imageView.layer.cornerRadius = cell.imageView.frame.size.width / 2;
+    cell.imageView.clipsToBounds = YES;
     
     return cell;
 }
@@ -121,6 +128,30 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
+-(void) makeCall: (NSString *)phNo {
+    
+    
+    NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",phNo]];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
+        
+        [[UIApplication sharedApplication] openURL:phoneUrl];
+        
+    } else
+    {
+        UIAlertController* alert2 = [UIAlertController alertControllerWithTitle: @"Alert"                                                                                                                                 message:@"Call facility is not available!!!"
+                                                                 preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* alertIn = [UIAlertAction actionWithTitle:@"OK"
+                                                          style:UIAlertActionStyleDefault
+                                                        handler:^(UIAlertAction * action) {
+                                                            
+                                                            
+                                                        }];
+        [alert2 addAction:alertIn];
+    }
+    
+}
+
 
 #pragma mark - Segues
 
@@ -141,40 +172,10 @@
         //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Contact *selectedContact = (Contact *)[[self fetchedResultsController] objectAtIndexPath:indexPath];
         
-        
-        
         EditContactViewController *editContactViewController = (EditContactViewController *)[segue destinationViewController];
         
         [editContactViewController receiveContext:self.context andContact:selectedContact];
     }
 }
-
-
-
--(void) makeCall: (NSString *)phNo {
-    
-    
-    NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",phNo]];
-    
-    if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
-        
-        [[UIApplication sharedApplication] openURL:phoneUrl];
-        
-    } else
-    {
-        UIAlertController* alert2 = [UIAlertController alertControllerWithTitle: @"Alert"                                                                                                                                 message:@"Call facility is not available!!!"
-            preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction* alertIn = [UIAlertAction actionWithTitle:@"OK"
-                                                          style:UIAlertActionStyleDefault
-                                                        handler:^(UIAlertAction * action) {
-                                                            
-                                                            
-                                                        }];
-        [alert2 addAction:alertIn];
-    }
-    
-}
-
-
 
 @end

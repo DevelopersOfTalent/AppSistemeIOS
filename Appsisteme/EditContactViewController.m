@@ -13,7 +13,7 @@
 
 
 
-@interface EditContactViewController ()
+@interface EditContactViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 
 
@@ -28,6 +28,8 @@
 
 @property (nonatomic, strong) Contact *editedContact;
 @property (nonatomic, strong) Contact *editedContactAux;
+
+@property (strong, nonatomic) UIImage *image;
 
 
 
@@ -66,6 +68,9 @@
     return self;
 }
 
+
+#pragma mark - Core Data
+
 - (IBAction)editContact:(id)sender {
     
     if ([self isValidPhone:self.textFieldPhoneNumber.text] && ![self.textFieldName.text isEqualToString:@""]) {
@@ -73,10 +78,15 @@
         [self.editedContact setName:self.textFieldName.text];
         [self.editedContact setPhoneNumber:self.textFieldPhoneNumber.text];
         
+        UIImage *imageResize = [self imageWithImage:self.image scaledToSize:CGSizeMake(56, 56)];
+        NSData *imageData = UIImagePNGRepresentation(imageResize);
+        [self.editedContact setImage:imageData];
+        
         NSError *error;
         [_context save:&error];
         
         [self.navigationController popViewControllerAnimated:YES];
+        
     } else if ([self.textFieldName.text isEqualToString:@""]){
         
         [self.view makeToast:@"El campo nombre del contacto no puede estar vacío" duration:2.0 position:CSToastPositionCenter];
@@ -84,6 +94,66 @@
         
         [self.view makeToast:@"Introduzca un número de teléfono válido" duration:2.0 position:CSToastPositionCenter];
     }
+}
+
+- (UIImage*)imageWithImage:(UIImage*)image
+              scaledToSize:(CGSize)targetSize;
+
+{
+    UIImage *sourceImage = image;
+    UIImage *newImage = nil;
+    CGSize imageSize = sourceImage.size;
+    CGFloat width = imageSize.width;
+    CGFloat height = imageSize.height;
+    CGFloat targetWidth = targetSize.width;
+    CGFloat targetHeight = targetSize.height;
+    CGFloat scaleFactor = 0.0;
+    CGFloat scaledWidth = targetWidth;
+    CGFloat scaledHeight = targetHeight;
+    CGPoint thumbnailPoint = CGPointMake(0.0,0.0);
+    
+    if (CGSizeEqualToSize(imageSize, targetSize) == NO)
+    {
+        CGFloat widthFactor = targetWidth / width;
+        CGFloat heightFactor = targetHeight / height;
+        
+        if (widthFactor > heightFactor)
+            scaleFactor = widthFactor; // scale to fit height
+        else {
+            scaleFactor = heightFactor;
+        } // scale to fit width
+        
+        scaledWidth  = width * scaleFactor;
+        scaledHeight = height * scaleFactor;
+        
+        // center the image
+        if (widthFactor > heightFactor)
+        {
+            thumbnailPoint.y = (targetHeight - scaledHeight) * 0.5;
+        }
+        else
+            if (widthFactor < heightFactor)
+            {
+                thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5;
+            }
+    }
+    
+    UIGraphicsBeginImageContext(targetSize); // this will crop
+    
+    CGRect thumbnailRect = CGRectZero;
+    thumbnailRect.origin = thumbnailPoint;
+    thumbnailRect.size.width  = scaledWidth;
+    thumbnailRect.size.height = scaledHeight;
+    
+    [sourceImage drawInRect:thumbnailRect];
+    
+    newImage = UIGraphicsGetImageFromCurrentImageContext();
+    if(newImage == nil)
+        NSLog(@"could not scale image");
+    
+    //pop the context to get back to the default
+    UIGraphicsEndImageContext();
+    return newImage;
 }
 
 -(BOOL) isValidPhone:(NSString *) phone {
@@ -110,9 +180,7 @@
         // it only matched partial string
         return NO;
     }
-}
-
-    
+}    
 
 - (IBAction)deleteContact:(id)sender {
     
@@ -140,6 +208,32 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
     [super touchesBegan:touches withEvent:event];
+}
+
+
+#pragma mark - Image Picker Controller Delegate
+
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    self.image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+}
+
+- (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+#pragma mark - Actions
+
+- (IBAction)openGalery:(UIButton *)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    [self presentViewController:picker animated:YES completion:nil];
 }
 
 @end

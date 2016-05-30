@@ -12,9 +12,6 @@
 
 @interface ContactsViewController : CoreDataTableViewController
 
-
-@property (strong, nonatomic) UIImage *image;
-
 - (void) loadContacts;
 
 //-(void) addInsertButton;
