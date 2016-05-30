@@ -16,6 +16,7 @@
 		6554DB1A1CF1AE07002684D5 /* Contact+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB191CF1AE07002684D5 /* Contact+Methods.m */; };
 		6554DB1E1CF1B701002684D5 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB1D1CF1B701002684D5 /* CoreDataTableViewController.m */; };
 		6554DB211CF1CADE002684D5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB1F1CF1CADE002684D5 /* Model.xcdatamodeld */; };
+		6556E1DC1CFC2E2500F7F49E /* GuardianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6556E1DB1CFC2E2500F7F49E /* GuardianViewController.m */; };
 		FB0285341CEC5EBF005B6B67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0285331CEC5EBF005B6B67 /* main.m */; };
 		FB0285371CEC5EBF005B6B67 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0285361CEC5EBF005B6B67 /* AppDelegate.m */; };
 		FB02853A1CEC5EBF005B6B67 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0285391CEC5EBF005B6B67 /* ContactsViewController.m */; };
@@ -33,7 +34,6 @@
 		FBD1EFAE1CEDB5F30056AB89 /* NewContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD1EFAD1CEDB5F30056AB89 /* NewContactViewController.m */; };
 		FBD46E9A1CF6DA45000202F9 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD46E991CF6DA45000202F9 /* Session.m */; };
 		FBD8A3EC1CF58EC60076F920 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD8A3EB1CF58EC60076F920 /* RegisterViewController.m */; };
-		FBD8A3EF1CF5DD4F0076F920 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD8A3EE1CF5DD4F0076F920 /* NavigationViewController.m */; };
 		FBF8A3ED1CF9DD84009B000A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF8A3EC1CF9DD84009B000A /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +65,8 @@
 		6554DB1C1CF1B701002684D5 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
 		6554DB1D1CF1B701002684D5 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
 		6554DB201CF1CADE002684D5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		6556E1DA1CFC2E2500F7F49E /* GuardianViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuardianViewController.h; sourceTree = "<group>"; };
+		6556E1DB1CFC2E2500F7F49E /* GuardianViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuardianViewController.m; sourceTree = "<group>"; };
 		65D0E24F1CF21C6F00374315 /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
 		FB02852F1CEC5EBF005B6B67 /* Appsisteme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appsisteme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB0285331CEC5EBF005B6B67 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,8 +98,6 @@
 		FBD46E991CF6DA45000202F9 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
 		FBD8A3EA1CF58EC60076F920 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		FBD8A3EB1CF58EC60076F920 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		FBD8A3ED1CF5DD4F0076F920 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
-		FBD8A3EE1CF5DD4F0076F920 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
 		FBF8A3EC1CF9DD84009B000A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -135,8 +135,8 @@
 		652BCB241CF9FFF000008F24 /* Navigation controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FBD8A3ED1CF5DD4F0076F920 /* NavigationViewController.h */,
-				FBD8A3EE1CF5DD4F0076F920 /* NavigationViewController.m */,
+				6556E1DA1CFC2E2500F7F49E /* GuardianViewController.h */,
+				6556E1DB1CFC2E2500F7F49E /* GuardianViewController.m */,
 				652BCB251CFA002E00008F24 /* GuardedNavigationController.h */,
 				652BCB261CFA002E00008F24 /* GuardedNavigationController.m */,
 			);
@@ -390,10 +390,10 @@
 				FBD1EFAE1CEDB5F30056AB89 /* NewContactViewController.m in Sources */,
 				FB509CD41CF58626006D8922 /* ContactsTableViewCell.m in Sources */,
 				6554DB1A1CF1AE07002684D5 /* Contact+Methods.m in Sources */,
-				FBD8A3EF1CF5DD4F0076F920 /* NavigationViewController.m in Sources */,
 				FB0285341CEC5EBF005B6B67 /* main.m in Sources */,
 				FBD8A3EC1CF58EC60076F920 /* RegisterViewController.m in Sources */,
 				6554DB211CF1CADE002684D5 /* Model.xcdatamodeld in Sources */,
+				6556E1DC1CFC2E2500F7F49E /* GuardianViewController.m in Sources */,
 				6554DB111CF1A33C002684D5 /* CoreDataStack.m in Sources */,
 				FBA12EC81CF46C5C003A0649 /* UserTypeViewController.m in Sources */,
 			);
