@@ -19,11 +19,8 @@
 
 @property (strong, nonatomic) NSManagedObjectContext *context;
 
-@property (strong,nonatomic) OneSignal *oneSignal;
-
 @property (strong,nonatomic) AppDelegate *appDelegate;
 
-@property (strong,nonatomic) NSString *idUser;
 
 @end
 
@@ -51,17 +48,6 @@
     _context = [[[AppDelegate appDelegate] coreDataStack] managedObjectContext];
     [self loadContacts];
     
-    [_oneSignal getTags:^(NSDictionary* tags) {
-        NSLog(@"%@", tags);
-    }];
-    
-    _idUser= @"9584842e-0dd2-48b9-bdab-fa1f37ba1339";
-    
-    _oneSignal = [[AppDelegate appDelegate] oneSignal];
-    [_oneSignal postNotification:@{
-                                   @"contents" : @{@"en": @"Hola"},
-                                   @"include_player_ids": @[_idUser]
-                                   }];
     
 }
 

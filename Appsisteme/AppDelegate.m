@@ -64,13 +64,7 @@
             NSLog(@"pushToken:%@", pushToken);
         
     }];
-    
-
-    return YES;
- //   [_oneSignal postNotification:@{
-  //                                 @"contents" : @{@"en": @"_userId"},
-   //                                @"include_player_ids": @[@"9584842e-0dd2-48b9-bdab-fa1f37ba1339"]
-  //                                 }];
+                        
     
     return YES;
 }

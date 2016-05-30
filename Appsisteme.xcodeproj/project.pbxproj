@@ -23,6 +23,7 @@
 		FB0285421CEC5EBF005B6B67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB0285411CEC5EBF005B6B67 /* Assets.xcassets */; };
 		FB0285451CEC5EBF005B6B67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB0285431CEC5EBF005B6B67 /* LaunchScreen.storyboard */; };
 		FB0285501CEC5EBF005B6B67 /* AppsistemeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB02854F1CEC5EBF005B6B67 /* AppsistemeTests.m */; };
+		FB250B081CFC25040096B2D4 /* StateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB250B071CFC25040096B2D4 /* StateViewController.m */; };
 		FB509CD41CF58626006D8922 /* ContactsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB509CD31CF58626006D8922 /* ContactsTableViewCell.m */; };
 		FB509CDD1CF59EB2006D8922 /* EditContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB509CDC1CF59EB2006D8922 /* EditContactViewController.m */; };
 		FB509CDF1CF5AFD8006D8922 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB509CDE1CF5AFD8006D8922 /* Foundation.framework */; };
@@ -32,7 +33,6 @@
 		FBD1EFAE1CEDB5F30056AB89 /* NewContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD1EFAD1CEDB5F30056AB89 /* NewContactViewController.m */; };
 		FBD46E9A1CF6DA45000202F9 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD46E991CF6DA45000202F9 /* Session.m */; };
 		FBD8A3EC1CF58EC60076F920 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD8A3EB1CF58EC60076F920 /* RegisterViewController.m */; };
-		FBD8A3EF1CF5DD4F0076F920 /* GuardianNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD8A3EE1CF5DD4F0076F920 /* GuardianNavigationController.m */; };
 		FBD8A3EF1CF5DD4F0076F920 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD8A3EE1CF5DD4F0076F920 /* NavigationViewController.m */; };
 		FBF8A3ED1CF9DD84009B000A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF8A3EC1CF9DD84009B000A /* UIKit.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +79,8 @@
 		FB02854B1CEC5EBF005B6B67 /* AppsistemeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppsistemeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB02854F1CEC5EBF005B6B67 /* AppsistemeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppsistemeTests.m; sourceTree = "<group>"; };
 		FB0285511CEC5EBF005B6B67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB250B061CFC25040096B2D4 /* StateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateViewController.h; sourceTree = "<group>"; };
+		FB250B071CFC25040096B2D4 /* StateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateViewController.m; sourceTree = "<group>"; };
 		FB509CD21CF58626006D8922 /* ContactsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewCell.h; sourceTree = "<group>"; };
 		FB509CD31CF58626006D8922 /* ContactsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewCell.m; sourceTree = "<group>"; };
 		FB509CDB1CF59EB2006D8922 /* EditContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditContactViewController.h; sourceTree = "<group>"; };
@@ -94,8 +96,6 @@
 		FBD46E991CF6DA45000202F9 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
 		FBD8A3EA1CF58EC60076F920 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		FBD8A3EB1CF58EC60076F920 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		FBD8A3ED1CF5DD4F0076F920 /* GuardianNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuardianNavigationController.h; sourceTree = "<group>"; };
-		FBD8A3EE1CF5DD4F0076F920 /* GuardianNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuardianNavigationController.m; sourceTree = "<group>"; };
 		FBD8A3ED1CF5DD4F0076F920 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		FBD8A3EE1CF5DD4F0076F920 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
 		FBF8A3EC1CF9DD84009B000A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -135,8 +135,8 @@
 		652BCB241CF9FFF000008F24 /* Navigation controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FBD8A3ED1CF5DD4F0076F920 /* GuardianNavigationController.h */,
-				FBD8A3EE1CF5DD4F0076F920 /* GuardianNavigationController.m */,
+				FBD8A3ED1CF5DD4F0076F920 /* NavigationViewController.h */,
+				FBD8A3EE1CF5DD4F0076F920 /* NavigationViewController.m */,
 				652BCB251CFA002E00008F24 /* GuardedNavigationController.h */,
 				652BCB261CFA002E00008F24 /* GuardedNavigationController.m */,
 			);
@@ -250,6 +250,8 @@
 				FB509CDC1CF59EB2006D8922 /* EditContactViewController.m */,
 				650F776F1CFB6AB1006A2374 /* ExitViewController.h */,
 				650F77701CFB6AB1006A2374 /* ExitViewController.m */,
+				FB250B061CFC25040096B2D4 /* StateViewController.h */,
+				FB250B071CFC25040096B2D4 /* StateViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -378,6 +380,7 @@
 				FBD46E9A1CF6DA45000202F9 /* Session.m in Sources */,
 				6554DB171CF1AB8B002684D5 /* Contact.m in Sources */,
 				FB02853A1CEC5EBF005B6B67 /* ContactsViewController.m in Sources */,
+				FB250B081CFC25040096B2D4 /* StateViewController.m in Sources */,
 				650F77711CFB6AB1006A2374 /* ExitViewController.m in Sources */,
 				6554DB161CF1AB8B002684D5 /* Contact+CoreDataProperties.m in Sources */,
 				FB509CDD1CF59EB2006D8922 /* EditContactViewController.m in Sources */,
@@ -387,7 +390,7 @@
 				FBD1EFAE1CEDB5F30056AB89 /* NewContactViewController.m in Sources */,
 				FB509CD41CF58626006D8922 /* ContactsTableViewCell.m in Sources */,
 				6554DB1A1CF1AE07002684D5 /* Contact+Methods.m in Sources */,
-				FBD8A3EF1CF5DD4F0076F920 /* GuardianNavigationController.m in Sources */,
+				FBD8A3EF1CF5DD4F0076F920 /* NavigationViewController.m in Sources */,
 				FB0285341CEC5EBF005B6B67 /* main.m in Sources */,
 				FBD8A3EC1CF58EC60076F920 /* RegisterViewController.m in Sources */,
 				6554DB211CF1CADE002684D5 /* Model.xcdatamodeld in Sources */,
