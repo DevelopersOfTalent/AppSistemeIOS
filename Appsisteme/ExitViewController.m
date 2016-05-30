@@ -7,6 +7,7 @@
 //
 
 #import "ExitViewController.h"
+#import "AppDelegate.h"
 
 @interface ExitViewController ()
 
@@ -21,14 +22,14 @@
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0         // El timer se ejcuta cada segundo
                                              target:self        // Se ejecuta este timer en este view
-                                           selector:@selector(finishApp)      // Se ejecuta el método contar
+                                           selector:@selector(unwindToRegister)      // Se ejecuta el método contar
                                            userInfo:nil
                                             repeats:NO];
 }
 
--(void) finishApp{
+-(void) unwindToRegister{
     
-    exit(1);
+    
 }
 
 @end
