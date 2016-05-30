@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CoreDataTableViewController.h"
-
+#import <OneSignal/OneSignal.h>
 
 @interface ContactsViewController : CoreDataTableViewController
 

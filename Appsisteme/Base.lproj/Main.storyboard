@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -546,7 +546,7 @@
         <!--3.1_parentStates-->
         <scene sceneID="k9x-Rg-aSG">
             <objects>
-                <viewController title="3.1_parentStates" id="mVb-eA-YIc" sceneMemberID="viewController">
+                <viewController title="3.1_parentStates" id="mVb-eA-YIc" customClass="StateViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FLO-H6-CPh"/>
                         <viewControllerLayoutGuide type="bottom" id="vHR-1Y-N1G"/>
@@ -555,14 +555,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEU-wr-jmz">
-                                <rect key="frame" x="165" y="149" width="130" height="130"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="6Du-K2-sy8"/>
-                                    <constraint firstAttribute="width" constant="130" id="pam-ue-Dl9"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="buttom_bad"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyL-Hp-zm7">
                                 <rect key="frame" x="95" y="289" width="130" height="130"/>
                                 <constraints>
@@ -578,6 +570,17 @@
                                     <constraint firstAttribute="height" constant="140" id="rDD-ls-oHA"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="buttom_fine"/>
+                                <connections>
+                                    <action selector="sendState:" destination="mVb-eA-YIc" eventType="touchUpInside" id="pCJ-vA-Rso"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEU-wr-jmz">
+                                <rect key="frame" x="165" y="149" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="6Du-K2-sy8"/>
+                                    <constraint firstAttribute="width" constant="130" id="pam-ue-Dl9"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="buttom_bad"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -593,6 +596,11 @@
                     <tabBarItem key="tabBarItem" title="Estado" id="stQ-tM-G8Z"/>
                     <navigationItem key="navigationItem" id="OhJ-JB-nRj"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="badButton" destination="DEU-wr-jmz" id="Z69-BV-ytS"/>
+                        <outlet property="callMeButton" destination="UyL-Hp-zm7" id="5DU-TC-SJr"/>
+                        <outlet property="fineButton" destination="Xho-lF-2NZ" id="TtB-Dh-cHJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ISp-Sp-8wv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -879,7 +887,7 @@
         <!--2.1_guardianAskState-->
         <scene sceneID="0ro-8b-6GJ">
             <objects>
-                <viewController title="2.1_guardianAskState" id="CBL-cw-O3l" sceneMemberID="viewController">
+                <viewController title="2.1_guardianAskState" id="CBL-cw-O3l" customClass="StateViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pGr-K5-bpa"/>
                         <viewControllerLayoutGuide type="bottom" id="fYG-ez-f3z"/>
@@ -895,6 +903,9 @@
                                     <constraint firstAttribute="width" constant="260" id="hRS-cn-8VZ"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="button_ask"/>
+                                <connections>
+                                    <action selector="requestState:" destination="CBL-cw-O3l" eventType="touchUpInside" id="fEh-xA-fxB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -906,6 +917,9 @@
                     <tabBarItem key="tabBarItem" title="" id="jfb-vi-eKS"/>
                     <navigationItem key="navigationItem" id="zaO-UA-PwX"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="requestButton" destination="CjA-2x-ydb" id="CS8-YM-Od9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rzd-qQ-cra" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

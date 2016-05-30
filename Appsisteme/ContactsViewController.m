@@ -14,9 +14,13 @@
 #import "EditContactViewController.h"
 
 
+
 @interface ContactsViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) NSManagedObjectContext *context;
+
+@property (strong,nonatomic) AppDelegate *appDelegate;
+
 
 @end
 
@@ -28,15 +32,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[[AppDelegate appDelegate] oneSignal] sendTag:@"key" value:@"value"];
     
     _context = [[[AppDelegate appDelegate] coreDataStack] managedObjectContext];
+    
+    
 }
+
+
 
 -(void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
+    [self loadContacts];
     _context = [[[AppDelegate appDelegate] coreDataStack] managedObjectContext];
     [self loadContacts];
+    
+    
 }
 
 
@@ -125,7 +137,6 @@
     
     if ([[segue identifier] isEqualToString:@"edit"]) {
         
-        //button
         
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:((UIView*)sender).tag inSection:0];
         
@@ -155,7 +166,6 @@
     {
         UIAlertController* alert2 = [UIAlertController alertControllerWithTitle: @"Alert"                                                                                                                                 message:@"Call facility is not available!!!"
             preferredStyle:UIAlertControllerStyleAlert];
-        
         UIAlertAction* alertIn = [UIAlertAction actionWithTitle:@"OK"
                                                           style:UIAlertActionStyleDefault
                                                         handler:^(UIAlertAction * action) {

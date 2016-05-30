@@ -14,11 +14,12 @@
 @interface AppDelegate ()
 
 
-
 @end
 
 
 @implementation AppDelegate
+@synthesize oneSignal = _oneSignal;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
@@ -38,7 +39,32 @@
     //One signal
     self.oneSignal = [[OneSignal alloc] initWithLaunchOptions:launchOptions
                                                         appId:@"bdf1bce9-c220-4631-8784-045722fa5861"
-                                           handleNotification:nil];
+                                           handleNotification:^(NSString* message, NSDictionary* additionalData, BOOL isActive) {
+                                               NSLog(@"OneSignal Notification opened:\nMessage: %@", message);
+                                               
+                                               if (additionalData) {
+                                                   NSLog(@"additionalData: %@", additionalData);
+                                                   
+                                                   // Check for and read any custom values you added to the notification
+                                                   // This done with the "Additional Data" section the dashboard.
+                                                   // OR setting the 'data' field on our REST API.
+                                                   NSString* customKey = additionalData[@"customKey"];
+                                                   if (customKey)
+                                                       NSLog(@"customKey: %@", customKey);
+                                               }
+                                           }];
+    
+    [_oneSignal enableInAppAlertNotification:true];
+    
+    [_oneSignal IdsAvailable:^(NSString* userId, NSString* pushToken) {
+        NSLog(@"UserId:%@", userId);
+        _userId = userId;
+        
+        if (pushToken != nil)
+            NSLog(@"pushToken:%@", pushToken);
+        
+    }];
+                        
     
     return YES;
 }
@@ -91,6 +117,20 @@
     });
     
     return appDelegate;
+}
+
+
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    NSLog(@"userInfo: %@",userInfo);
+    NSLog(@"userInfo: %@",userInfo);
+    if ( application.applicationState == UIApplicationStateInactive || application.applicationState == UIApplicationStateBackground  )
+    {
+        //opened from a push notification when the app was on background
+        NSDictionary *notification = [userInfo objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+        NSLog(@"Notificacion: %@",notification);
+    }
 }
 
 @end
