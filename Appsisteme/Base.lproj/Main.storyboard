@@ -85,6 +85,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="ckX-W6-f2v" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-124" y="635"/>
         </scene>
@@ -455,6 +456,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fB-ba-R6E">
+                                <rect key="frame" x="137" y="463" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="openGalery:" destination="rDr-VR-8yb" eventType="touchUpInside" id="nsg-ld-nMV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -772,11 +780,28 @@
                                 <color key="textColor" red="0.32549019610000002" green="0.69803921570000005" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dS7-J0-XTY">
+                                <rect key="frame" x="46" y="394" width="228" height="40"/>
+                                <color key="backgroundColor" red="0.32549019610000002" green="0.69803921570000005" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="rno-qh-jzL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Volver a pantalla de inicio">
+                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ckX-W6-f2v" kind="unwind" unwindAction="unwindFromExitToUserType:" id="ShR-Jc-Uwf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qRP-GC-8ux" firstAttribute="centerY" secondItem="xEo-u1-gqC" secondAttribute="centerY" constant="-50" id="6cP-u0-Wyn"/>
                             <constraint firstItem="qRP-GC-8ux" firstAttribute="centerX" secondItem="xEo-u1-gqC" secondAttribute="centerX" constant="10" id="P2Y-pi-OY3"/>
+                            <constraint firstItem="dS7-J0-XTY" firstAttribute="centerX" secondItem="xEo-u1-gqC" secondAttribute="centerX" id="UCV-g1-7OY"/>
+                            <constraint firstItem="dS7-J0-XTY" firstAttribute="leading" secondItem="xEo-u1-gqC" secondAttribute="leadingMargin" constant="30" id="Uev-yt-2XO"/>
+                            <constraint firstItem="dS7-J0-XTY" firstAttribute="top" secondItem="qRP-GC-8ux" secondAttribute="bottom" constant="40" id="dBC-O6-sQB"/>
                             <constraint firstItem="IhS-Le-HzI" firstAttribute="top" secondItem="qRP-GC-8ux" secondAttribute="bottom" constant="-50" id="kYN-GG-QTv"/>
                             <constraint firstItem="IhS-Le-HzI" firstAttribute="centerX" secondItem="xEo-u1-gqC" secondAttribute="centerX" id="qtY-hs-ULZ"/>
                         </constraints>
@@ -788,7 +813,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nka-BH-nfI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1229" y="635"/>
+            <point key="canvasLocation" x="289" y="459"/>
         </scene>
         <!--1B waitSkinParent-->
         <scene sceneID="KYH-rU-qen">

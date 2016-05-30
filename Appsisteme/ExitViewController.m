@@ -11,24 +11,24 @@
 
 @interface ExitViewController ()
 
-@property (nonatomic, strong) NSTimer *timer;
+//@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
 @implementation ExitViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0         // El timer se ejcuta cada segundo
-                                             target:self        // Se ejecuta este timer en este view
-                                           selector:@selector(unwindToRegister)      // Se ejecuta el método contar
-                                           userInfo:nil
-                                            repeats:NO];
-}
-
--(void) unwindToRegister{
-    
-}
+//- (void)viewDidLoad {
+//    [super viewDidLoad];
+//    
+//    self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0         // El timer se ejcuta cada segundo
+//                                             target:self        // Se ejecuta este timer en este view
+//                                           selector:@selector(unwindToRegister)      // Se ejecuta el método contar
+//                                           userInfo:nil
+//                                            repeats:NO];
+//}
+//
+//-(void) unwindToRegister{
+//    
+//}
 
 @end

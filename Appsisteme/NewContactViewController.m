@@ -9,14 +9,17 @@
 #import "NewContactViewController.h"
 #import "Contact.h"
 #import "UIView+Toast.h"
+#import "ContactsViewController.h"
 
-@interface NewContactViewController ()
+@interface NewContactViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *contactName;
 @property (weak, nonatomic) IBOutlet UITextField *contactPhoneNumber;
 
 @property (strong, nonatomic) NSManagedObjectContext *context;
 @property (strong, nonatomic) NSManagedObjectContext *contextAux;
+
+@property (strong, nonatomic) UIImage *image;
 
 @end
 
@@ -133,6 +136,44 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
     [super touchesBegan:touches withEvent:event];
+}
+
+
+#pragma mark - Image Picker Controller Delegate
+
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    self.image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+}
+
+- (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+#pragma mark - Actions
+
+- (IBAction)openGalery:(UIButton *)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([[segue identifier] isEqualToString:@"add"]) {
+        
+        ContactsViewController *contactsVC = (ContactsViewController *)[segue destinationViewController];
+        
+        contactsVC.image = self.image;
+    }
 }
 
 

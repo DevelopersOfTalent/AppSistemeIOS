@@ -79,11 +79,9 @@
     cell.preferencesButton.tag = indexPath.row;
     [cell.preferencesButton addTarget:self action:@selector(editContact:) forControlEvents:(UIControlEventTouchUpInside)];
     
-    
-    
-    
     Contact *contact = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.labelContactsName.text = contact.name;
+    cell.imageView.image = self.image;
     
     return cell;
 }
@@ -180,15 +178,3 @@
 
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
