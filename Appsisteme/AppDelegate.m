@@ -13,11 +13,12 @@
 
 @interface AppDelegate ()
 
-
+@property (nonatomic) NSDictionary *dataDictionary;
 @end
 
 
 @implementation AppDelegate
+
 @synthesize oneSignal = _oneSignal;
 
 
@@ -44,13 +45,15 @@
                                                
                                                if (additionalData) {
                                                    NSLog(@"additionalData: %@", additionalData);
+                                                   _dataDictionary = additionalData;
+                                                   NSLog(@"data dictionary %@",_dataDictionary);
                                                    
                                                    // Check for and read any custom values you added to the notification
                                                    // This done with the "Additional Data" section the dashboard.
                                                    // OR setting the 'data' field on our REST API.
-                                                   NSString* customKey = additionalData[@"customKey"];
-                                                   if (customKey)
-                                                       NSLog(@"customKey: %@", customKey);
+                                                   NSString* data = additionalData[@"data"];
+                                                   if (data)
+                                                       NSLog(@"customKey: %@", data);
                                                }
                                            }];
     

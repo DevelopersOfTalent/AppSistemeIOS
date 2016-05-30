@@ -25,6 +25,10 @@
 		FB0285501CEC5EBF005B6B67 /* AppsistemeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB02854F1CEC5EBF005B6B67 /* AppsistemeTests.m */; };
 		FB250B081CFC25040096B2D4 /* StateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB250B071CFC25040096B2D4 /* StateViewController.m */; };
 		FB250B0B1CFC34780096B2D4 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = FB250B0A1CFC34780096B2D4 /* UIView+Toast.m */; };
+		FB26F57B1CFC943400358C95 /* LogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB26F57A1CFC943400358C95 /* LogViewController.m */; };
+		FB26F57E1CFC964600358C95 /* LogTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB26F57D1CFC964600358C95 /* LogTableViewCell.m */; };
+		FB26F5831CFC9AE500358C95 /* Log+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FB26F5801CFC9AE500358C95 /* Log+CoreDataProperties.m */; };
+		FB26F5841CFC9AE500358C95 /* Log.m in Sources */ = {isa = PBXBuildFile; fileRef = FB26F5821CFC9AE500358C95 /* Log.m */; };
 		FB509CD41CF58626006D8922 /* ContactsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB509CD31CF58626006D8922 /* ContactsTableViewCell.m */; };
 		FB509CDD1CF59EB2006D8922 /* EditContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB509CDC1CF59EB2006D8922 /* EditContactViewController.m */; };
 		FB509CDF1CF5AFD8006D8922 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB509CDE1CF5AFD8006D8922 /* Foundation.framework */; };
@@ -83,6 +87,14 @@
 		FB250B071CFC25040096B2D4 /* StateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateViewController.m; sourceTree = "<group>"; };
 		FB250B091CFC34780096B2D4 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		FB250B0A1CFC34780096B2D4 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		FB26F5791CFC943400358C95 /* LogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogViewController.h; sourceTree = "<group>"; };
+		FB26F57A1CFC943400358C95 /* LogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogViewController.m; sourceTree = "<group>"; };
+		FB26F57C1CFC964600358C95 /* LogTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogTableViewCell.h; sourceTree = "<group>"; };
+		FB26F57D1CFC964600358C95 /* LogTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogTableViewCell.m; sourceTree = "<group>"; };
+		FB26F57F1CFC9AE500358C95 /* Log+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Log+CoreDataProperties.h"; path = "../Log+CoreDataProperties.h"; sourceTree = "<group>"; };
+		FB26F5801CFC9AE500358C95 /* Log+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Log+CoreDataProperties.m"; path = "../Log+CoreDataProperties.m"; sourceTree = "<group>"; };
+		FB26F5811CFC9AE500358C95 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Log.h; path = ../Log.h; sourceTree = "<group>"; };
+		FB26F5821CFC9AE500358C95 /* Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Log.m; path = ../Log.m; sourceTree = "<group>"; };
 		FB509CD21CF58626006D8922 /* ContactsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewCell.h; sourceTree = "<group>"; };
 		FB509CD31CF58626006D8922 /* ContactsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewCell.m; sourceTree = "<group>"; };
 		FB509CDB1CF59EB2006D8922 /* EditContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditContactViewController.h; sourceTree = "<group>"; };
@@ -219,6 +231,10 @@
 				6554DB131CF1AB8B002684D5 /* Contact+CoreDataProperties.m */,
 				6554DB141CF1AB8B002684D5 /* Contact.h */,
 				6554DB151CF1AB8B002684D5 /* Contact.m */,
+				FB26F57F1CFC9AE500358C95 /* Log+CoreDataProperties.h */,
+				FB26F5801CFC9AE500358C95 /* Log+CoreDataProperties.m */,
+				FB26F5811CFC9AE500358C95 /* Log.h */,
+				FB26F5821CFC9AE500358C95 /* Log.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -252,6 +268,8 @@
 				650F77701CFB6AB1006A2374 /* ExitViewController.m */,
 				FB250B061CFC25040096B2D4 /* StateViewController.h */,
 				FB250B071CFC25040096B2D4 /* StateViewController.m */,
+				FB26F5791CFC943400358C95 /* LogViewController.h */,
+				FB26F57A1CFC943400358C95 /* LogViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -263,6 +281,8 @@
 				FBD46E991CF6DA45000202F9 /* Session.m */,
 				FB509CD21CF58626006D8922 /* ContactsTableViewCell.h */,
 				FB509CD31CF58626006D8922 /* ContactsTableViewCell.m */,
+				FB26F57C1CFC964600358C95 /* LogTableViewCell.h */,
+				FB26F57D1CFC964600358C95 /* LogTableViewCell.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -379,6 +399,7 @@
 				FBD46E9A1CF6DA45000202F9 /* Session.m in Sources */,
 				6554DB171CF1AB8B002684D5 /* Contact.m in Sources */,
 				FB02853A1CEC5EBF005B6B67 /* ContactsViewController.m in Sources */,
+				FB26F5831CFC9AE500358C95 /* Log+CoreDataProperties.m in Sources */,
 				FB250B081CFC25040096B2D4 /* StateViewController.m in Sources */,
 				650F77711CFB6AB1006A2374 /* ExitViewController.m in Sources */,
 				6554DB161CF1AB8B002684D5 /* Contact+CoreDataProperties.m in Sources */,
@@ -390,11 +411,14 @@
 				FBD1EFAE1CEDB5F30056AB89 /* NewContactViewController.m in Sources */,
 				FB509CD41CF58626006D8922 /* ContactsTableViewCell.m in Sources */,
 				6554DB1A1CF1AE07002684D5 /* Contact+Methods.m in Sources */,
+				FB26F57B1CFC943400358C95 /* LogViewController.m in Sources */,
 				FB0285341CEC5EBF005B6B67 /* main.m in Sources */,
 				FBD8A3EC1CF58EC60076F920 /* RegisterViewController.m in Sources */,
+				FB26F5841CFC9AE500358C95 /* Log.m in Sources */,
 				6554DB211CF1CADE002684D5 /* Model.xcdatamodeld in Sources */,
 				6556E1DC1CFC2E2500F7F49E /* GuardianViewController.m in Sources */,
 				6554DB111CF1A33C002684D5 /* CoreDataStack.m in Sources */,
+				FB26F57E1CFC964600358C95 /* LogTableViewCell.m in Sources */,
 				FBA12EC81CF46C5C003A0649 /* UserTypeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

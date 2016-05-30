@@ -8,14 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "CoreDataTableViewController.h"
-#import <OneSignal/OneSignal.h>
+
 
 @interface ContactsViewController : CoreDataTableViewController
 
 - (void) loadContacts;
 
-//-(void) addInsertButton;
-//-(void) addButtonWasTapped:(id)sender;
 
 @end
 
