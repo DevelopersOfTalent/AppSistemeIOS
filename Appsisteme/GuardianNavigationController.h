@@ -1,8 +1,8 @@
 //
-//  NavigationViewController.h
+//  GuardianViewController.h
 //  Appsisteme
 //
-//  Created by Alumno on 25/05/16.
+//  Created by Andrea Cerrato on 30/5/16.
 //  Copyright © 2016 Alumno. All rights reserved.
 //
 
@@ -10,5 +10,4 @@
 
 @interface GuardianNavigationController : UINavigationController
 
-//- (void)goToAddContact;
 @end
