@@ -92,4 +92,5 @@
     self.userTypeAux = userType;
 }
 
+
 @end

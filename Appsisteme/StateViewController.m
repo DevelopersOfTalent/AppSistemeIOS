@@ -11,9 +11,6 @@
 
 @interface StateViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *requestButton;
-@property (weak, nonatomic) IBOutlet UIButton *fineButton;
-@property (weak, nonatomic) IBOutlet UIButton *badButton;
-@property (weak, nonatomic) IBOutlet UIButton *callMeButton;
 @property (strong,nonatomic) OneSignal *oneSignal;
 @property (strong,nonatomic) NSString *idUser;
 
@@ -32,24 +29,38 @@
 }
 - (IBAction)requestState:(id)sender {
     
-    [_oneSignal postNotification:@{
-                                  @"contents" : @{@"en": @"_userId"},
-                                   @"include_player_ids": @[@"9584842e-0dd2-48b9-bdab-fa1f37ba1339"]
-                                  }];
+   _idUser= @"65322cff-b81e-4d76-8a70-860e8dcd0f29";
     
-    [_oneSignal getTags:^(NSDictionary* tags) {
-        NSLog(@"%@", tags);
-    }];
-    
-   // _idUser= @"9584842e-0dd2-48b9-bdab-fa1f37ba1339";
-    
-  //  _oneSignal = [[AppDelegate appDelegate] oneSignal];
-  //  [_oneSignal postNotification:@{
-   //                                @"contents" : @{@"en": @"Hola"},
-    //                               @"include_player_ids": @[_idUser]
-    //                               }];
+   _oneSignal = [[AppDelegate appDelegate] oneSignal];
+   [_oneSignal postNotification:@{
+                                 @"contents" : @{@"en": @"Hola"},
+                                 @"include_player_ids": @[_idUser]
+                                 }];
 };
 - (IBAction)sendState:(id)sender {
+    
+    _idUser= @"65322cff-b81e-4d76-8a70-860e8dcd0f29";
+    _oneSignal = [[AppDelegate appDelegate] oneSignal];
+    NSString *buttonName = [sender titleForState:UIControlStateNormal];
+    if ([buttonName   isEqual: @"Good"]) {
+        _oneSignal = [[AppDelegate appDelegate] oneSignal];
+        [_oneSignal postNotification:@{
+                                       @"contents" : @{@"en": @"Bien"},
+                                       @"include_player_ids": @[_idUser]
+                                       }];            }
+    else if ([buttonName  isEqual: @"Bad"]){
+        _oneSignal = [[AppDelegate appDelegate] oneSignal];
+        [_oneSignal postNotification:@{
+                                       @"contents" : @{@"en": @"Mal"},
+                                       @"include_player_ids": @[_idUser]
+                                       }];     }
+    else if ([buttonName  isEqual: @"CallMe"]){
+        _oneSignal = [[AppDelegate appDelegate] oneSignal];
+        [_oneSignal postNotification:@{
+                                       @"contents" : @{@"en": @"Llamame"},
+                                       @"include_player_ids": @[_idUser]
+                                       }];     }
+    
 }
 
 /*

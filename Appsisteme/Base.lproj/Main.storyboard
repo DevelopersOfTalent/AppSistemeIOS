@@ -555,23 +555,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyL-Hp-zm7">
-                                <rect key="frame" x="95" y="289" width="130" height="130"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="cY0-J5-UVH"/>
-                                    <constraint firstAttribute="height" constant="130" id="pob-0t-2I8"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="buttom_call"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xho-lF-2NZ">
                                 <rect key="frame" x="20" y="144" width="140" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="MOm-02-28X"/>
                                     <constraint firstAttribute="height" constant="140" id="rDD-ls-oHA"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="buttom_fine"/>
+                                <state key="normal" title="Good" image="buttom_fine"/>
                                 <connections>
-                                    <action selector="sendState:" destination="mVb-eA-YIc" eventType="touchUpInside" id="pCJ-vA-Rso"/>
+                                    <action selector="sendState:" destination="mVb-eA-YIc" eventType="touchUpInside" id="Rsb-qI-AyK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEU-wr-jmz">
@@ -580,7 +572,21 @@
                                     <constraint firstAttribute="height" constant="130" id="6Du-K2-sy8"/>
                                     <constraint firstAttribute="width" constant="130" id="pam-ue-Dl9"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="buttom_bad"/>
+                                <state key="normal" title="Bad" image="buttom_bad"/>
+                                <connections>
+                                    <action selector="sendState:" destination="mVb-eA-YIc" eventType="touchUpInside" id="grG-6k-ehU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyL-Hp-zm7">
+                                <rect key="frame" x="95" y="289" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="cY0-J5-UVH"/>
+                                    <constraint firstAttribute="height" constant="130" id="pob-0t-2I8"/>
+                                </constraints>
+                                <state key="normal" title="CallMe" image="buttom_call"/>
+                                <connections>
+                                    <action selector="sendState:" destination="mVb-eA-YIc" eventType="touchUpInside" id="fIl-tM-R6o"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -596,11 +602,6 @@
                     <tabBarItem key="tabBarItem" title="Estado" id="stQ-tM-G8Z"/>
                     <navigationItem key="navigationItem" id="OhJ-JB-nRj"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="badButton" destination="DEU-wr-jmz" id="Z69-BV-ytS"/>
-                        <outlet property="callMeButton" destination="UyL-Hp-zm7" id="5DU-TC-SJr"/>
-                        <outlet property="fineButton" destination="Xho-lF-2NZ" id="TtB-Dh-cHJ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ISp-Sp-8wv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
