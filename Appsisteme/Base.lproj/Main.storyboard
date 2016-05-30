@@ -555,7 +555,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyL-Hp-zm7">
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyL-Hp-zm7">
                                 <rect key="frame" x="95" y="289" width="130" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="cY0-J5-UVH"/>
@@ -563,7 +563,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="buttom_call"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xho-lF-2NZ">
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xho-lF-2NZ">
                                 <rect key="frame" x="20" y="144" width="140" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="MOm-02-28X"/>
@@ -574,7 +574,7 @@
                                     <action selector="sendState:" destination="mVb-eA-YIc" eventType="touchUpInside" id="pCJ-vA-Rso"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEU-wr-jmz">
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEU-wr-jmz">
                                 <rect key="frame" x="165" y="149" width="130" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="6Du-K2-sy8"/>
@@ -896,7 +896,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CjA-2x-ydb">
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CjA-2x-ydb">
                                 <rect key="frame" x="30" y="154" width="260" height="260"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="260" id="Pbw-6v-05E"/>
