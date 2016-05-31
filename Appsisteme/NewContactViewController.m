@@ -183,30 +183,12 @@
     }
 }
 
--(BOOL) isValidPhone:(NSString *) phone {
+- (BOOL)isValidPhone:(NSString *)phoneNumber
+{
+    NSString *phoneRegex = @"^[0-9]{9,14}$";
+    NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", phoneRegex];
     
-    NSError *error = NULL;
-    NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypePhoneNumber error:&error];
-    
-    NSRange inputRange = NSMakeRange(0, [phone length]);
-    NSArray *matches = [detector matchesInString:phone options:0 range:inputRange];
-    
-    // no match at all
-    if ([matches count] == 0) {
-        return NO;
-    }
-    
-    // found match but we need to check if it matched the whole string
-    NSTextCheckingResult *result = (NSTextCheckingResult *)[matches objectAtIndex:0];
-    
-    if ([result resultType] == NSTextCheckingTypePhoneNumber && result.range.location == inputRange.location && result.range.length == inputRange.length) {
-        // it matched the whole string
-        return YES;
-    }
-    else {
-        // it only matched partial string
-        return NO;
-    }
+    return [phoneTest evaluateWithObject:phoneNumber];
 }
 
 

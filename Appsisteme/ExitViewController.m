@@ -13,22 +13,31 @@
 
 //@property (nonatomic, strong) NSTimer *timer;
 
+@property (weak, nonatomic) IBOutlet UITextField *exitTextField;
+
 @end
 
 @implementation ExitViewController
 
-//- (void)viewDidLoad {
-//    [super viewDidLoad];
-//    
-//    self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0         // El timer se ejcuta cada segundo
-//                                             target:self        // Se ejecuta este timer en este view
-//                                           selector:@selector(unwindToRegister)      // Se ejecuta el método contar
-//                                           userInfo:nil
-//                                            repeats:NO];
-//}
-//
-//-(void) unwindToRegister{
-//    
-//}
+- (IBAction)exit:(UIButton *)sender {
+    
+    if ([self.exitTextField.text isEqualToString:@"salir"]) {
+        
+        [self.tabBarController.navigationController popToRootViewControllerAnimated:YES];
+    }
+}
+
+- (IBAction)cancelExit:(UIButton *)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+#pragma mark - Hide keyboard
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+    [super touchesBegan:touches withEvent:event];
+}
 
 @end
