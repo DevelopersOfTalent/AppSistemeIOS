@@ -51,8 +51,6 @@
         
         [self.view makeToast:@"La contraseña debe tener entre 6 y 10 caracteres" duration:2.0 position:CSToastPositionCenter];
     }
-
-    
     
 }
 
@@ -93,10 +91,5 @@
 }
 
 
-
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self.view endEditing:YES];
-    [super touchesBegan:touches withEvent:event];
-}
 
 @end

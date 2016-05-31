@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
-
+#import "StateViewController.h"
 #import "ContactsViewController.h"
 
 @interface AppDelegate ()
@@ -44,9 +43,13 @@
                                                
                                                
                                                if (additionalData) {
-                                                   NSLog(@"additionalData: %@", additionalData);
+                                                   
                                                    _dataDictionary = additionalData;
-                                                   NSLog(@"data dictionary %@",_dataDictionary);
+                                                   
+                                                   StateViewController *stateViewController = [[StateViewController alloc] initWithNibName:nil bundle:nil];
+                                                   [stateViewController reciveNotification:_dataDictionary ];
+                                                   
+                                                   
                                                    
                                                    // Check for and read any custom values you added to the notification
                                                    // This done with the "Additional Data" section the dashboard.
@@ -126,7 +129,6 @@
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
-    NSLog(@"userInfo: %@",userInfo);
     NSLog(@"userInfo: %@",userInfo);
     if ( application.applicationState == UIApplicationStateInactive || application.applicationState == UIApplicationStateBackground  )
     {

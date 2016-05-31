@@ -61,7 +61,7 @@
 
 - (IBAction)requestState:(id)sender {
     
-   _idUser= @"238931b8-09ee-439f-aa92-8ba50ee398f7";
+   _idUser= @"eed57d57-4b88-44b5-895e-0be1fda91bcd";
     
    _oneSignal = [[AppDelegate appDelegate] oneSignal];
    [_oneSignal postNotification:@{
@@ -72,7 +72,7 @@
 
 - (IBAction)sendState:(id)sender {
     
-    _idUser= @"238931b8-09ee-439f-aa92-8ba50ee398f7";
+    _idUser= @"eed57d57-4b88-44b5-895e-0be1fda91bcd";
     _oneSignal = [[AppDelegate appDelegate] oneSignal];
     NSString *buttonName = [sender titleForState:UIControlStateNormal];
     
@@ -89,15 +89,16 @@
     [log setDate:date];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
-    [dateFormatter setDateStyle:NSDateFormatterShortStyle];    
+    
+    [dateFormatter setDateFormat:@"HH:mm d/MM/yy "];
+    
     NSString * dateString = [dateFormatter stringFromDate: date];
     
     if ([buttonName isEqual: @"Good"]) {
         _oneSignal = [[AppDelegate appDelegate] oneSignal];
         [_oneSignal postNotification:@{
                                        @"contents" : @{@"en": @"Bien"},
-                                       @"data" : @{@"identifier" : @"1",@"date" : dateString},
+                                       @"data" : @{@"state" : @"1",@"date" : dateString},
                                        @"include_player_ids": @[_idUser]
                                        }];
         [log setState:@"1"];
@@ -107,7 +108,7 @@
         _oneSignal = [[AppDelegate appDelegate] oneSignal];
         [_oneSignal postNotification:@{
                                        @"contents" : @{@"en": @"Mal"},
-                                       @"data" : @{@"identifier" : @"2",@"date" : dateString},
+                                       @"data" : @{@"state" : @"2",@"date" : dateString},
                                        @"include_player_ids": @[_idUser]
                                        }];
         [log setState:@"2"];
@@ -117,21 +118,31 @@
         _oneSignal = [[AppDelegate appDelegate] oneSignal];
         [_oneSignal postNotification:@{
                                        @"contents" : @{@"en": @"Llamame"},
-                                       @"data" : @{@"identifier" : @"3",@"date" : dateString},
+                                       @"data" : @{@"state" : @"3",@"date" : dateString},
                                        @"include_player_ids": @[_idUser]
                                        }];
         [log setState:@"3"];
     }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void) reciveNotification: (NSDictionary *)dataDictionary {
+    
+    _context = [[[AppDelegate appDelegate] coreDataStack] managedObjectContext];
+    
+    NSString *reciveState= [dataDictionary objectForKey:@"state"];
+    NSString *reciveDate= [dataDictionary objectForKey:@"date"];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"HH:mm d/MM/yy "];
+    NSDate *convertedDate = [dateFormatter dateFromString:reciveDate];
+    
+    Log *log = [NSEntityDescription
+                insertNewObjectForEntityForName:@"Log"
+                inManagedObjectContext:self.context];
+    
+    [log setState:reciveState];
+    [log setDate:convertedDate];
+    
 }
-*/
 
 @end

@@ -10,4 +10,6 @@
 
 @interface StateViewController : UIViewController
 
+-(void) reciveNotification:  (NSDictionary *) dataDictionary;
+
 @end

@@ -14,6 +14,7 @@
 @interface LogViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) NSManagedObjectContext *context;
+@property (nonatomic, strong) Log *editedLog;
 
 @property (strong,nonatomic) AppDelegate *appDelegate;
 
@@ -90,12 +91,9 @@
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     
-    [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
-    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
-    
+    [dateFormatter setDateFormat:@"HH:mm d/MM/yy "];
     
     NSString * dateString = [dateFormatter stringFromDate: log.date];
-    
     
     cell.labelLogState.text = _state;
     cell.labelLogDate.text = dateString;
@@ -105,7 +103,27 @@
     return cell;
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
 
+-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return @"Eliminar";
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        //remove the deleted object from your data source.
+        //If your data source is an NSMutableArray, do this
+        
+        Log *log = [self.fetchedResultsController objectAtIndexPath:indexPath];        
+        [_context deleteObject:log];
+        
+        NSError *error;
+        [_context save:&error];
+        [tableView reloadData]; // tell table to refresh now
+    }
+}
 
 
 
