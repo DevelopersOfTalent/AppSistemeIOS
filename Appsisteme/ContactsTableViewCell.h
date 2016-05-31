@@ -13,7 +13,6 @@
 @property (weak, nonatomic) IBOutlet UIView *contactsCell;
 @property (weak, nonatomic) IBOutlet UIButton *preferencesButton;
 @property (weak, nonatomic) IBOutlet UILabel *labelContactsName;
-
-
+@property (weak, nonatomic) IBOutlet UIImageView *contactImage;
 
 @end

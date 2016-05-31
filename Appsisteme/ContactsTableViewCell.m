@@ -21,4 +21,13 @@
     // Configure the view for the selected state
 }
 
+-(void)layoutSubviews {
+    [super layoutSubviews];
+    
+    self.contactImage.layer.cornerRadius = self.contactImage.frame.size.width / 2;
+    self.contactImage.clipsToBounds = YES;
+    
+    [super layoutSubviews];
+}
+
 @end

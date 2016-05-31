@@ -30,6 +30,7 @@
 @property (nonatomic, strong) Contact *editedContactAux;
 
 @property (strong, nonatomic) UIImage *image;
+@property (nonatomic) BOOL isPhotoEdited;
 
 
 
@@ -78,9 +79,19 @@
         [self.editedContact setName:self.textFieldName.text];
         [self.editedContact setPhoneNumber:self.textFieldPhoneNumber.text];
         
-        UIImage *imageResize = [self imageWithImage:self.image scaledToSize:CGSizeMake(56, 56)];
-        NSData *imageData = UIImagePNGRepresentation(imageResize);
-        [self.editedContact setImage:imageData];
+        if (self.isPhotoEdited) {
+            
+            UIImage *imageResize = [self imageWithImage:self.image scaledToSize:CGSizeMake(56, 56)];
+            NSData *imageData = UIImagePNGRepresentation(imageResize);
+            [self.editedContact setImage:imageData];
+            self.isPhotoEdited = NO;
+        } else {
+            
+            self.image = [UIImage imageNamed:@"fotoUser.png"];
+            UIImage *imageResize = [self imageWithImage:self.image scaledToSize:CGSizeMake(56, 56)];
+            NSData *imageData = UIImagePNGRepresentation(imageResize);
+            [self.editedContact setImage:imageData];
+        }
         
         NSError *error;
         [_context save:&error];
@@ -215,12 +226,15 @@
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     
+    self.isPhotoEdited = YES;
+    
     [self dismissViewControllerAnimated:YES completion:nil];
     self.image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
 }
 
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     
+    self.image = [UIImage imageNamed:@"fotoUser.png"];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

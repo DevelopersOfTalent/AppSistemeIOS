@@ -283,6 +283,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="contactImage" destination="kxC-Wj-3OB" id="uYv-Nj-ndT"/>
                                     <outlet property="contactsCell" destination="paf-A7-ElC" id="acr-1o-cjI"/>
                                     <outlet property="labelContactsName" destination="Ijk-2Y-3au" id="WCS-lp-OA3"/>
                                     <outlet property="preferencesButton" destination="yvb-Af-BfU" id="vLJ-my-WyJ"/>
@@ -1153,6 +1154,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="contactImage" destination="nhQ-GI-wxd" id="A0i-ug-9D5"/>
                                     <outlet property="contactsCell" destination="zJ3-Gd-9Cg" id="Gw2-61-OP6"/>
                                     <outlet property="labelContactsName" destination="D4s-2e-Jtc" id="0Sy-Is-PFe"/>
                                     <outlet property="preferencesButton" destination="7eJ-n9-EX9" id="ADc-Yx-ZUA"/>

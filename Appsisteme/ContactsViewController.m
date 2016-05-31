@@ -76,19 +76,21 @@
         cell = [[ContactsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.imageView.layer.cornerRadius = cell.imageView.frame.size.width / 2;
-    cell.imageView.clipsToBounds = YES;
-    
     cell.preferencesButton.tag = indexPath.row;
     [cell.preferencesButton addTarget:self action:@selector(editContact:) forControlEvents:(UIControlEventTouchUpInside)];
     
     Contact *contact = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.labelContactsName.text = contact.name;
-    
+        
     UIImage *image = [UIImage imageWithData:contact.image];
-    cell.imageView.image = image;
-    cell.imageView.layer.cornerRadius = cell.imageView.frame.size.width / 2;
-    cell.imageView.clipsToBounds = YES;
+    
+    if (CGSizeEqualToSize(image.size, CGSizeMake(0, 0))) {
+        
+        image = [UIImage imageNamed:@"fotoUser.png"];
+    } else {
+        
+        cell.contactImage.image = image;
+    }
     
     return cell;
 }
