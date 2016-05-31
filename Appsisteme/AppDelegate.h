@@ -20,6 +20,8 @@
 
 @property (nonatomic) NSString *userId;
 
+@property (nonatomic) NSDictionary *dataDictionary;
+
 /**
  * Returns the application delegate
  *

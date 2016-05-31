@@ -5,7 +5,7 @@
         <attribute name="phoneNumber" attributeType="String" minValueString="9" syncable="YES"/>
     </entity>
     <entity name="Log" representedClassName="Log" syncable="YES">
-        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>

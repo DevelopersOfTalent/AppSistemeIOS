@@ -13,7 +13,6 @@
 
 @interface AppDelegate ()
 
-@property (nonatomic) NSDictionary *dataDictionary;
 @end
 
 
@@ -42,6 +41,7 @@
                                                         appId:@"bdf1bce9-c220-4631-8784-045722fa5861"
                                            handleNotification:^(NSString* message, NSDictionary* additionalData, BOOL isActive) {
                                                NSLog(@"OneSignal Notification opened:\nMessage: %@", message);
+                                               
                                                
                                                if (additionalData) {
                                                    NSLog(@"additionalData: %@", additionalData);

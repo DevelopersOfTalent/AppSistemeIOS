@@ -61,7 +61,7 @@
 
 - (IBAction)requestState:(id)sender {
     
-   _idUser= @"b73ec819-fac7-418d-a663-a8c7b12cc9c6";
+   _idUser= @"238931b8-09ee-439f-aa92-8ba50ee398f7";
     
    _oneSignal = [[AppDelegate appDelegate] oneSignal];
    [_oneSignal postNotification:@{
@@ -72,7 +72,7 @@
 
 - (IBAction)sendState:(id)sender {
     
-    _idUser= @"b73ec819-fac7-418d-a663-a8c7b12cc9c6";
+    _idUser= @"238931b8-09ee-439f-aa92-8ba50ee398f7";
     _oneSignal = [[AppDelegate appDelegate] oneSignal];
     NSString *buttonName = [sender titleForState:UIControlStateNormal];
     
@@ -80,37 +80,48 @@
                 insertNewObjectForEntityForName:@"Log"
                 inManagedObjectContext:self.context];
     
-    [log setState:buttonName];
-    [log setDate:@"Hoy"];
     
     [self.context insertObject:log];
     
+    NSTimeInterval timeInSeconds = [[NSDate date] timeIntervalSince1970];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:timeInSeconds];
     
-    if ([buttonName   isEqual: @"Good"]) {
+    [log setDate:date];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+    [dateFormatter setDateStyle:NSDateFormatterShortStyle];    
+    NSString * dateString = [dateFormatter stringFromDate: date];
+    
+    if ([buttonName isEqual: @"Good"]) {
         _oneSignal = [[AppDelegate appDelegate] oneSignal];
         [_oneSignal postNotification:@{
                                        @"contents" : @{@"en": @"Bien"},
-                                       @"data" : @{@"calle" : @"8",@"calle2" : @"18"},
+                                       @"data" : @{@"identifier" : @"1",@"date" : dateString},
                                        @"include_player_ids": @[_idUser]
                                        }];
+        [log setState:@"1"];
     }
     
-    else if ([buttonName  isEqual: @"Bad"]){
+    else if ([buttonName isEqual: @"Bad"]){
         _oneSignal = [[AppDelegate appDelegate] oneSignal];
         [_oneSignal postNotification:@{
                                        @"contents" : @{@"en": @"Mal"},
+                                       @"data" : @{@"identifier" : @"2",@"date" : dateString},
                                        @"include_player_ids": @[_idUser]
                                        }];
+        [log setState:@"2"];
     }
     
-    else if ([buttonName  isEqual: @"CallMe"]){
+    else if ([buttonName isEqual: @"CallMe"]){
         _oneSignal = [[AppDelegate appDelegate] oneSignal];
         [_oneSignal postNotification:@{
                                        @"contents" : @{@"en": @"Llamame"},
+                                       @"data" : @{@"identifier" : @"3",@"date" : dateString},
                                        @"include_player_ids": @[_idUser]
                                        }];
+        [log setState:@"3"];
     }
-    
 }
 
 /*

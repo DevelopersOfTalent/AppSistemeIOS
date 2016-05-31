@@ -17,6 +17,8 @@
 
 @property (strong,nonatomic) AppDelegate *appDelegate;
 
+@property (strong,nonatomic) NSString *state;
+
 @end
 
 @implementation LogViewController
@@ -58,7 +60,7 @@
     //Fetch
     NSFetchRequest *fetch = [[NSFetchRequest alloc] init];
     [fetch setEntity:[NSEntityDescription entityForName:@"Log" inManagedObjectContext:self.context]];
-    fetch.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"state" ascending:YES]];
+    fetch.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO]];
     NSFetchedResultsController *results = [[NSFetchedResultsController alloc] initWithFetchRequest:fetch managedObjectContext:self.context sectionNameKeyPath:nil cacheName:nil];
     self.fetchedResultsController = results;
 }
@@ -74,8 +76,30 @@
  
     
     Log *log = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.labelLogState.text = log.state;
-    cell.labelLogDate.text = log.date;
+ 
+   
+      if ([log.state isEqual: @"1"] ) {
+        _state = @"Bien";
+          
+      } else if ([log.state isEqual: @"2"]){
+          _state =@"Mal";
+          
+      } else if ([log.state isEqual: @"3"]){
+          _state = @"Llamame";
+      }
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+    
+    
+    NSString * dateString = [dateFormatter stringFromDate: log.date];
+    
+    
+    cell.labelLogState.text = _state;
+    cell.labelLogDate.text = dateString;
+    
     
     
     return cell;

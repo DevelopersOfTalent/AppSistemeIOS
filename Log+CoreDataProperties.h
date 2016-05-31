@@ -2,7 +2,7 @@
 //  Log+CoreDataProperties.h
 //  Appsisteme
 //
-//  Created by Alumno on 30/05/16.
+//  Created by Alumno on 31/05/16.
 //  Copyright © 2016 Alumno. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -15,8 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Log (CoreDataProperties)
 
+@property (nullable, nonatomic, retain) NSDate *date;
 @property (nullable, nonatomic, retain) NSString *state;
-@property (nullable, nonatomic, retain) NSString *date;
 
 @end
 
