@@ -29,6 +29,7 @@
 -(void)receiveUserType:(NSString *) userType {
     
     self.userTypeAux = userType;
+
 }
 
 
@@ -43,6 +44,13 @@
     [super viewWillAppear:animated];
     
     self.userType = self.userTypeAux;
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSString *emailUser = [user stringForKey: @"email"];
+    NSString *passwordUser = [user stringForKey: @"password"];
+    
+    self.email.text = emailUser;
+    self.password.text = passwordUser;
+    
 }
 
 
@@ -58,8 +66,12 @@
 
 -(IBAction) segueWithUserType:(UIButton *) sender {
     
-    if([self isValidEmail:self.email.text] && [self isValidPassword:self.password.text]) {
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    [user setObject: self.email.text forKey:(@"email")];
+    [user setObject: self.password.text forKey:(@"password")];
     
+    if([self isValidEmail:self.email.text] && [self isValidPassword:self.password.text]) {
+        
         [self doTheSegue];
     } else if (![self isValidEmail:self.email.text]) {
         
@@ -92,11 +104,14 @@
 -(void) doTheSegue {
     
     if ([[[Session sharedSession] userType] isEqualToString:@"guardian"]) {
+        
         [self performSegueWithIdentifier:@"segueToGuardianPath" sender:nil];
     }
     if ([[[Session sharedSession] userType] isEqualToString:@"guarded"]) {
+        
         [self performSegueWithIdentifier:@"segueToGuardedPath" sender:nil];
     }
 }
+
 
 @end
