@@ -9,6 +9,7 @@
 #import "RegisterViewController.h"
 #import "Session.h"
 #import "UIView+Toast.h"
+#import "RegisterTwoViewController.h"
 
 @interface RegisterViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *email;
@@ -18,6 +19,8 @@
 @property (copy, nonatomic) NSString *userType;
 
 @property (copy, nonatomic) NSString *idSegue;
+
+@property (nonatomic) int idGuardianJSON;
 
 @end
 
@@ -72,7 +75,14 @@
     
     if([self isValidEmail:self.email.text] && [self isValidPassword:self.password.text]) {
         
-        [self doTheSegue];
+        if([self isRegistered]){
+            
+            [self doTheSegue];
+        } else {
+            
+            [self.view makeToast:@"El usuario no se encuentra registrado" duration:2.0 position:CSToastPositionCenter];
+        }
+        
     } else if (![self isValidEmail:self.email.text]) {
         
         [self.view makeToast:@"El email introducido no es correcto" duration:2.0 position:CSToastPositionCenter];
@@ -82,6 +92,46 @@
     }
     
 }
+
+- (BOOL) isRegistered {
+    
+    // Read JSON data into array
+    NSError *error;
+    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"servicio" ofType:@"json"];
+    NSData *jsonData = [NSData dataWithContentsOfFile:jsonPath];
+    if (jsonData == nil) {
+        // handle error ...
+    }
+    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+    if (jsonArray == nil) {
+        // handle error ...
+    }
+    
+    if ([[[Session sharedSession] userType] isEqualToString:@"guardian"]) {
+        
+        for (NSDictionary *dict in jsonArray) {
+            NSString *emailVigilante = [dict objectForKey:@"email2"];
+            if ([emailVigilante isEqualToString:self.email.text]) {
+                self.idGuardianJSON = (int)[dict objectForKey:@"id"];
+                return YES;
+            }
+        }
+    }
+    
+    if ([[[Session sharedSession] userType] isEqualToString:@"guarded"]) {
+        
+        for (NSDictionary *dict in jsonArray) {
+            NSString *emailVigilante = [dict objectForKey:@"email1"];
+            if ([emailVigilante isEqualToString:self.email.text]) {
+                
+                return YES;
+            }
+        }
+    }
+    
+    return NO;
+}
+
 
 -(BOOL) isValidEmail:(NSString *)email
 {
@@ -110,6 +160,16 @@
     if ([[[Session sharedSession] userType] isEqualToString:@"guarded"]) {
         
         [self performSegueWithIdentifier:@"segueToGuardedPath" sender:nil];
+    }
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([[[Session sharedSession] userType] isEqualToString:@"guardian"]) {
+        
+        RegisterTwoViewController *registerTwoVC = (RegisterTwoViewController *)[segue destinationViewController];
+        
+        registerTwoVC.idGuardianJSON = self.idGuardianJSON;
     }
 }
 

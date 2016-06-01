@@ -11,6 +11,8 @@
 		650B96851CFCAA8500A89738 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B96831CFCAA8500A89738 /* Contact.m */; };
 		650F77711CFB6AB1006A2374 /* ExitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650F77701CFB6AB1006A2374 /* ExitViewController.m */; };
 		652BCB271CFA002E00008F24 /* GuardedNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 652BCB261CFA002E00008F24 /* GuardedNavigationController.m */; };
+		653BCFA61CFF5EFC004F8B87 /* servicio.json in Resources */ = {isa = PBXBuildFile; fileRef = 653BCFA51CFF5EFB004F8B87 /* servicio.json */; };
+		653BCFA91CFF7571004F8B87 /* WaitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653BCFA81CFF7571004F8B87 /* WaitViewController.m */; };
 		6554DB111CF1A33C002684D5 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB101CF1A33C002684D5 /* CoreDataStack.m */; };
 		6554DB1A1CF1AE07002684D5 /* Contact+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB191CF1AE07002684D5 /* Contact+Methods.m */; };
 		6554DB1E1CF1B701002684D5 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB1D1CF1B701002684D5 /* CoreDataTableViewController.m */; };
@@ -62,6 +64,9 @@
 		650F77701CFB6AB1006A2374 /* ExitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExitViewController.m; sourceTree = "<group>"; };
 		652BCB251CFA002E00008F24 /* GuardedNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuardedNavigationController.h; sourceTree = "<group>"; };
 		652BCB261CFA002E00008F24 /* GuardedNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuardedNavigationController.m; sourceTree = "<group>"; };
+		653BCFA51CFF5EFB004F8B87 /* servicio.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = servicio.json; path = ../../../../Downloads/servicio.json; sourceTree = "<group>"; };
+		653BCFA71CFF7571004F8B87 /* WaitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaitViewController.h; sourceTree = "<group>"; };
+		653BCFA81CFF7571004F8B87 /* WaitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitViewController.m; sourceTree = "<group>"; };
 		6554DB0F1CF1A33C002684D5 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
 		6554DB101CF1A33C002684D5 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
 		6554DB181CF1AE07002684D5 /* Contact+Methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Contact+Methods.h"; sourceTree = "<group>"; };
@@ -209,6 +214,7 @@
 				FB0285411CEC5EBF005B6B67 /* Assets.xcassets */,
 				FB0285431CEC5EBF005B6B67 /* LaunchScreen.storyboard */,
 				FB0285461CEC5EBF005B6B67 /* Info.plist */,
+				653BCFA51CFF5EFB004F8B87 /* servicio.json */,
 				FB0285321CEC5EBF005B6B67 /* Supporting Files */,
 			);
 			path = Appsisteme;
@@ -268,6 +274,8 @@
 				FBD8A3EB1CF58EC60076F920 /* RegisterViewController.m */,
 				FB1648A91CFEFF1C00EEA7F0 /* RegisterTwoViewController.h */,
 				FB1648AA1CFEFF1C00EEA7F0 /* RegisterTwoViewController.m */,
+				653BCFA71CFF7571004F8B87 /* WaitViewController.h */,
+				653BCFA81CFF7571004F8B87 /* WaitViewController.m */,
 				FB250B061CFC25040096B2D4 /* StateViewController.h */,
 				FB250B071CFC25040096B2D4 /* StateViewController.m */,
 				FB0285381CEC5EBF005B6B67 /* ContactsViewController.h */,
@@ -387,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB0285451CEC5EBF005B6B67 /* LaunchScreen.storyboard in Resources */,
+				653BCFA61CFF5EFC004F8B87 /* servicio.json in Resources */,
 				FB0285421CEC5EBF005B6B67 /* Assets.xcassets in Resources */,
 				FB02853D1CEC5EBF005B6B67 /* Main.storyboard in Resources */,
 			);
@@ -423,6 +432,7 @@
 				650B96851CFCAA8500A89738 /* Contact.m in Sources */,
 				6554DB1A1CF1AE07002684D5 /* Contact+Methods.m in Sources */,
 				FB26F57B1CFC943400358C95 /* LogViewController.m in Sources */,
+				653BCFA91CFF7571004F8B87 /* WaitViewController.m in Sources */,
 				FB0285341CEC5EBF005B6B67 /* main.m in Sources */,
 				FB1648AB1CFEFF1C00EEA7F0 /* RegisterTwoViewController.m in Sources */,
 				FBD8A3EC1CF58EC60076F920 /* RegisterViewController.m in Sources */,

@@ -1,18 +1,17 @@
 //
-//  RegisterTwoViewController.h
+//  WaitViewController.h
 //  Appsisteme
 //
-//  Created by Alumno on 01/06/16.
+//  Created by Andrea Cerrato on 1/6/16.
 //  Copyright © 2016 Alumno. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface RegisterTwoViewController : UIViewController
+@interface WaitViewController : UIViewController
 
 @property (nonatomic) int idGuardianJSON;
 @property (nonatomic) int idGuardedJSON;
 @property (copy, nonatomic) NSString *guardianMail;
-
 
 @end
