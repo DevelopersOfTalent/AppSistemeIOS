@@ -22,14 +22,20 @@
 - (IBAction)exit:(UIButton *)sender {
     
     if ([self.exitTextField.text isEqualToString:@"salir"]) {
+        NSLog(@"Entra if exit");
         
-        [self.tabBarController.navigationController popToRootViewControllerAnimated:YES];
+        [[self tabBarController] dismissViewControllerAnimated:YES completion:^{
+           
+            UINavigationController *navController = (UINavigationController *)[[[AppDelegate appDelegate] window] rootViewController];
+            
+            [navController popToRootViewControllerAnimated:YES];
+        }];
     }
 }
 
 - (IBAction)cancelExit:(UIButton *)sender {
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.tabBarController setSelectedIndex:0];
 }
 
 

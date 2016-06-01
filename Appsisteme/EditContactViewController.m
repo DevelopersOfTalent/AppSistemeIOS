@@ -217,7 +217,9 @@
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     
     self.image = [UIImage imageNamed:@"fotoUser.png"];
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+    //[self.navigationController popViewControllerAnimated:YES];
 }
 
 

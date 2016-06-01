@@ -83,6 +83,7 @@
                         <outlet property="guarded" destination="eQg-Ui-SkY" id="sHX-A5-u79"/>
                         <outlet property="guardian" destination="eZn-fu-ruK" id="rUZ-Vk-qSJ"/>
                         <segue destination="OkL-iB-s2k" kind="show" identifier="segueToRegister" id="fF1-mX-od5"/>
+                        <segue destination="nZ6-pK-SG8" kind="show" identifier="exit" id="KBs-Mn-5eW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -605,8 +606,8 @@
                                     <action selector="sendState:" destination="mVb-eA-YIc" eventType="touchUpInside" id="UAD-sf-uU6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="CallMe" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyL-Hp-zm7">
-                                <rect key="frame" x="95" y="287" width="130" height="130"/>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="CallMe" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyL-Hp-zm7">
+                                <rect key="frame" x="95" y="289" width="130" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="cY0-J5-UVH"/>
                                     <constraint firstAttribute="height" constant="130" id="pob-0t-2I8"/>
@@ -638,15 +639,15 @@
         <!--2 guardianHOME_tabBar-->
         <scene sceneID="twl-MF-Gq0">
             <objects>
-                <tabBarController title="2 guardianHOME_tabBar" id="cqL-OL-IVS" sceneMemberID="viewController">
+                <tabBarController title="2 guardianHOME_tabBar" id="cqL-OL-IVS" customClass="GuardianTabBarController" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="IE1-Tf-KP7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.32549019610000002" green="0.69803921570000005" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.32549019610000002" green="0.69803921570000005" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="XXJ-x2-XL4" kind="relationship" relationship="viewControllers" id="flO-eO-ftn"/>
@@ -873,7 +874,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nka-BH-nfI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1204" y="610"/>
+            <point key="canvasLocation" x="216" y="635"/>
         </scene>
         <!--1B waitSkinParent-->
         <scene sceneID="KYH-rU-qen">
@@ -1155,7 +1156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gjq-3p-To9" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="318" y="635"/>
+            <point key="canvasLocation" x="607" y="635"/>
         </scene>
         <!--2.2.1_my_contacts-->
         <scene sceneID="Z81-pY-jnv">
