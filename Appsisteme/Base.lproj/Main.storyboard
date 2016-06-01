@@ -297,8 +297,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="vh4-lS-Fhl">
-                        <barButtonItem key="rightBarButtonItem" image="add" width="25" id="bF7-Xp-Xms">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <barButtonItem key="rightBarButtonItem" image="add_button_transparente" width="25" id="bF7-Xp-Xms">
+                            <color key="tintColor" red="0.32549019610000002" green="0.69803921570000005" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="rDr-VR-8yb" kind="show" identifier="add" id="560-cg-r2P"/>
                             </connections>
@@ -1225,8 +1225,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="HSg-2q-LgM">
-                        <barButtonItem key="rightBarButtonItem" image="add" width="25" id="Tc9-ux-qFr">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <barButtonItem key="rightBarButtonItem" image="add_button_transparente" width="25" id="Tc9-ux-qFr">
+                            <color key="tintColor" red="0.32549019610000002" green="0.69803921570000005" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="aad-bc-Ndb" kind="show" identifier="add" id="yNk-na-az5"/>
                             </connections>
@@ -1502,7 +1502,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add" width="30" height="30"/>
+        <image name="add_button_transparente" width="30" height="30"/>
         <image name="ajustes" width="917" height="858"/>
         <image name="buttom_bad" width="181" height="179"/>
         <image name="buttom_call" width="181" height="180"/>

@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"cabecera_vigilante_260.jpg"] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"cabecera_vigilante_260 copia.jpg"] forBarMetrics:UIBarMetricsDefault];
 }
 
 @end
