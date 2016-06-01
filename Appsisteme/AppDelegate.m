@@ -7,17 +7,16 @@
 //
 
 #import "AppDelegate.h"
-
-
+#import "StateViewController.h"
 #import "ContactsViewController.h"
 
 @interface AppDelegate ()
-
 
 @end
 
 
 @implementation AppDelegate
+
 @synthesize oneSignal = _oneSignal;
 
 
@@ -42,15 +41,22 @@
                                            handleNotification:^(NSString* message, NSDictionary* additionalData, BOOL isActive) {
                                                NSLog(@"OneSignal Notification opened:\nMessage: %@", message);
                                                
+                                               
                                                if (additionalData) {
-                                                   NSLog(@"additionalData: %@", additionalData);
+                                                   
+                                                   _dataDictionary = additionalData;
+                                                   
+                                                   StateViewController *stateViewController = [[StateViewController alloc] initWithNibName:nil bundle:nil];
+                                                   [stateViewController reciveNotification:_dataDictionary ];
+                                                   
+                                                   
                                                    
                                                    // Check for and read any custom values you added to the notification
                                                    // This done with the "Additional Data" section the dashboard.
                                                    // OR setting the 'data' field on our REST API.
-                                                   NSString* customKey = additionalData[@"customKey"];
-                                                   if (customKey)
-                                                       NSLog(@"customKey: %@", customKey);
+                                                   NSString* data = additionalData[@"data"];
+                                                   if (data)
+                                                       NSLog(@"customKey: %@", data);
                                                }
                                            }];
     
@@ -123,7 +129,6 @@
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
-    NSLog(@"userInfo: %@",userInfo);
     NSLog(@"userInfo: %@",userInfo);
     if ( application.applicationState == UIApplicationStateInactive || application.applicationState == UIApplicationStateBackground  )
     {

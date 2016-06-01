@@ -68,8 +68,6 @@
         
         [self.view makeToast:@"La contraseña debe tener entre 6 y 10 caracteres" duration:2.0 position:CSToastPositionCenter];
     }
-
-    
     
 }
 

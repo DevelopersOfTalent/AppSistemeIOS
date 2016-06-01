@@ -8,58 +8,141 @@
 
 #import "StateViewController.h"
 #import "AppDelegate.h"
+#import "Log.h"
+#import "CoreDataTableViewController.h"
 
 @interface StateViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *requestButton;
-@property (weak, nonatomic) IBOutlet UIButton *fineButton;
-@property (weak, nonatomic) IBOutlet UIButton *badButton;
-@property (weak, nonatomic) IBOutlet UIButton *callMeButton;
 @property (strong,nonatomic) OneSignal *oneSignal;
 @property (strong,nonatomic) NSString *idUser;
+
+@property (strong, nonatomic) NSManagedObjectContext *context;
+@property (strong, nonatomic) NSManagedObjectContext *contextAux;
 
 @end
 
 @implementation StateViewController
 
+#pragma mark - Init
+
+-(instancetype) initWithContext: (NSManagedObjectContext *) context {
+    
+    if (self = [super initWithNibName:nil bundle:nil]) {
+        _context = context;
+    }
+    return self;
+}
+
+#pragma mark - LifeCycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [[[AppDelegate appDelegate] oneSignal] sendTag:@"key" value:@"value"];
+    
+    _context = [[[AppDelegate appDelegate] coreDataStack] managedObjectContext];
+    
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.context = self.contextAux;
+    [super viewWillAppear:animated];
+
+    
+    
+    
+    _context = [[[AppDelegate appDelegate] coreDataStack] managedObjectContext];
+
 }
+
+
 - (IBAction)requestState:(id)sender {
     
-    [_oneSignal postNotification:@{
-                                  @"contents" : @{@"en": @"_userId"},
-                                   @"include_player_ids": @[@"9584842e-0dd2-48b9-bdab-fa1f37ba1339"]
-                                  }];
+   _idUser= @"eed57d57-4b88-44b5-895e-0be1fda91bcd";
     
-    [_oneSignal getTags:^(NSDictionary* tags) {
-        NSLog(@"%@", tags);
-    }];
-    
-   // _idUser= @"9584842e-0dd2-48b9-bdab-fa1f37ba1339";
-    
-  //  _oneSignal = [[AppDelegate appDelegate] oneSignal];
-  //  [_oneSignal postNotification:@{
-   //                                @"contents" : @{@"en": @"Hola"},
-    //                               @"include_player_ids": @[_idUser]
-    //                               }];
+   _oneSignal = [[AppDelegate appDelegate] oneSignal];
+   [_oneSignal postNotification:@{
+                                 @"contents" : @{@"en": @"Hola"},
+                                 @"include_player_ids": @[_idUser]
+                                 }];
 };
+
 - (IBAction)sendState:(id)sender {
+    
+    _idUser= @"eed57d57-4b88-44b5-895e-0be1fda91bcd";
+    _oneSignal = [[AppDelegate appDelegate] oneSignal];
+    NSString *buttonName = [sender titleForState:UIControlStateNormal];
+    
+    Log *log = [NSEntityDescription
+                insertNewObjectForEntityForName:@"Log"
+                inManagedObjectContext:self.context];
+    
+    
+    [self.context insertObject:log];
+    
+    NSTimeInterval timeInSeconds = [[NSDate date] timeIntervalSince1970];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:timeInSeconds];
+    
+    [log setDate:date];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    [dateFormatter setDateFormat:@"HH:mm d/MM/yy "];
+    
+    NSString * dateString = [dateFormatter stringFromDate: date];
+    
+    if ([buttonName isEqual: @"Good"]) {
+        _oneSignal = [[AppDelegate appDelegate] oneSignal];
+        [_oneSignal postNotification:@{
+                                       @"contents" : @{@"en": @"Bien"},
+                                       @"data" : @{@"state" : @"1",@"date" : dateString},
+                                       @"include_player_ids": @[_idUser]
+                                       }];
+        [log setState:@"1"];
+    }
+    
+    else if ([buttonName isEqual: @"Bad"]){
+        _oneSignal = [[AppDelegate appDelegate] oneSignal];
+        [_oneSignal postNotification:@{
+                                       @"contents" : @{@"en": @"Mal"},
+                                       @"data" : @{@"state" : @"2",@"date" : dateString},
+                                       @"include_player_ids": @[_idUser]
+                                       }];
+        [log setState:@"2"];
+    }
+    
+    else if ([buttonName isEqual: @"CallMe"]){
+        _oneSignal = [[AppDelegate appDelegate] oneSignal];
+        [_oneSignal postNotification:@{
+                                       @"contents" : @{@"en": @"Llamame"},
+                                       @"data" : @{@"state" : @"3",@"date" : dateString},
+                                       @"include_player_ids": @[_idUser]
+                                       }];
+        [log setState:@"3"];
+    }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void) reciveNotification: (NSDictionary *)dataDictionary {
+    
+    _context = [[[AppDelegate appDelegate] coreDataStack] managedObjectContext];
+    
+    NSString *reciveState= [dataDictionary objectForKey:@"state"];
+    NSString *reciveDate= [dataDictionary objectForKey:@"date"];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"HH:mm d/MM/yy "];
+    NSDate *convertedDate = [dateFormatter dateFromString:reciveDate];
+    
+    Log *log = [NSEntityDescription
+                insertNewObjectForEntityForName:@"Log"
+                inManagedObjectContext:self.context];
+    
+    [log setState:reciveState];
+    [log setDate:convertedDate];
+    
 }
-*/
 
 @end
