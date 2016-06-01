@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TME-Ba-4Ix">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TME-Ba-4Ix">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -90,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="-124" y="635"/>
         </scene>
-        <!--0B guardianRegister-->
+        <!--Register Two View Controller-->
         <scene sceneID="uQm-s0-7gP">
             <objects>
-                <viewController title="0B guardianRegister" id="acy-b6-RNE" customClass="RegisterTwoViewController" sceneMemberID="viewController">
+                <viewController id="acy-b6-RNE" customClass="RegisterTwoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GLx-2M-EUP"/>
                         <viewControllerLayoutGuide type="bottom" id="ljH-hi-sIj"/>
@@ -166,10 +166,10 @@
             </objects>
             <point key="canvasLocation" x="727" y="289"/>
         </scene>
-        <!--1A waitSkinGuardian-->
+        <!--View Controller-->
         <scene sceneID="mun-zX-wT1">
             <objects>
-                <viewController title="1A waitSkinGuardian" id="B64-Bu-ZEA" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="B64-Bu-ZEA" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jlv-g2-bEO"/>
                         <viewControllerLayoutGuide type="bottom" id="Ajj-6t-kvM"/>
@@ -589,12 +589,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Good" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xho-lF-2NZ">
-                                <rect key="frame" x="20" y="144" width="140" height="140"/>
+                                <rect key="frame" x="25" y="149" width="130" height="130"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="MOm-02-28X"/>
-                                    <constraint firstAttribute="height" constant="140" id="rDD-ls-oHA"/>
+                                    <constraint firstAttribute="width" constant="130" id="MOm-02-28X"/>
+                                    <constraint firstAttribute="height" constant="130" id="rDD-ls-oHA"/>
                                 </constraints>
-                                <state key="normal" title="Good" image="buttom_fine"/>
+                                <state key="normal" title="Good" image="button_fine"/>
                                 <connections>
                                     <action selector="sendState:" destination="mVb-eA-YIc" eventType="touchUpInside" id="pCJ-vA-Rso"/>
                                 </connections>
@@ -605,7 +605,7 @@
                                     <constraint firstAttribute="height" constant="130" id="6Du-K2-sy8"/>
                                     <constraint firstAttribute="width" constant="130" id="pam-ue-Dl9"/>
                                 </constraints>
-                                <state key="normal" title="Bad" image="buttom_bad"/>
+                                <state key="normal" title="Bad" image="button_bad"/>
                                 <connections>
                                     <action selector="sendState:" destination="mVb-eA-YIc" eventType="touchUpInside" id="UAD-sf-uU6"/>
                                 </connections>
@@ -616,7 +616,7 @@
                                     <constraint firstAttribute="width" constant="130" id="cY0-J5-UVH"/>
                                     <constraint firstAttribute="height" constant="130" id="pob-0t-2I8"/>
                                 </constraints>
-                                <state key="normal" title="CallMe" image="buttom_call"/>
+                                <state key="normal" title="CallMe" image="button_call"/>
                                 <connections>
                                     <action selector="sendState:" destination="mVb-eA-YIc" eventType="touchUpInside" id="vU7-cZ-H0h"/>
                                 </connections>
@@ -664,10 +664,10 @@
             </objects>
             <point key="canvasLocation" x="1229" y="-439"/>
         </scene>
-        <!--Log View Controller-->
+        <!--2.3_guardianAskState-->
         <scene sceneID="kxa-v5-RiH">
             <objects>
-                <tableViewController id="tNG-rg-NOU" customClass="LogViewController" sceneMemberID="viewController">
+                <tableViewController title="2.3_guardianAskState" id="tNG-rg-NOU" customClass="LogViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="IoF-8J-Frd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -880,10 +880,10 @@
             </objects>
             <point key="canvasLocation" x="1218" y="623"/>
         </scene>
-        <!--1B waitSkinParent-->
+        <!--View Controller-->
         <scene sceneID="KYH-rU-qen">
             <objects>
-                <viewController title="1B waitSkinParent" id="vtW-2Y-Jd7" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="vtW-2Y-Jd7" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zaS-wi-Usf"/>
                         <viewControllerLayoutGuide type="bottom" id="poS-DW-zmB"/>
@@ -1032,10 +1032,10 @@
             </objects>
             <point key="canvasLocation" x="1700" y="-1105"/>
         </scene>
-        <!--0A register-->
+        <!--Register View Controller-->
         <scene sceneID="Fjc-NB-alY">
             <objects>
-                <viewController title="0A register" id="OkL-iB-s2k" customClass="RegisterViewController" sceneMemberID="viewController">
+                <viewController id="OkL-iB-s2k" customClass="RegisterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="weh-Yf-tdw"/>
                         <viewControllerLayoutGuide type="bottom" id="mLC-jj-Wha"/>
@@ -1439,10 +1439,10 @@
             </objects>
             <point key="canvasLocation" x="2640" y="2416"/>
         </scene>
-        <!--Log View Controller-->
+        <!--2.3_guardianAskState-->
         <scene sceneID="O03-R5-vpX">
             <objects>
-                <tableViewController id="DHs-vM-bXL" customClass="LogViewController" sceneMemberID="viewController">
+                <tableViewController title="2.3_guardianAskState" id="DHs-vM-bXL" customClass="LogViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mak-NP-Uil">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1508,10 +1508,10 @@
     <resources>
         <image name="add_button_transparente" width="30" height="30"/>
         <image name="ajustes" width="917" height="858"/>
-        <image name="buttom_bad" width="181" height="179"/>
-        <image name="buttom_call" width="181" height="180"/>
-        <image name="buttom_fine" width="135" height="137"/>
         <image name="button_ask" width="316" height="314"/>
+        <image name="button_bad" width="176" height="174"/>
+        <image name="button_call" width="174" height="175"/>
+        <image name="button_fine" width="171" height="174"/>
         <image name="fotoUser" width="300" height="300"/>
         <image name="icono_menu" width="30" height="26"/>
         <image name="icono_no_persona_asociada" width="204" height="204"/>
@@ -1521,7 +1521,7 @@
         <image name="logo" width="461" height="249"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mnx-AU-2nt"/>
+        <segue reference="KBs-Mn-5eW"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.32549019610000002" green="0.69803921570000005" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>
