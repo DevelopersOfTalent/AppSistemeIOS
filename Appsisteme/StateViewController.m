@@ -30,6 +30,7 @@
     if (self = [super initWithNibName:nil bundle:nil]) {
         _context = context;
     }
+    
     return self;
 }
 
@@ -41,6 +42,8 @@
     
     _context = [[[AppDelegate appDelegate] coreDataStack] managedObjectContext];
     
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    [user setBool:YES forKey:@"access"];
     
 }
 

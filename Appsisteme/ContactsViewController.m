@@ -107,33 +107,7 @@
     
     Contact *contact =[self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle: contact.name
-                                                                   message:@"¿Que desea hacer?"
-                                                            preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Llamar"
-                                                            style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction * action) {
-                                                              
-                                                              NSString *phNo = contact.phoneNumber;
-                                                              
-                                                              [self makeCall:phNo];
-                                                              
-                                                              }];
-    UIAlertAction* defaultAction2 = [UIAlertAction actionWithTitle:@"Atras"
-                                                             style:UIAlertActionStyleDefault
-                                                           handler:^(UIAlertAction * action) {
-                                                               
-                                                               
-                                                           }];
-    [alert addAction:defaultAction];
-    [alert addAction:defaultAction2];
-    [self presentViewController:alert animated:YES completion:nil];
-}
-
--(void) makeCall: (NSString *)phNo {
-    
-    
-    NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",phNo]];
+    NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",contact.phoneNumber]];
     
     if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
         
@@ -151,9 +125,7 @@
                                                         }];
         [alert2 addAction:alertIn];
     }
-    
 }
-
 
 #pragma mark - Segues
 

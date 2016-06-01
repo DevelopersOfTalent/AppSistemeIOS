@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TME-Ba-4Ix">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TME-Ba-4Ix">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -93,7 +93,7 @@
         <!--0B guardianRegister-->
         <scene sceneID="uQm-s0-7gP">
             <objects>
-                <viewController title="0B guardianRegister" id="acy-b6-RNE" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="0B guardianRegister" id="acy-b6-RNE" customClass="RegisterTwoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GLx-2M-EUP"/>
                         <viewControllerLayoutGuide type="bottom" id="ljH-hi-sIj"/>
@@ -129,6 +129,7 @@
                                     <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="save:" destination="acy-b6-RNE" eventType="touchUpInside" id="1w7-0v-U4x"/>
                                     <segue destination="B64-Bu-ZEA" kind="show" id="2ik-22-4fh"/>
                                 </connections>
                             </button>
@@ -157,6 +158,9 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="email" destination="1oO-8y-u5t" id="gj6-pK-Ifa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F4V-Bd-lnr" sceneMemberID="firstResponder"/>
             </objects>
@@ -874,7 +878,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nka-BH-nfI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="216" y="635"/>
+            <point key="canvasLocation" x="1218" y="623"/>
         </scene>
         <!--1B waitSkinParent-->
         <scene sceneID="KYH-rU-qen">
@@ -1156,7 +1160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gjq-3p-To9" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="607" y="635"/>
+            <point key="canvasLocation" x="273" y="635"/>
         </scene>
         <!--2.2.1_my_contacts-->
         <scene sceneID="Z81-pY-jnv">

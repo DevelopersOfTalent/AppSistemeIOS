@@ -24,6 +24,7 @@
 		FB0285421CEC5EBF005B6B67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB0285411CEC5EBF005B6B67 /* Assets.xcassets */; };
 		FB0285451CEC5EBF005B6B67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB0285431CEC5EBF005B6B67 /* LaunchScreen.storyboard */; };
 		FB0285501CEC5EBF005B6B67 /* AppsistemeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB02854F1CEC5EBF005B6B67 /* AppsistemeTests.m */; };
+		FB1648AB1CFEFF1C00EEA7F0 /* RegisterTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1648AA1CFEFF1C00EEA7F0 /* RegisterTwoViewController.m */; };
 		FB250B081CFC25040096B2D4 /* StateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB250B071CFC25040096B2D4 /* StateViewController.m */; };
 		FB250B0B1CFC34780096B2D4 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = FB250B0A1CFC34780096B2D4 /* UIView+Toast.m */; };
 		FB26F57B1CFC943400358C95 /* LogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB26F57A1CFC943400358C95 /* LogViewController.m */; };
@@ -86,6 +87,8 @@
 		FB02854B1CEC5EBF005B6B67 /* AppsistemeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppsistemeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB02854F1CEC5EBF005B6B67 /* AppsistemeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppsistemeTests.m; sourceTree = "<group>"; };
 		FB0285511CEC5EBF005B6B67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB1648A91CFEFF1C00EEA7F0 /* RegisterTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterTwoViewController.h; sourceTree = "<group>"; };
+		FB1648AA1CFEFF1C00EEA7F0 /* RegisterTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterTwoViewController.m; sourceTree = "<group>"; };
 		FB250B061CFC25040096B2D4 /* StateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateViewController.h; sourceTree = "<group>"; };
 		FB250B071CFC25040096B2D4 /* StateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateViewController.m; sourceTree = "<group>"; };
 		FB250B091CFC34780096B2D4 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
@@ -263,6 +266,8 @@
 				FBA12EC71CF46C5C003A0649 /* UserTypeViewController.m */,
 				FBD8A3EA1CF58EC60076F920 /* RegisterViewController.h */,
 				FBD8A3EB1CF58EC60076F920 /* RegisterViewController.m */,
+				FB1648A91CFEFF1C00EEA7F0 /* RegisterTwoViewController.h */,
+				FB1648AA1CFEFF1C00EEA7F0 /* RegisterTwoViewController.m */,
 				FB250B061CFC25040096B2D4 /* StateViewController.h */,
 				FB250B071CFC25040096B2D4 /* StateViewController.m */,
 				FB0285381CEC5EBF005B6B67 /* ContactsViewController.h */,
@@ -419,6 +424,7 @@
 				6554DB1A1CF1AE07002684D5 /* Contact+Methods.m in Sources */,
 				FB26F57B1CFC943400358C95 /* LogViewController.m in Sources */,
 				FB0285341CEC5EBF005B6B67 /* main.m in Sources */,
+				FB1648AB1CFEFF1C00EEA7F0 /* RegisterTwoViewController.m in Sources */,
 				FBD8A3EC1CF58EC60076F920 /* RegisterViewController.m in Sources */,
 				FB74F31B1CFD7D0200C6B622 /* Log.m in Sources */,
 				6554DB211CF1CADE002684D5 /* Model.xcdatamodeld in Sources */,
