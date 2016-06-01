@@ -74,7 +74,6 @@
         if ([emailVigilante isEqualToString:self.email.text]) {
             
             self.idGuardedJSON = (int)[dict objectForKey:@"id"];
-            self.guardianMail = [dict objectForKey:@"email2"];
         }
     }
 }
@@ -93,8 +92,6 @@
         
     waitVC.idGuardianJSON = self.idGuardianJSON;
     waitVC.idGuardedJSON = self.idGuardedJSON;
-    waitVC.guardianMail = self.guardianMail;
-    
 }
 
 @end

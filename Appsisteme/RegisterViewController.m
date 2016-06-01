@@ -10,6 +10,7 @@
 #import "Session.h"
 #import "UIView+Toast.h"
 #import "RegisterTwoViewController.h"
+#import "WaitViewController.h"
 
 @interface RegisterViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *email;
@@ -21,6 +22,7 @@
 @property (copy, nonatomic) NSString *idSegue;
 
 @property (nonatomic) int idGuardianJSON;
+@property (copy, nonatomic) NSString *guardianMail;
 
 @end
 
@@ -123,7 +125,7 @@
         for (NSDictionary *dict in jsonArray) {
             NSString *emailVigilante = [dict objectForKey:@"email1"];
             if ([emailVigilante isEqualToString:self.email.text]) {
-                
+                self.guardianMail = [dict objectForKey:@"email2"];
                 return YES;
             }
         }
@@ -170,6 +172,13 @@
         RegisterTwoViewController *registerTwoVC = (RegisterTwoViewController *)[segue destinationViewController];
         
         registerTwoVC.idGuardianJSON = self.idGuardianJSON;
+    }
+    
+    if ([[[Session sharedSession] userType] isEqualToString:@"guarded"]) {
+        
+        WaitViewController *waitVC = (WaitViewController *)[segue destinationViewController];
+        
+        waitVC.guardianMail = self.guardianMail;
     }
 }
 

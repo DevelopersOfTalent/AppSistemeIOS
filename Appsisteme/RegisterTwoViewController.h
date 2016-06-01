@@ -12,7 +12,6 @@
 
 @property (nonatomic) int idGuardianJSON;
 @property (nonatomic) int idGuardedJSON;
-@property (copy, nonatomic) NSString *guardianMail;
 
 
 @end
