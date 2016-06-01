@@ -583,32 +583,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyL-Hp-zm7">
-                                <rect key="frame" x="95" y="289" width="130" height="130"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="cY0-J5-UVH"/>
-                                    <constraint firstAttribute="height" constant="130" id="pob-0t-2I8"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="buttom_call"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xho-lF-2NZ">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Good" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xho-lF-2NZ">
                                 <rect key="frame" x="20" y="144" width="140" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="MOm-02-28X"/>
                                     <constraint firstAttribute="height" constant="140" id="rDD-ls-oHA"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="buttom_fine"/>
+                                <state key="normal" title="Good" image="buttom_fine"/>
                                 <connections>
                                     <action selector="sendState:" destination="mVb-eA-YIc" eventType="touchUpInside" id="pCJ-vA-Rso"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEU-wr-jmz">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Bad" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEU-wr-jmz">
                                 <rect key="frame" x="165" y="149" width="130" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="6Du-K2-sy8"/>
                                     <constraint firstAttribute="width" constant="130" id="pam-ue-Dl9"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="buttom_bad"/>
+                                <state key="normal" title="Bad" image="buttom_bad"/>
+                                <connections>
+                                    <action selector="sendState:" destination="mVb-eA-YIc" eventType="touchUpInside" id="UAD-sf-uU6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="CallMe" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyL-Hp-zm7">
+                                <rect key="frame" x="95" y="287" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="cY0-J5-UVH"/>
+                                    <constraint firstAttribute="height" constant="130" id="pob-0t-2I8"/>
+                                </constraints>
+                                <state key="normal" title="CallMe" image="buttom_call"/>
+                                <connections>
+                                    <action selector="sendState:" destination="mVb-eA-YIc" eventType="touchUpInside" id="vU7-cZ-H0h"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -624,11 +630,6 @@
                     <tabBarItem key="tabBarItem" title="Estado" id="stQ-tM-G8Z"/>
                     <navigationItem key="navigationItem" id="OhJ-JB-nRj"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="badButton" destination="DEU-wr-jmz" id="Z69-BV-ytS"/>
-                        <outlet property="callMeButton" destination="UyL-Hp-zm7" id="5DU-TC-SJr"/>
-                        <outlet property="fineButton" destination="Xho-lF-2NZ" id="TtB-Dh-cHJ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ISp-Sp-8wv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -658,16 +659,16 @@
             </objects>
             <point key="canvasLocation" x="1229" y="-439"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Log View Controller-->
         <scene sceneID="kxa-v5-RiH">
             <objects>
-                <tableViewController id="tNG-rg-NOU" sceneMemberID="viewController">
+                <tableViewController id="tNG-rg-NOU" customClass="LogViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="IoF-8J-Frd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellLog" id="RfP-Ih-f9p">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellLog" id="RfP-Ih-f9p" customClass="LogTableViewCell">
                                 <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RfP-Ih-f9p" id="tKp-jG-2Ue">
@@ -703,6 +704,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="labelLogDate" destination="OO1-wR-oYB" id="FRg-R2-Ktr"/>
+                                    <outlet property="labelLogState" destination="jU6-9e-nLs" id="mvS-Yx-aEh"/>
+                                    <outlet property="viewLogCell" destination="tKp-jG-2Ue" id="jzq-Dp-VgJ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1428,16 +1434,16 @@
             </objects>
             <point key="canvasLocation" x="2640" y="2416"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Log View Controller-->
         <scene sceneID="O03-R5-vpX">
             <objects>
-                <tableViewController id="DHs-vM-bXL" sceneMemberID="viewController">
+                <tableViewController id="DHs-vM-bXL" customClass="LogViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mak-NP-Uil">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellLog" id="60o-oc-IUS">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellLog" id="60o-oc-IUS" customClass="LogTableViewCell">
                                 <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="60o-oc-IUS" id="liX-QE-y6s">
@@ -1474,6 +1480,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="labelLogDate" destination="FsB-3Y-7om" id="vxg-l9-Yx1"/>
+                                    <outlet property="labelLogState" destination="nEm-u7-xtK" id="b8Z-62-QMQ"/>
+                                    <outlet property="viewLogCell" destination="liX-QE-y6s" id="nXy-gN-wfh"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

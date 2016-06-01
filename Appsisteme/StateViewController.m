@@ -95,33 +95,39 @@
     NSString * dateString = [dateFormatter stringFromDate: date];
     
     if ([buttonName isEqual: @"Good"]) {
+        
+        [log setState:@"1"];
+        
         _oneSignal = [[AppDelegate appDelegate] oneSignal];
         [_oneSignal postNotification:@{
                                        @"contents" : @{@"en": @"Bien"},
                                        @"data" : @{@"state" : @"1",@"date" : dateString},
                                        @"include_player_ids": @[_idUser]
                                        }];
-        [log setState:@"1"];
     }
     
     else if ([buttonName isEqual: @"Bad"]){
+        
+        [log setState:@"2"];
+        
         _oneSignal = [[AppDelegate appDelegate] oneSignal];
         [_oneSignal postNotification:@{
                                        @"contents" : @{@"en": @"Mal"},
                                        @"data" : @{@"state" : @"2",@"date" : dateString},
                                        @"include_player_ids": @[_idUser]
                                        }];
-        [log setState:@"2"];
     }
     
     else if ([buttonName isEqual: @"CallMe"]){
+        
+         [log setState:@"3"];
+        
         _oneSignal = [[AppDelegate appDelegate] oneSignal];
         [_oneSignal postNotification:@{
                                        @"contents" : @{@"en": @"Llamame"},
                                        @"data" : @{@"state" : @"3",@"date" : dateString},
                                        @"include_player_ids": @[_idUser]
                                        }];
-        [log setState:@"3"];
     }
 }
 
