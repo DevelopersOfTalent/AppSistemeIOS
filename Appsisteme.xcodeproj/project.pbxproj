@@ -11,7 +11,6 @@
 		650B96851CFCAA8500A89738 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B96831CFCAA8500A89738 /* Contact.m */; };
 		650F77711CFB6AB1006A2374 /* ExitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650F77701CFB6AB1006A2374 /* ExitViewController.m */; };
 		652BCB271CFA002E00008F24 /* GuardedNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 652BCB261CFA002E00008F24 /* GuardedNavigationController.m */; };
-		653BCFA61CFF5EFC004F8B87 /* servicio.json in Resources */ = {isa = PBXBuildFile; fileRef = 653BCFA51CFF5EFB004F8B87 /* servicio.json */; };
 		653BCFA91CFF7571004F8B87 /* WaitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653BCFA81CFF7571004F8B87 /* WaitViewController.m */; };
 		6554DB111CF1A33C002684D5 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB101CF1A33C002684D5 /* CoreDataStack.m */; };
 		6554DB1A1CF1AE07002684D5 /* Contact+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554DB191CF1AE07002684D5 /* Contact+Methods.m */; };
@@ -26,6 +25,7 @@
 		FB0285421CEC5EBF005B6B67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB0285411CEC5EBF005B6B67 /* Assets.xcassets */; };
 		FB0285451CEC5EBF005B6B67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB0285431CEC5EBF005B6B67 /* LaunchScreen.storyboard */; };
 		FB0285501CEC5EBF005B6B67 /* AppsistemeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB02854F1CEC5EBF005B6B67 /* AppsistemeTests.m */; };
+		FB04479A1D00182D00C92D04 /* servicio.json in Resources */ = {isa = PBXBuildFile; fileRef = FB0447991D00182D00C92D04 /* servicio.json */; };
 		FB1648AB1CFEFF1C00EEA7F0 /* RegisterTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1648AA1CFEFF1C00EEA7F0 /* RegisterTwoViewController.m */; };
 		FB250B081CFC25040096B2D4 /* StateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB250B071CFC25040096B2D4 /* StateViewController.m */; };
 		FB250B0B1CFC34780096B2D4 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = FB250B0A1CFC34780096B2D4 /* UIView+Toast.m */; };
@@ -64,7 +64,6 @@
 		650F77701CFB6AB1006A2374 /* ExitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExitViewController.m; sourceTree = "<group>"; };
 		652BCB251CFA002E00008F24 /* GuardedNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuardedNavigationController.h; sourceTree = "<group>"; };
 		652BCB261CFA002E00008F24 /* GuardedNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuardedNavigationController.m; sourceTree = "<group>"; };
-		653BCFA51CFF5EFB004F8B87 /* servicio.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = servicio.json; path = ../../../../Downloads/servicio.json; sourceTree = "<group>"; };
 		653BCFA71CFF7571004F8B87 /* WaitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaitViewController.h; sourceTree = "<group>"; };
 		653BCFA81CFF7571004F8B87 /* WaitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitViewController.m; sourceTree = "<group>"; };
 		6554DB0F1CF1A33C002684D5 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
@@ -92,6 +91,7 @@
 		FB02854B1CEC5EBF005B6B67 /* AppsistemeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppsistemeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB02854F1CEC5EBF005B6B67 /* AppsistemeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppsistemeTests.m; sourceTree = "<group>"; };
 		FB0285511CEC5EBF005B6B67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB0447991D00182D00C92D04 /* servicio.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = servicio.json; sourceTree = "<group>"; };
 		FB1648A91CFEFF1C00EEA7F0 /* RegisterTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterTwoViewController.h; sourceTree = "<group>"; };
 		FB1648AA1CFEFF1C00EEA7F0 /* RegisterTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterTwoViewController.m; sourceTree = "<group>"; };
 		FB250B061CFC25040096B2D4 /* StateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateViewController.h; sourceTree = "<group>"; };
@@ -214,7 +214,7 @@
 				FB0285411CEC5EBF005B6B67 /* Assets.xcassets */,
 				FB0285431CEC5EBF005B6B67 /* LaunchScreen.storyboard */,
 				FB0285461CEC5EBF005B6B67 /* Info.plist */,
-				653BCFA51CFF5EFB004F8B87 /* servicio.json */,
+				FB0447991D00182D00C92D04 /* servicio.json */,
 				FB0285321CEC5EBF005B6B67 /* Supporting Files */,
 			);
 			path = Appsisteme;
@@ -395,7 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB0285451CEC5EBF005B6B67 /* LaunchScreen.storyboard in Resources */,
-				653BCFA61CFF5EFC004F8B87 /* servicio.json in Resources */,
+				FB04479A1D00182D00C92D04 /* servicio.json in Resources */,
 				FB0285421CEC5EBF005B6B67 /* Assets.xcassets in Resources */,
 				FB02853D1CEC5EBF005B6B67 /* Main.storyboard in Resources */,
 			);

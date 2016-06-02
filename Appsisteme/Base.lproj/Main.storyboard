@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TME-Ba-4Ix">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TME-Ba-4Ix">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -689,7 +689,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jU6-9e-nLs">
-                                            <rect key="frame" x="28" y="11" width="160" height="21"/>
+                                            <rect key="frame" x="28" y="11" width="90" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="e6p-nl-ZVn"/>
                                             </constraints>
@@ -698,7 +698,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OO1-wR-oYB">
-                                            <rect key="frame" x="208" y="11" width="84" height="21"/>
+                                            <rect key="frame" x="138" y="11" width="154" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="pk7-9T-TJt"/>
                                             </constraints>
@@ -709,7 +709,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="jU6-9e-nLs" firstAttribute="centerY" secondItem="tKp-jG-2Ue" secondAttribute="centerY" id="Kmg-8y-O1n"/>
-                                        <constraint firstItem="OO1-wR-oYB" firstAttribute="centerX" secondItem="tKp-jG-2Ue" secondAttribute="centerX" constant="90" id="Pz6-hv-lCb"/>
+                                        <constraint firstItem="OO1-wR-oYB" firstAttribute="centerX" secondItem="tKp-jG-2Ue" secondAttribute="centerX" constant="55" id="Pz6-hv-lCb"/>
                                         <constraint firstItem="jU6-9e-nLs" firstAttribute="leading" secondItem="tKp-jG-2Ue" secondAttribute="leadingMargin" constant="20" id="kXN-B7-3xf"/>
                                         <constraint firstItem="OO1-wR-oYB" firstAttribute="leading" secondItem="jU6-9e-nLs" secondAttribute="trailing" constant="20" id="lGc-mQ-nqP"/>
                                         <constraint firstItem="OO1-wR-oYB" firstAttribute="centerY" secondItem="tKp-jG-2Ue" secondAttribute="centerY" id="lrL-HO-cT0"/>
