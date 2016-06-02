@@ -68,7 +68,7 @@
     
    _oneSignal = [[AppDelegate appDelegate] oneSignal];
    [_oneSignal postNotification:@{
-                                 @"contents" : @{@"en": @"Hola"},
+                                 @"contents" : @{@"en": @"¿Cómo estás"},
                                  @"include_player_ids": @[_idUser]
                                  }];
 };
@@ -127,7 +127,7 @@
         
         _oneSignal = [[AppDelegate appDelegate] oneSignal];
         [_oneSignal postNotification:@{
-                                       @"contents" : @{@"en": @"Llamame"},
+                                       @"contents" : @{@"en": @"Llámame"},
                                        @"data" : @{@"state" : @"3",@"date" : dateString},
                                        @"include_player_ids": @[_idUser]
                                        }];
