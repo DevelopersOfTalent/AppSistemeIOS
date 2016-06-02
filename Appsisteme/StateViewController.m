@@ -64,7 +64,7 @@
 
 - (IBAction)requestState:(id)sender {
     
-   _idUser= @"eed57d57-4b88-44b5-895e-0be1fda91bcd";
+   _idUser= @"5c804b17-913b-449e-be8f-06eb607619f9";
     
    _oneSignal = [[AppDelegate appDelegate] oneSignal];
    [_oneSignal postNotification:@{
@@ -75,7 +75,7 @@
 
 - (IBAction)sendState:(id)sender {
     
-    _idUser= @"eed57d57-4b88-44b5-895e-0be1fda91bcd";
+    _idUser= @"5c804b17-913b-449e-be8f-06eb607619f9";
     _oneSignal = [[AppDelegate appDelegate] oneSignal];
     NSString *buttonName = [sender titleForState:UIControlStateNormal];
     
